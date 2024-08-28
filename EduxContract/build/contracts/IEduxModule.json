@@ -1,0 +1,560 @@
+{
+  "contractName": "IEduxModule",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getModuleMetadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getModuleMetadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"for now we check for keccak('EDUX_MODULE'); Override this and add the type(IModuleInterface).interfaceId for corresponding module type\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getModuleMetadataURI()\":{\"notice\":\"Human-readable description of the module\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/modules/interfaces/IEduxModule.sol\":\"IEduxModule\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"project:/contracts/modules/interfaces/IEduxModule.sol\":{\"keccak256\":\"0xf34f80448b3fd709dfa91bf87b8dfb0a052f1f6b4953dac1a4d20cf316c74266\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37f917bcb60496f2d1f81da9e85221d58a73af125049209ef0cf9409eb71e94d\",\"dweb:/ipfs/QmUGFJtHDJHN1A8LSeWJpL4RaG96NjLbAXkmhK9u8h9uEB\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0;\r\n\r\nimport {IERC165} from '@openzeppelin/contracts/utils/introspection/IERC165.sol';\r\n\r\ninterface IEduxModule is IERC165 {\r\n    /// @dev for now we check for keccak('EDUX_MODULE');\r\n    /// Override this and add the type(IModuleInterface).interfaceId for corresponding module type\r\n    function supportsInterface(bytes4 interfaceID) external view returns (bool);\r\n\r\n    /// @notice Human-readable description of the module\r\n    // Can be JSON\r\n    // Can be contract source code\r\n    // Can be github link\r\n    // Can be ipfs with documentation\r\n    // etc\r\n    function getModuleMetadataURI() external view returns (string memory);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\modules\\interfaces\\IEduxModule.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/modules/interfaces/IEduxModule.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        3034
+      ],
+      "IEduxModule": [
+        21139
+      ]
+    },
+    "id": 21140,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21120,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:94"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "id": 21122,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 21140,
+        "sourceUnit": 3035,
+        "src": "61:80:94",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 21121,
+              "name": "IERC165",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3034,
+              "src": "69:7:94",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 21123,
+              "name": "IERC165",
+              "nameLocations": [
+                "170:7:94"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3034,
+              "src": "170:7:94"
+            },
+            "id": 21124,
+            "nodeType": "InheritanceSpecifier",
+            "src": "170:7:94"
+          }
+        ],
+        "canonicalName": "IEduxModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 21139,
+        "linearizedBaseContracts": [
+          21139,
+          3034
+        ],
+        "name": "IEduxModule",
+        "nameLocation": "155:11:94",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              3033
+            ],
+            "documentation": {
+              "id": 21125,
+              "nodeType": "StructuredDocumentation",
+              "src": "185:152:94",
+              "text": "@dev for now we check for keccak('EDUX_MODULE');\n Override this and add the type(IModuleInterface).interfaceId for corresponding module type"
+            },
+            "functionSelector": "01ffc9a7",
+            "id": 21132,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "352:17:94",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21127,
+                  "mutability": "mutable",
+                  "name": "interfaceID",
+                  "nameLocation": "377:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21132,
+                  "src": "370:18:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 21126,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:6:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:20:94"
+            },
+            "returnParameters": {
+              "id": 21131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21130,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21132,
+                  "src": "413:4:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 21129,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:4:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "412:6:94"
+            },
+            "scope": 21139,
+            "src": "343:76:94",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 21133,
+              "nodeType": "StructuredDocumentation",
+              "src": "427:52:94",
+              "text": "@notice Human-readable description of the module"
+            },
+            "functionSelector": "ce90d52e",
+            "id": 21138,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getModuleMetadataURI",
+            "nameLocation": "628:20:94",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21134,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "648:2:94"
+            },
+            "returnParameters": {
+              "id": 21137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21136,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21138,
+                  "src": "674:13:94",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 21135,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "674:6:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "673:15:94"
+            },
+            "scope": 21139,
+            "src": "619:70:94",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 21140,
+        "src": "145:547:94",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:659:94"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/modules/interfaces/IEduxModule.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        3034
+      ],
+      "IEduxModule": [
+        21139
+      ]
+    },
+    "id": 21140,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21120,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:94"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "id": 21122,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 21140,
+        "sourceUnit": 3035,
+        "src": "61:80:94",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 21121,
+              "name": "IERC165",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3034,
+              "src": "69:7:94",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 21123,
+              "name": "IERC165",
+              "nameLocations": [
+                "170:7:94"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3034,
+              "src": "170:7:94"
+            },
+            "id": 21124,
+            "nodeType": "InheritanceSpecifier",
+            "src": "170:7:94"
+          }
+        ],
+        "canonicalName": "IEduxModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 21139,
+        "linearizedBaseContracts": [
+          21139,
+          3034
+        ],
+        "name": "IEduxModule",
+        "nameLocation": "155:11:94",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              3033
+            ],
+            "documentation": {
+              "id": 21125,
+              "nodeType": "StructuredDocumentation",
+              "src": "185:152:94",
+              "text": "@dev for now we check for keccak('EDUX_MODULE');\n Override this and add the type(IModuleInterface).interfaceId for corresponding module type"
+            },
+            "functionSelector": "01ffc9a7",
+            "id": 21132,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "352:17:94",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21127,
+                  "mutability": "mutable",
+                  "name": "interfaceID",
+                  "nameLocation": "377:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21132,
+                  "src": "370:18:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 21126,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:6:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:20:94"
+            },
+            "returnParameters": {
+              "id": 21131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21130,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21132,
+                  "src": "413:4:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 21129,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:4:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "412:6:94"
+            },
+            "scope": 21139,
+            "src": "343:76:94",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 21133,
+              "nodeType": "StructuredDocumentation",
+              "src": "427:52:94",
+              "text": "@notice Human-readable description of the module"
+            },
+            "functionSelector": "ce90d52e",
+            "id": 21138,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getModuleMetadataURI",
+            "nameLocation": "628:20:94",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21134,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "648:2:94"
+            },
+            "returnParameters": {
+              "id": 21137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21136,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21138,
+                  "src": "674:13:94",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 21135,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "674:6:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "673:15:94"
+            },
+            "scope": 21139,
+            "src": "619:70:94",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 21140,
+        "src": "145:547:94",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:659:94"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:22.300Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "for now we check for keccak('EDUX_MODULE'); Override this and add the type(IModuleInterface).interfaceId for corresponding module type"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getModuleMetadataURI()": {
+        "notice": "Human-readable description of the module"
+      }
+    },
+    "version": 1
+  }
+}

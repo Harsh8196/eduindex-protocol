@@ -1,0 +1,368 @@
+{
+  "contractName": "IProfileTokenURI",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "mintTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mintTimestamp\",\"type\":\"uint256\"}],\"name\":\"getTokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IProfileTokenURI.sol\":\"IProfileTokenURI\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IProfileTokenURI.sol\":{\"keccak256\":\"0xc840b2f5d09cb15a5a2dfcfcccfafc126200ce0b6ceecee9a042c028817ff97b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3734df049cedb8a6f73299816a61abb658bc6ad1f6e63e226a7be1a44df49738\",\"dweb:/ipfs/QmZUXxXm8MhcXFwMSxqydoWrVwPyctAuL7cN4mYvsczeK6\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.15;\r\n\r\ninterface IProfileTokenURI {\r\n    function getTokenURI(uint256 profileId, uint256 mintTimestamp) external view returns (string memory);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IProfileTokenURI.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IProfileTokenURI.sol",
+    "exportedSymbols": {
+      "IProfileTokenURI": [
+        6543
+      ]
+    },
+    "id": 6544,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6533,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:34"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IProfileTokenURI",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6543,
+        "linearizedBaseContracts": [
+          6543
+        ],
+        "name": "IProfileTokenURI",
+        "nameLocation": "73:16:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ad22a3f2",
+            "id": 6542,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenURI",
+            "nameLocation": "106:11:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6538,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6535,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "126:9:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6542,
+                  "src": "118:17:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6534,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6537,
+                  "mutability": "mutable",
+                  "name": "mintTimestamp",
+                  "nameLocation": "145:13:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6542,
+                  "src": "137:21:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6536,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "137:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "117:42:34"
+            },
+            "returnParameters": {
+              "id": 6541,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6540,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6542,
+                  "src": "183:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6539,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:6:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "182:15:34"
+            },
+            "scope": 6543,
+            "src": "97:101:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6544,
+        "src": "63:138:34",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:166:34"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IProfileTokenURI.sol",
+    "exportedSymbols": {
+      "IProfileTokenURI": [
+        6543
+      ]
+    },
+    "id": 6544,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6533,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:34"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IProfileTokenURI",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6543,
+        "linearizedBaseContracts": [
+          6543
+        ],
+        "name": "IProfileTokenURI",
+        "nameLocation": "73:16:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ad22a3f2",
+            "id": 6542,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenURI",
+            "nameLocation": "106:11:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6538,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6535,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "126:9:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6542,
+                  "src": "118:17:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6534,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6537,
+                  "mutability": "mutable",
+                  "name": "mintTimestamp",
+                  "nameLocation": "145:13:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6542,
+                  "src": "137:21:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6536,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "137:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "117:42:34"
+            },
+            "returnParameters": {
+              "id": 6541,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6540,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6542,
+                  "src": "183:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6539,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:6:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "182:15:34"
+            },
+            "scope": 6543,
+            "src": "97:101:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6544,
+        "src": "63:138:34",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:166:34"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.400Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

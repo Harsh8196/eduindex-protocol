@@ -1,0 +1,2035 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "publicationActedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationActedId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actorProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "actionModuleAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "actionModuleData",
+						"type": "bytes"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct Types.PublicationActionParams",
+				"name": "publicationActionParams",
+				"type": "tuple"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "actionModuleReturnData",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "Acted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "BaseInitialized",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "publicationCollectedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationCollectedId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collectorProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "currency",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "collectModuleAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "collectModuleData",
+						"type": "bytes"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct Types.PublicationCollectParams",
+				"name": "publicationCollectParams",
+				"type": "tuple"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "collectModuleReturnData",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "Collected",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "certificateModule",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "collectModule",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "collectModulesInitData",
+						"type": "bytes"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct Types.CourseParams",
+				"name": "courseParams",
+				"type": "tuple"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "collectModulesInitReturnData",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "CourseCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "caller",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "oldEmergencyAdmin",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newEmergencyAdmin",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "EmergencyAdminSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "caller",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "prevGovernance",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newGovernance",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "GovernanceSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "actionModules",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "actionModulesInitDatas",
+						"type": "bytes[]"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct Types.LessonParams",
+				"name": "lessonParams",
+				"type": "tuple"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes[]",
+				"name": "actionModulesInitReturnDatas",
+				"type": "bytes[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "LessonCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "creator",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ProfileCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileCreator",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "bool",
+				"name": "whitelisted",
+				"type": "bool"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ProfileCreatorWhitelisted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "metadata",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ProfileMetadataSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "metadataURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct Types.ProgressParams",
+				"name": "progressParams",
+				"type": "tuple"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ProgressCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct Types.RatingParams",
+				"name": "ratingParams",
+				"type": "tuple"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "transactionExecutor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "RatingCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "caller",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "enum Types.ProtocolState",
+				"name": "prevState",
+				"type": "uint8"
+			},
+			{
+				"indexed": true,
+				"internalType": "enum Types.ProtocolState",
+				"name": "newState",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "StateSet",
+		"type": "event"
+	},
+    {
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "moduleRegistry",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "newGovernance",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "InitParamsInvalid",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "InvalidOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "InvalidParameter",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NonERC721ReceiverImplementer",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotAllowed",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotGovernance",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotOwnerOrApproved",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotProfileOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotWhitelisted",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Paused",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ProtocolFeeIsNotCorrect",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "PublishingPaused",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "TokenDoesNotExist",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "approved",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "approved",
+				"type": "bool"
+			}
+		],
+		"name": "ApprovalForAll",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "fromTokenId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "toTokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "BatchMetadataUpdate",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "prevTreasuryFee",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "newTreasuryFee",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "currency",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "TreasuryFeeSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint16",
+				"name": "prevTreasuryFee",
+				"type": "uint16"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint16",
+				"name": "newTreasuryFee",
+				"type": "uint16"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "TreasuryFeeSetBPS",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "prevTreasury",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newTreasury",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "TreasurySet",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "publicationActedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationActedId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actorProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "actionModuleAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "actionModuleData",
+						"type": "bytes"
+					}
+				],
+				"internalType": "struct Types.PublicationActionParams",
+				"name": "publicationActionParams",
+				"type": "tuple"
+			}
+		],
+		"name": "act",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "metadataURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Types.ProgressParams[]",
+				"name": "progressParams",
+				"type": "tuple[]"
+			}
+		],
+		"name": "bulkprogress",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "burn",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "publicationCollectedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationCollectedId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collectorProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "currency",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "collectModuleAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "collectModuleData",
+						"type": "bytes"
+					}
+				],
+				"internalType": "struct Types.PublicationCollectParams",
+				"name": "publicationCollectParams",
+				"type": "tuple"
+			}
+		],
+		"name": "collect",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pointedProfileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pointedPublication",
+				"type": "uint256"
+			}
+		],
+		"name": "completeCourse",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "certificateModule",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "collectModule",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "collectModulesInitData",
+						"type": "bytes"
+					}
+				],
+				"internalType": "struct Types.CourseParams",
+				"name": "courseParams",
+				"type": "tuple"
+			}
+		],
+		"name": "course",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"internalType": "struct Types.CreateProfileParams",
+				"name": "createProfileParams",
+				"type": "tuple"
+			}
+		],
+		"name": "createProfile",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "exists",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "getApproved",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			}
+		],
+		"name": "getContentURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getGovernance",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getModuleRegistry",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			}
+		],
+		"name": "getProfile",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "pubCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "metadataURI",
+						"type": "string"
+					}
+				],
+				"internalType": "struct Types.ProfileMemory",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getProfileTokenURIContract",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			}
+		],
+		"name": "getPublication",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalLesson",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Types.PublicationType",
+						"name": "pubType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rootProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rootPubId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "collectModule",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "certificateModule",
+						"type": "address"
+					}
+				],
+				"internalType": "struct Types.PublicationMemory",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			}
+		],
+		"name": "getPublicationType",
+		"outputs": [
+			{
+				"internalType": "enum Types.PublicationType",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getState",
+		"outputs": [
+			{
+				"internalType": "enum Types.ProtocolState",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTreasury",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTreasuryData",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint16",
+				"name": "",
+				"type": "uint16"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "currency",
+				"type": "address"
+			}
+		],
+		"name": "getTreasuryFee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTreasuryFeeBPS",
+		"outputs": [
+			{
+				"internalType": "uint16",
+				"name": "",
+				"type": "uint16"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "module",
+				"type": "address"
+			}
+		],
+		"name": "isActionModuleEnabledInPublication",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			}
+		],
+		"name": "isApprovedForAll",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pointedProfile",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pointedPubId",
+				"type": "uint256"
+			}
+		],
+		"name": "isCourseCompleted",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pointedPubId",
+				"type": "uint256"
+			}
+		],
+		"name": "isLessonCompleted",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileCreator",
+				"type": "address"
+			}
+		],
+		"name": "isProfileCreatorWhitelisted",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "actionModules",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "actionModulesInitDatas",
+						"type": "bytes[]"
+					}
+				],
+				"internalType": "struct Types.LessonParams",
+				"name": "lessonParams",
+				"type": "tuple"
+			}
+		],
+		"name": "lesson",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "mintTimestampOf",
+		"outputs": [
+			{
+				"internalType": "uint96",
+				"name": "",
+				"type": "uint96"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "ownerOf",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "contentURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointedPubId",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Types.RatingParams",
+				"name": "ratingParams",
+				"type": "tuple"
+			}
+		],
+		"name": "rating",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "safeTransferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_data",
+				"type": "bytes"
+			}
+		],
+		"name": "safeTransferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "approved",
+				"type": "bool"
+			}
+		],
+		"name": "setApprovalForAll",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newEmergencyAdmin",
+				"type": "address"
+			}
+		],
+		"name": "setEmergencyAdmin",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newGovernance",
+				"type": "address"
+			}
+		],
+		"name": "setGovernance",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "metadataURI",
+				"type": "string"
+			}
+		],
+		"name": "setProfileMetadataURI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileTokenURIContract",
+				"type": "address"
+			}
+		],
+		"name": "setProfileTokenURIContract",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "enum Types.ProtocolState",
+				"name": "newState",
+				"type": "uint8"
+			}
+		],
+		"name": "setState",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newTreasury",
+				"type": "address"
+			}
+		],
+		"name": "setTreasury",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "newTreasuryFee",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "currency",
+				"type": "address"
+			}
+		],
+		"name": "setTreasuryFee",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "newTreasuryFee",
+				"type": "uint16"
+			}
+		],
+		"name": "setTreasuryFeeBPS",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes4",
+				"name": "interfaceId",
+				"type": "bytes4"
+			}
+		],
+		"name": "supportsInterface",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenDataOf",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint96",
+						"name": "mintTimestamp",
+						"type": "uint96"
+					}
+				],
+				"internalType": "struct Types.TokenData",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "transferProfile",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileCreator",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "whitelist",
+				"type": "bool"
+			}
+		],
+		"name": "whitelistProfileCreator",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

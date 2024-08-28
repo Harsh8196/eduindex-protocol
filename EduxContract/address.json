@@ -1,0 +1,37 @@
+{
+    "OpenCampusCodexTest": {
+      "testnet": true,
+      "chainId": 656476,
+      "network": "opencampus",
+      "EduxHub": "0x51835f2c023E41F093d6D36fe74a159bfaf5f667",
+      "ModuleRegistry": "0x9E7C0129e9C8C76270ba4C4fc39BcD3aC4Ccb301",
+      "ProfileTokenURI": "0xFcd476DBfb0932D5cEF6C137811AbC41B2EeFd57",
+      "Treasury":"0x8eF170a969Bd664Cd09d21F9fAB3F84329183BaB",
+      "Modules": {
+        "collect":[
+            {
+                "name":"SimpleFeeCollectModule",
+                "address":"0xb6FfaeFc397e9739385e464954434aD39f534332"
+            }
+        ],
+        "action":[
+            {
+                "name":"RewardActionModule",
+                "address":"0xbAFaC84cFdC477C55e2a134f1D7e7873c79394a7"
+            }
+        ],
+        "certificate":[
+            {
+                "name":"BaseNFTCertificateModule",
+                "address":"0xd30fb36Db7D3E85D2A57E69B1e90b311A94A6716"
+            }
+        ]
+      },
+      "currencies":[
+        {
+            "erc20token":"WEDU",
+            "address":"0xbe52762D8D68d183C7Cf4BB3e2aaa312e47C7084"
+        }
+      ]
+    }
+}

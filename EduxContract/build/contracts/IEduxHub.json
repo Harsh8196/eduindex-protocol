@@ -1,0 +1,1467 @@
+{
+  "contractName": "IEduxHub",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "publicationActedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "publicationActedId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "actorProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "actionModuleAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "actionModuleData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Types.PublicationActionParams",
+          "name": "publicationActionParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "act",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "profileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "metadataURI",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedPubId",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Types.ProgressParams[]",
+          "name": "progressParams",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "bulkprogress",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "publicationCollectedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "publicationCollectedId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "collectorProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "currency",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "collectModuleAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "collectModuleData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Types.PublicationCollectParams",
+          "name": "publicationCollectParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "collect",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedProfileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedPublication",
+          "type": "uint256"
+        }
+      ],
+      "name": "completeCourse",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "profileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "contentURI",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "certificateModule",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "collectModule",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "collectModulesInitData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Types.CourseParams",
+          "name": "courseParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "course",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct Types.CreateProfileParams",
+          "name": "createProfileParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "createProfile",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getContentURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getGovernance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getModuleRegistry",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProfile",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "pubCount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "metadataURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct Types.ProfileMemory",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getProfileTokenURIContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPublication",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "pointedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedPubId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalLesson",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "contentURI",
+              "type": "string"
+            },
+            {
+              "internalType": "enum Types.PublicationType",
+              "name": "pubType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "rootProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "rootPubId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "collectModule",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "certificateModule",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct Types.PublicationMemory",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPublicationType",
+      "outputs": [
+        {
+          "internalType": "enum Types.PublicationType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getState",
+      "outputs": [
+        {
+          "internalType": "enum Types.ProtocolState",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasury",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasuryData",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "currency",
+          "type": "address"
+        }
+      ],
+      "name": "getTreasuryFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasuryFeeBPS",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "isActionModuleEnabledInPublication",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedProfile",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedPubId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isCourseCompleted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedPubId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isLessonCompleted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "profileCreator",
+          "type": "address"
+        }
+      ],
+      "name": "isProfileCreatorWhitelisted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "profileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "contentURI",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedPubId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "actionModules",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bytes[]",
+              "name": "actionModulesInitDatas",
+              "type": "bytes[]"
+            }
+          ],
+          "internalType": "struct Types.LessonParams",
+          "name": "lessonParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "lesson",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "profileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "contentURI",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pointedPubId",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Types.RatingParams",
+          "name": "ratingParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "rating",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newEmergencyAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "setEmergencyAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "setGovernance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "metadataURI",
+          "type": "string"
+        }
+      ],
+      "name": "setProfileMetadataURI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "profileTokenURIContract",
+          "type": "address"
+        }
+      ],
+      "name": "setProfileTokenURIContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum Types.ProtocolState",
+          "name": "newState",
+          "type": "uint8"
+        }
+      ],
+      "name": "setState",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newTreasury",
+          "type": "address"
+        }
+      ],
+      "name": "setTreasury",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newTreasuryFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "currency",
+          "type": "address"
+        }
+      ],
+      "name": "setTreasuryFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "newTreasuryFee",
+          "type": "uint16"
+        }
+      ],
+      "name": "setTreasuryFeeBPS",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "profileCreator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "whitelist",
+          "type": "bool"
+        }
+      ],
+      "name": "whitelistProfileCreator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"publicationActedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"publicationActedId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"actorProfileId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"actionModuleAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"actionModuleData\",\"type\":\"bytes\"}],\"internalType\":\"struct Types.PublicationActionParams\",\"name\":\"publicationActionParams\",\"type\":\"tuple\"}],\"name\":\"act\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pointedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPubId\",\"type\":\"uint256\"}],\"internalType\":\"struct Types.ProgressParams[]\",\"name\":\"progressParams\",\"type\":\"tuple[]\"}],\"name\":\"bulkprogress\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"publicationCollectedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"publicationCollectedId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"collectorProfileId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"currency\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"collectModuleAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"collectModuleData\",\"type\":\"bytes\"}],\"internalType\":\"struct Types.PublicationCollectParams\",\"name\":\"publicationCollectParams\",\"type\":\"tuple\"}],\"name\":\"collect\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPublication\",\"type\":\"uint256\"}],\"name\":\"completeCourse\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"contentURI\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"certificateModule\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"collectModule\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"collectModulesInitData\",\"type\":\"bytes\"}],\"internalType\":\"struct Types.CourseParams\",\"name\":\"courseParams\",\"type\":\"tuple\"}],\"name\":\"course\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"internalType\":\"struct Types.CreateProfileParams\",\"name\":\"createProfileParams\",\"type\":\"tuple\"}],\"name\":\"createProfile\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pubId\",\"type\":\"uint256\"}],\"name\":\"getContentURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGovernance\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getModuleRegistry\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"}],\"name\":\"getProfile\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"pubCount\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"internalType\":\"struct Types.ProfileMemory\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getProfileTokenURIContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pubId\",\"type\":\"uint256\"}],\"name\":\"getPublication\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"pointedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPubId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalLesson\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"contentURI\",\"type\":\"string\"},{\"internalType\":\"enum Types.PublicationType\",\"name\":\"pubType\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"rootProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"rootPubId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"collectModule\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"certificateModule\",\"type\":\"address\"}],\"internalType\":\"struct Types.PublicationMemory\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pubId\",\"type\":\"uint256\"}],\"name\":\"getPublicationType\",\"outputs\":[{\"internalType\":\"enum Types.PublicationType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getState\",\"outputs\":[{\"internalType\":\"enum Types.ProtocolState\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTreasury\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTreasuryData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"currency\",\"type\":\"address\"}],\"name\":\"getTreasuryFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTreasuryFeeBPS\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pubId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"module\",\"type\":\"address\"}],\"name\":\"isActionModuleEnabledInPublication\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedProfile\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPubId\",\"type\":\"uint256\"}],\"name\":\"isCourseCompleted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPubId\",\"type\":\"uint256\"}],\"name\":\"isLessonCompleted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"profileCreator\",\"type\":\"address\"}],\"name\":\"isProfileCreatorWhitelisted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"contentURI\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pointedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPubId\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"actionModules\",\"type\":\"address[]\"},{\"internalType\":\"bytes[]\",\"name\":\"actionModulesInitDatas\",\"type\":\"bytes[]\"}],\"internalType\":\"struct Types.LessonParams\",\"name\":\"lessonParams\",\"type\":\"tuple\"}],\"name\":\"lesson\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"contentURI\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pointedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPubId\",\"type\":\"uint256\"}],\"internalType\":\"struct Types.RatingParams\",\"name\":\"ratingParams\",\"type\":\"tuple\"}],\"name\":\"rating\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newEmergencyAdmin\",\"type\":\"address\"}],\"name\":\"setEmergencyAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newGovernance\",\"type\":\"address\"}],\"name\":\"setGovernance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"name\":\"setProfileMetadataURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"profileTokenURIContract\",\"type\":\"address\"}],\"name\":\"setProfileTokenURIContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Types.ProtocolState\",\"name\":\"newState\",\"type\":\"uint8\"}],\"name\":\"setState\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newTreasury\",\"type\":\"address\"}],\"name\":\"setTreasury\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newTreasuryFee\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"currency\",\"type\":\"address\"}],\"name\":\"setTreasuryFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"newTreasuryFee\",\"type\":\"uint16\"}],\"name\":\"setTreasuryFeeBPS\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"profileCreator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"whitelist\",\"type\":\"bool\"}],\"name\":\"whitelistProfileCreator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"act((uint256,uint256,uint256,address,bytes))\":{\"params\":{\"publicationActionParams\":\"A PublicationActionParams struct containing the parameters.\"},\"returns\":{\"_0\":\"bytes Arbitrary data the action module returns.\"}},\"bulkprogress((uint256,string,uint256,uint256)[])\":{\"params\":{\"progressParams\":\"A ProgressParams struct containing the needed parameters.\"},\"returns\":{\"_0\":\"uint256 An integer representing the progress's publication ID.\"}},\"collect((uint256,uint256,uint256,address,address,bytes))\":{\"params\":{\"publicationCollectParams\":\"A PublicationCollectParams struct containing the parameters.\"},\"returns\":{\"_0\":\"bytes Arbitrary data the action module returns.\"}},\"completeCourse(uint256,uint256,uint256)\":{\"params\":{\"pointedProfileId\":\"The token ID of the publication's profile.\",\"pointedPublication\":\"The course publication id.\",\"profileId\":\"The token ID of the profile.\"},\"returns\":{\"_0\":\"uint256 TokenId for received NFT certificate\"}},\"course((uint256,string,address,address,bytes))\":{\"params\":{\"courseParams\":\"A CourseParams struct containing the needed parameters.\"},\"returns\":{\"_0\":\"uint256 An integer representing the course's publication ID.\"}},\"createProfile((address))\":{\"custom:permissions\":\"Any whitelisted profile creator.\",\"params\":{\"createProfileParams\":\"A CreateProfileParams struct containing the needed params.\"}},\"getContentURI(uint256,uint256)\":{\"params\":{\"profileId\":\"The token ID of the profile that published the publication to query.\",\"pubId\":\"The publication ID of the publication to query.\"},\"returns\":{\"_0\":\"string The URI associated with a given publication.\"}},\"getGovernance()\":{\"returns\":{\"_0\":\"address The address of the currently configured governance.\"}},\"getModuleRegistry()\":{\"returns\":{\"_0\":\"address The address of the Module Registry contract.\"}},\"getProfile(uint256)\":{\"params\":{\"profileId\":\"The token ID of the profile to query.\"},\"returns\":{\"_0\":\"Profile The profile struct of the given profile.\"}},\"getProfileTokenURIContract()\":{\"returns\":{\"_0\":\"address The profile token URI contract.\"}},\"getPublication(uint256,uint256)\":{\"params\":{\"profileId\":\"The token ID of the profile that published the publication to query.\",\"pubId\":\"The publication ID of the publication to query.\"},\"returns\":{\"_0\":\"Publication The publication struct associated with the queried publication.\"}},\"getPublicationType(uint256,uint256)\":{\"params\":{\"profileId\":\"The token ID of the profile that published the publication to query.\",\"pubId\":\"The publication ID of the publication to query.\"},\"returns\":{\"_0\":\"PublicationType The publication type of the queried publication.\"}},\"getState()\":{\"custom:permissions\":\"Anyone.\",\"returns\":{\"_0\":\"Types.ProtocolState The state currently set in the protocol.\"}},\"getTreasury()\":{\"returns\":{\"_0\":\"address The treasury address.\"}},\"getTreasuryData()\":{\"returns\":{\"_0\":\"tuple First, the treasury address, second, the treasury fee.\"}},\"getTreasuryFee(address)\":{\"params\":{\"currency\":\"the address of the currency.\"},\"returns\":{\"_0\":\"uint16 The treasury fee.*\"}},\"getTreasuryFeeBPS()\":{\"returns\":{\"_0\":\"uint16 The treasury fee.*\"}},\"isActionModuleEnabledInPublication(uint256,uint256,address)\":{\"params\":{\"module\":\"The address of the Action Module to query.\",\"profileId\":\"The token ID of the profile that published the publication to query.\",\"pubId\":\"The publication ID of the publication to query.\"},\"returns\":{\"_0\":\"bool True if the Action Module is enabled for the queried publication, false if not.\"}},\"isCourseCompleted(uint256,uint256,uint256)\":{\"params\":{\"pointedProfile\":\"The token ID of the publication's profile to query.\",\"pointedPubId\":\"The course publication id to query.\",\"profileId\":\"The token ID of the profile to query.\"},\"returns\":{\"_0\":\"true if course is completed by profile.\"}},\"isLessonCompleted(uint256,uint256)\":{\"params\":{\"pointedPubId\":\"The lesson publication id to query.\",\"profileId\":\"The token ID of the profile to query.\"},\"returns\":{\"_0\":\"true if lesson is completed by profile.\"}},\"isProfileCreatorWhitelisted(address)\":{\"params\":{\"profileCreator\":\"The address of the profile creator to check.\"},\"returns\":{\"_0\":\"bool True if the profile creator is whitelisted, false otherwise.\"}},\"lesson((uint256,string,uint256,uint256,address[],bytes[]))\":{\"params\":{\"lessonParams\":\"A LessonParams struct containing the needed parameters.\"},\"returns\":{\"_0\":\"uint256 An integer representing the lesson's publication ID.\"}},\"rating((uint256,string,uint256,uint256))\":{\"params\":{\"ratingParams\":\"A RatingParams struct containing the necessary parameters.\"},\"returns\":{\"_0\":\"uint256 An integer representing the rating's publication ID.\"}},\"setEmergencyAdmin(address)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"newEmergencyAdmin\":\"The new emergency admin address to set.\"}},\"setGovernance(address)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"newGovernance\":\"The new governance address to set.\"}},\"setProfileMetadataURI(uint256,string)\":{\"custom:permissions\":\"Profile Owner.\",\"params\":{\"metadataURI\":\"The metadata URI to set for the given profile.\",\"profileId\":\"The token ID of the profile to set the metadata URI for.\"}},\"setProfileTokenURIContract(address)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"profileTokenURIContract\":\"The profile token URI contract to set.\"}},\"setState(uint8)\":{\"custom:permissions\":\"Governance or Emergency Admin. Emergency Admin can only restrict more.\",\"params\":{\"newState\":\"The state to set. It can be one of the following:  - Unpaused: The protocol is fully operational.  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.  - Paused: The protocol is paused for all operations.\"}},\"setTreasury(address)\":{\"custom:permissions\":\"Governance\",\"params\":{\"newTreasury\":\"The new treasury address to set.\"}},\"setTreasuryFee(uint256,address)\":{\"custom:permissions\":\"Governance\",\"params\":{\"currency\":\"The currency for the fee to set\",\"newTreasuryFee\":\"The new treasury fee to set.\"}},\"setTreasuryFeeBPS(uint16)\":{\"custom:permissions\":\"Governance\",\"params\":{\"newTreasuryFee\":\"The new treasury fee to set.\"}},\"whitelistProfileCreator(address,bool)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"profileCreator\":\"The profile creator address to add or remove from the whitelist.\",\"whitelist\":\"Whether or not the profile creator should be whitelisted.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"act((uint256,uint256,uint256,address,bytes))\":{\"notice\":\"Acts on a given publication with the specified parameters. You can act on a lesson publication (if it has at least one action module initialized).\"},\"bulkprogress((uint256,string,uint256,uint256)[])\":{\"notice\":\"Publishes a progress of the lesson publication. Progress is a type of reference publication that points to lesson publication You can only submit the progress on the lesson once.\"},\"collect((uint256,uint256,uint256,address,address,bytes))\":{\"notice\":\"Collect on a given publication with the specified parameters. You can collect course publication.\"},\"completeCourse(uint256,uint256,uint256)\":{\"notice\":\"completeCourse for completed course with the specified parameters.\"},\"course((uint256,string,address,address,bytes))\":{\"notice\":\"Publishes a course. Course is the most basic publication type, and can be used to publish any kind of content. Course can have these types of modules initialized:  - Collect modules: Only One collect module based for collection of the course (Collecting by paying fee, or token gated etc)\"},\"createProfile((address))\":{\"notice\":\"Creates a profile with the specified parameters, minting a Profile NFT to the given recipient.\"},\"getContentURI(uint256,uint256)\":{\"notice\":\"Returns the URI associated with a given publication. This is used to store the publication's metadata, e.g.: content, images, etc.\"},\"getGovernance()\":{\"notice\":\"Returns the currently configured governance address.\"},\"getModuleRegistry()\":{\"notice\":\"Returns the address of the registry that stores all modules that are used by the Edux Protocol.\"},\"getProfile(uint256)\":{\"notice\":\"Returns the full profile struct associated with a given profile token ID.\"},\"getProfileTokenURIContract()\":{\"notice\":\"Gets the profile token URI contract.\"},\"getPublication(uint256,uint256)\":{\"notice\":\"Returns the full publication struct for a given publication.\"},\"getPublicationType(uint256,uint256)\":{\"notice\":\"Returns the type of a given publication. The type can be one of the following (see PublicationType enum): - Nonexistent - Course - Lesson - Rating - Progress\"},\"getState()\":{\"notice\":\"Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an unpaused state.\"},\"getTreasury()\":{\"notice\":\"Returns the treasury address.\"},\"getTreasuryData()\":{\"notice\":\"Returns the treasury address and treasury fee in a single call.\"},\"getTreasuryFee(address)\":{\"notice\":\"Returns the treasury fee.\"},\"getTreasuryFeeBPS()\":{\"notice\":\"Returns the treasury fee.\"},\"isActionModuleEnabledInPublication(uint256,uint256,address)\":{\"notice\":\"Returns wether a given Action Module is enabled for a given publication.\"},\"isCourseCompleted(uint256,uint256,uint256)\":{\"notice\":\"Returns true if course is completed by profile on given course publication.\"},\"isLessonCompleted(uint256,uint256)\":{\"notice\":\"Returns true if lesson is completed by profile on given lesson publication.\"},\"isProfileCreatorWhitelisted(address)\":{\"notice\":\"Returns whether or not a profile creator is whitelisted.\"},\"lesson((uint256,string,uint256,uint256,address[],bytes[]))\":{\"notice\":\"Publishes a lesson on the given course publication. Lesson is a type of reference publication that points to another publication. Lesson can have these types of modules initialized:  - Action modules: any number of publication actions (e.g. token rewards, milestione base reward etc.)\"},\"rating((uint256,string,uint256,uint256))\":{\"notice\":\"Publishes a rating of the given course publication. Rating is a type of reference publication that points to another publication course Rating don't have any modules initialized. You can only rate the course once.\"},\"setEmergencyAdmin(address)\":{\"notice\":\"Sets the emergency admin, which is a permissioned role able to set the protocol state.\"},\"setGovernance(address)\":{\"notice\":\"Sets the privileged governance role.\"},\"setProfileMetadataURI(uint256,string)\":{\"notice\":\"Sets the metadata URI for the given profile.\"},\"setProfileTokenURIContract(address)\":{\"notice\":\"Sets the profile token URI contract.\"},\"setState(uint8)\":{\"notice\":\"Sets the protocol state to either a global pause, a publishing pause or an unpaused state.\"},\"setTreasury(address)\":{\"notice\":\"Sets the treasury address.\"},\"setTreasuryFee(uint256,address)\":{\"notice\":\"Sets the treasury fee.\"},\"setTreasuryFeeBPS(uint16)\":{\"notice\":\"Sets the treasury fee BPS.\"},\"whitelistProfileCreator(address,bool)\":{\"notice\":\"Adds or removes a profile creator from the whitelist.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IEduxHub.sol\":\"IEduxHub\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IEduxGovernable.sol\":{\"keccak256\":\"0x031fff189b69fdb25fd8f87ecd72009589681def4dbe5725bf8f4ff7182970cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ea198bc4c3dacd5a024e6c72269f80cf3059ab4565faac1940ae2f705c9d8bb\",\"dweb:/ipfs/QmVxLgPyg3wbssJ8kqA9vRBxaudxdm4SvC8UtDeYQTd2A2\"]},\"project:/contracts/interfaces/IEduxHub.sol\":{\"keccak256\":\"0xb36656dba7510b1498a3889fa511435b6fe770765899fb5e3f5e7a4854018397\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4605b850fda232c635aa18505773fd56c7b3b505bd1955fc521ac88d8f946da5\",\"dweb:/ipfs/QmQ8BjtWMng7MU9AjnZKem8jaUWorZY5XwQFPckwTFRWRB\"]},\"project:/contracts/interfaces/IEduxProtocol.sol\":{\"keccak256\":\"0x61fbdc89e501c8cb156653a25d52d2ea308c388c790f7f24801a729d5135c683\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0b60089f057abadc4fb777009bddae7b37e038e65fd3f843c71a690cb306be18\",\"dweb:/ipfs/Qmb6tAaQCTFMfmhSMLkEaN4Wsk1rHsvUhd4VHujUWLyvhD\"]},\"project:/contracts/libraries/constants/Types.sol\":{\"keccak256\":\"0x30fab63816f02dde57845d72241843eb6936f4fb968a84e1087cba37352f0270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c09adaebf74fd2c4d14591ec3baeef610edc70e0e8e73e5ae1058df1fddc846\",\"dweb:/ipfs/QmaZiF5nx1Ycq2vga3RkNxsujyQPyYBTwr5VkrwEfmHAQf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nimport {IEduxProtocol} from './IEduxProtocol.sol';\r\nimport {IEduxGovernable} from './IEduxGovernable.sol';\r\n\r\ninterface IEduxHub is\r\n    IEduxProtocol,\r\n    IEduxGovernable\r\n{}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IEduxHub.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IEduxHub.sol",
+    "exportedSymbols": {
+      "IEduxGovernable": [
+        6257
+      ],
+      "IEduxHub": [
+        6268
+      ],
+      "IEduxProtocol": [
+        6440
+      ]
+    },
+    "id": 6269,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6259,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:30"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IEduxProtocol.sol",
+        "file": "./IEduxProtocol.sol",
+        "id": 6261,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6269,
+        "sourceUnit": 6441,
+        "src": "63:50:30",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6260,
+              "name": "IEduxProtocol",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 6440,
+              "src": "71:13:30",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IEduxGovernable.sol",
+        "file": "./IEduxGovernable.sol",
+        "id": 6263,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6269,
+        "sourceUnit": 6258,
+        "src": "115:54:30",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6262,
+              "name": "IEduxGovernable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 6257,
+              "src": "123:15:30",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6264,
+              "name": "IEduxProtocol",
+              "nameLocations": [
+                "200:13:30"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6440,
+              "src": "200:13:30"
+            },
+            "id": 6265,
+            "nodeType": "InheritanceSpecifier",
+            "src": "200:13:30"
+          },
+          {
+            "baseName": {
+              "id": 6266,
+              "name": "IEduxGovernable",
+              "nameLocations": [
+                "220:15:30"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6257,
+              "src": "220:15:30"
+            },
+            "id": 6267,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:15:30"
+          }
+        ],
+        "canonicalName": "IEduxHub",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6268,
+        "linearizedBaseContracts": [
+          6268,
+          6257,
+          6440
+        ],
+        "name": "IEduxHub",
+        "nameLocation": "183:8:30",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6269,
+        "src": "173:66:30",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:204:30"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IEduxHub.sol",
+    "exportedSymbols": {
+      "IEduxGovernable": [
+        6257
+      ],
+      "IEduxHub": [
+        6268
+      ],
+      "IEduxProtocol": [
+        6440
+      ]
+    },
+    "id": 6269,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6259,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:30"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IEduxProtocol.sol",
+        "file": "./IEduxProtocol.sol",
+        "id": 6261,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6269,
+        "sourceUnit": 6441,
+        "src": "63:50:30",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6260,
+              "name": "IEduxProtocol",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 6440,
+              "src": "71:13:30",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IEduxGovernable.sol",
+        "file": "./IEduxGovernable.sol",
+        "id": 6263,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6269,
+        "sourceUnit": 6258,
+        "src": "115:54:30",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6262,
+              "name": "IEduxGovernable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 6257,
+              "src": "123:15:30",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6264,
+              "name": "IEduxProtocol",
+              "nameLocations": [
+                "200:13:30"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6440,
+              "src": "200:13:30"
+            },
+            "id": 6265,
+            "nodeType": "InheritanceSpecifier",
+            "src": "200:13:30"
+          },
+          {
+            "baseName": {
+              "id": 6266,
+              "name": "IEduxGovernable",
+              "nameLocations": [
+                "220:15:30"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6257,
+              "src": "220:15:30"
+            },
+            "id": 6267,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:15:30"
+          }
+        ],
+        "canonicalName": "IEduxHub",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6268,
+        "linearizedBaseContracts": [
+          6268,
+          6257,
+          6440
+        ],
+        "name": "IEduxHub",
+        "nameLocation": "183:8:30",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6269,
+        "src": "173:66:30",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:204:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.385Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "act((uint256,uint256,uint256,address,bytes))": {
+        "params": {
+          "publicationActionParams": "A PublicationActionParams struct containing the parameters."
+        },
+        "returns": {
+          "_0": "bytes Arbitrary data the action module returns."
+        }
+      },
+      "bulkprogress((uint256,string,uint256,uint256)[])": {
+        "params": {
+          "progressParams": "A ProgressParams struct containing the needed parameters."
+        },
+        "returns": {
+          "_0": "uint256 An integer representing the progress's publication ID."
+        }
+      },
+      "collect((uint256,uint256,uint256,address,address,bytes))": {
+        "params": {
+          "publicationCollectParams": "A PublicationCollectParams struct containing the parameters."
+        },
+        "returns": {
+          "_0": "bytes Arbitrary data the action module returns."
+        }
+      },
+      "completeCourse(uint256,uint256,uint256)": {
+        "params": {
+          "pointedProfileId": "The token ID of the publication's profile.",
+          "pointedPublication": "The course publication id.",
+          "profileId": "The token ID of the profile."
+        },
+        "returns": {
+          "_0": "uint256 TokenId for received NFT certificate"
+        }
+      },
+      "course((uint256,string,address,address,bytes))": {
+        "params": {
+          "courseParams": "A CourseParams struct containing the needed parameters."
+        },
+        "returns": {
+          "_0": "uint256 An integer representing the course's publication ID."
+        }
+      },
+      "createProfile((address))": {
+        "custom:permissions": "Any whitelisted profile creator.",
+        "params": {
+          "createProfileParams": "A CreateProfileParams struct containing the needed params."
+        }
+      },
+      "getContentURI(uint256,uint256)": {
+        "params": {
+          "profileId": "The token ID of the profile that published the publication to query.",
+          "pubId": "The publication ID of the publication to query."
+        },
+        "returns": {
+          "_0": "string The URI associated with a given publication."
+        }
+      },
+      "getGovernance()": {
+        "returns": {
+          "_0": "address The address of the currently configured governance."
+        }
+      },
+      "getModuleRegistry()": {
+        "returns": {
+          "_0": "address The address of the Module Registry contract."
+        }
+      },
+      "getProfile(uint256)": {
+        "params": {
+          "profileId": "The token ID of the profile to query."
+        },
+        "returns": {
+          "_0": "Profile The profile struct of the given profile."
+        }
+      },
+      "getProfileTokenURIContract()": {
+        "returns": {
+          "_0": "address The profile token URI contract."
+        }
+      },
+      "getPublication(uint256,uint256)": {
+        "params": {
+          "profileId": "The token ID of the profile that published the publication to query.",
+          "pubId": "The publication ID of the publication to query."
+        },
+        "returns": {
+          "_0": "Publication The publication struct associated with the queried publication."
+        }
+      },
+      "getPublicationType(uint256,uint256)": {
+        "params": {
+          "profileId": "The token ID of the profile that published the publication to query.",
+          "pubId": "The publication ID of the publication to query."
+        },
+        "returns": {
+          "_0": "PublicationType The publication type of the queried publication."
+        }
+      },
+      "getState()": {
+        "custom:permissions": "Anyone.",
+        "returns": {
+          "_0": "Types.ProtocolState The state currently set in the protocol."
+        }
+      },
+      "getTreasury()": {
+        "returns": {
+          "_0": "address The treasury address."
+        }
+      },
+      "getTreasuryData()": {
+        "returns": {
+          "_0": "tuple First, the treasury address, second, the treasury fee."
+        }
+      },
+      "getTreasuryFee(address)": {
+        "params": {
+          "currency": "the address of the currency."
+        },
+        "returns": {
+          "_0": "uint16 The treasury fee.*"
+        }
+      },
+      "getTreasuryFeeBPS()": {
+        "returns": {
+          "_0": "uint16 The treasury fee.*"
+        }
+      },
+      "isActionModuleEnabledInPublication(uint256,uint256,address)": {
+        "params": {
+          "module": "The address of the Action Module to query.",
+          "profileId": "The token ID of the profile that published the publication to query.",
+          "pubId": "The publication ID of the publication to query."
+        },
+        "returns": {
+          "_0": "bool True if the Action Module is enabled for the queried publication, false if not."
+        }
+      },
+      "isCourseCompleted(uint256,uint256,uint256)": {
+        "params": {
+          "pointedProfile": "The token ID of the publication's profile to query.",
+          "pointedPubId": "The course publication id to query.",
+          "profileId": "The token ID of the profile to query."
+        },
+        "returns": {
+          "_0": "true if course is completed by profile."
+        }
+      },
+      "isLessonCompleted(uint256,uint256)": {
+        "params": {
+          "pointedPubId": "The lesson publication id to query.",
+          "profileId": "The token ID of the profile to query."
+        },
+        "returns": {
+          "_0": "true if lesson is completed by profile."
+        }
+      },
+      "isProfileCreatorWhitelisted(address)": {
+        "params": {
+          "profileCreator": "The address of the profile creator to check."
+        },
+        "returns": {
+          "_0": "bool True if the profile creator is whitelisted, false otherwise."
+        }
+      },
+      "lesson((uint256,string,uint256,uint256,address[],bytes[]))": {
+        "params": {
+          "lessonParams": "A LessonParams struct containing the needed parameters."
+        },
+        "returns": {
+          "_0": "uint256 An integer representing the lesson's publication ID."
+        }
+      },
+      "rating((uint256,string,uint256,uint256))": {
+        "params": {
+          "ratingParams": "A RatingParams struct containing the necessary parameters."
+        },
+        "returns": {
+          "_0": "uint256 An integer representing the rating's publication ID."
+        }
+      },
+      "setEmergencyAdmin(address)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "newEmergencyAdmin": "The new emergency admin address to set."
+        }
+      },
+      "setGovernance(address)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "newGovernance": "The new governance address to set."
+        }
+      },
+      "setProfileMetadataURI(uint256,string)": {
+        "custom:permissions": "Profile Owner.",
+        "params": {
+          "metadataURI": "The metadata URI to set for the given profile.",
+          "profileId": "The token ID of the profile to set the metadata URI for."
+        }
+      },
+      "setProfileTokenURIContract(address)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "profileTokenURIContract": "The profile token URI contract to set."
+        }
+      },
+      "setState(uint8)": {
+        "custom:permissions": "Governance or Emergency Admin. Emergency Admin can only restrict more.",
+        "params": {
+          "newState": "The state to set. It can be one of the following:  - Unpaused: The protocol is fully operational.  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.  - Paused: The protocol is paused for all operations."
+        }
+      },
+      "setTreasury(address)": {
+        "custom:permissions": "Governance",
+        "params": {
+          "newTreasury": "The new treasury address to set."
+        }
+      },
+      "setTreasuryFee(uint256,address)": {
+        "custom:permissions": "Governance",
+        "params": {
+          "currency": "The currency for the fee to set",
+          "newTreasuryFee": "The new treasury fee to set."
+        }
+      },
+      "setTreasuryFeeBPS(uint16)": {
+        "custom:permissions": "Governance",
+        "params": {
+          "newTreasuryFee": "The new treasury fee to set."
+        }
+      },
+      "whitelistProfileCreator(address,bool)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "profileCreator": "The profile creator address to add or remove from the whitelist.",
+          "whitelist": "Whether or not the profile creator should be whitelisted."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "act((uint256,uint256,uint256,address,bytes))": {
+        "notice": "Acts on a given publication with the specified parameters. You can act on a lesson publication (if it has at least one action module initialized)."
+      },
+      "bulkprogress((uint256,string,uint256,uint256)[])": {
+        "notice": "Publishes a progress of the lesson publication. Progress is a type of reference publication that points to lesson publication You can only submit the progress on the lesson once."
+      },
+      "collect((uint256,uint256,uint256,address,address,bytes))": {
+        "notice": "Collect on a given publication with the specified parameters. You can collect course publication."
+      },
+      "completeCourse(uint256,uint256,uint256)": {
+        "notice": "completeCourse for completed course with the specified parameters."
+      },
+      "course((uint256,string,address,address,bytes))": {
+        "notice": "Publishes a course. Course is the most basic publication type, and can be used to publish any kind of content. Course can have these types of modules initialized:  - Collect modules: Only One collect module based for collection of the course (Collecting by paying fee, or token gated etc)"
+      },
+      "createProfile((address))": {
+        "notice": "Creates a profile with the specified parameters, minting a Profile NFT to the given recipient."
+      },
+      "getContentURI(uint256,uint256)": {
+        "notice": "Returns the URI associated with a given publication. This is used to store the publication's metadata, e.g.: content, images, etc."
+      },
+      "getGovernance()": {
+        "notice": "Returns the currently configured governance address."
+      },
+      "getModuleRegistry()": {
+        "notice": "Returns the address of the registry that stores all modules that are used by the Edux Protocol."
+      },
+      "getProfile(uint256)": {
+        "notice": "Returns the full profile struct associated with a given profile token ID."
+      },
+      "getProfileTokenURIContract()": {
+        "notice": "Gets the profile token URI contract."
+      },
+      "getPublication(uint256,uint256)": {
+        "notice": "Returns the full publication struct for a given publication."
+      },
+      "getPublicationType(uint256,uint256)": {
+        "notice": "Returns the type of a given publication. The type can be one of the following (see PublicationType enum): - Nonexistent - Course - Lesson - Rating - Progress"
+      },
+      "getState()": {
+        "notice": "Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an unpaused state."
+      },
+      "getTreasury()": {
+        "notice": "Returns the treasury address."
+      },
+      "getTreasuryData()": {
+        "notice": "Returns the treasury address and treasury fee in a single call."
+      },
+      "getTreasuryFee(address)": {
+        "notice": "Returns the treasury fee."
+      },
+      "getTreasuryFeeBPS()": {
+        "notice": "Returns the treasury fee."
+      },
+      "isActionModuleEnabledInPublication(uint256,uint256,address)": {
+        "notice": "Returns wether a given Action Module is enabled for a given publication."
+      },
+      "isCourseCompleted(uint256,uint256,uint256)": {
+        "notice": "Returns true if course is completed by profile on given course publication."
+      },
+      "isLessonCompleted(uint256,uint256)": {
+        "notice": "Returns true if lesson is completed by profile on given lesson publication."
+      },
+      "isProfileCreatorWhitelisted(address)": {
+        "notice": "Returns whether or not a profile creator is whitelisted."
+      },
+      "lesson((uint256,string,uint256,uint256,address[],bytes[]))": {
+        "notice": "Publishes a lesson on the given course publication. Lesson is a type of reference publication that points to another publication. Lesson can have these types of modules initialized:  - Action modules: any number of publication actions (e.g. token rewards, milestione base reward etc.)"
+      },
+      "rating((uint256,string,uint256,uint256))": {
+        "notice": "Publishes a rating of the given course publication. Rating is a type of reference publication that points to another publication course Rating don't have any modules initialized. You can only rate the course once."
+      },
+      "setEmergencyAdmin(address)": {
+        "notice": "Sets the emergency admin, which is a permissioned role able to set the protocol state."
+      },
+      "setGovernance(address)": {
+        "notice": "Sets the privileged governance role."
+      },
+      "setProfileMetadataURI(uint256,string)": {
+        "notice": "Sets the metadata URI for the given profile."
+      },
+      "setProfileTokenURIContract(address)": {
+        "notice": "Sets the profile token URI contract."
+      },
+      "setState(uint8)": {
+        "notice": "Sets the protocol state to either a global pause, a publishing pause or an unpaused state."
+      },
+      "setTreasury(address)": {
+        "notice": "Sets the treasury address."
+      },
+      "setTreasuryFee(uint256,address)": {
+        "notice": "Sets the treasury fee."
+      },
+      "setTreasuryFeeBPS(uint16)": {
+        "notice": "Sets the treasury fee BPS."
+      },
+      "whitelistProfileCreator(address,bool)": {
+        "notice": "Adds or removes a profile creator from the whitelist."
+      }
+    },
+    "version": 1
+  }
+}

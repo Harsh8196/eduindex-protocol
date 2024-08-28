@@ -1,0 +1,409 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "hub",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "moduleRegistry",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "moduleOwner",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "target",
+				"type": "address"
+			}
+		],
+		"name": "AddressEmptyCode",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "AddressInsufficientBalance",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "FailedInnerCall",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "InitParamsInvalid",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ModuleDataMismatch",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "NotHub",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			}
+		],
+		"name": "SafeERC20FailedOperation",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "HUB",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MODULE_REGISTRY",
+		"outputs": [
+			{
+				"internalType": "contract IModuleRegistry",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			}
+		],
+		"name": "getBasePublicationData",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint160",
+						"name": "amount",
+						"type": "uint160"
+					},
+					{
+						"internalType": "uint96",
+						"name": "collectLimit",
+						"type": "uint96"
+					},
+					{
+						"internalType": "address",
+						"name": "currency",
+						"type": "address"
+					},
+					{
+						"internalType": "uint72",
+						"name": "endTimestamp",
+						"type": "uint72"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint96",
+						"name": "currentCollects",
+						"type": "uint96"
+					}
+				],
+				"internalType": "struct ModuleTypes.BaseFeeCollectCourse",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getModuleMetadataURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			}
+		],
+		"name": "getPublicationData",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint160",
+						"name": "amount",
+						"type": "uint160"
+					},
+					{
+						"internalType": "uint96",
+						"name": "collectLimit",
+						"type": "uint96"
+					},
+					{
+						"internalType": "address",
+						"name": "currency",
+						"type": "address"
+					},
+					{
+						"internalType": "uint72",
+						"name": "endTimestamp",
+						"type": "uint72"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint96",
+						"name": "currentCollects",
+						"type": "uint96"
+					}
+				],
+				"internalType": "struct ModuleTypes.BaseFeeCollectCourse",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pubId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "data",
+				"type": "bytes"
+			}
+		],
+		"name": "initializePublicationCollect",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "metadataURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "publicationCollectedProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationCollectedId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collectorProfileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "collectorProfileOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "transactionExecutor",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "collectModuleData",
+						"type": "bytes"
+					}
+				],
+				"internalType": "struct Types.ProcessCollectParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "processPublicationCollect",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_metadataURI",
+				"type": "string"
+			}
+		],
+		"name": "setModuleMetadataURI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes4",
+				"name": "interfaceID",
+				"type": "bytes4"
+			}
+		],
+		"name": "supportsInterface",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

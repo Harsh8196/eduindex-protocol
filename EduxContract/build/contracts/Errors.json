@@ -1,0 +1,1456 @@
+{
+  "contractName": "Errors",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ActionNotAllowed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AlreadyEnabled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AlreadyInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ArrayMismatch",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CannotInitImplementation",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CertificateModuleIsNotProvided",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CollectExpired",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CollectModuleIsNotProvided",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CollectNotAllowed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CourseIsAlreayRatedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CourseIsNotCollectedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CourseIsNotCompletedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EmergencyAdminCanOnlyPauseFurther",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ExecutorInvalid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InitParamsInvalid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Initialized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidParameter",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidParams",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidPointedPub",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "LessonIsAlreadyCompletedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MintLimitExceeded",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ModuleDataMismatch",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NonERC721ReceiverImplementer",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotActionModule",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotAllowed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotGovernance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotGovernanceOrEmergencyAdmin",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotHub",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotOwnerOrApproved",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotProfileOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotRegistered",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotWhitelisted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Paused",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ProtocolFeeIsNotCorrect",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PublicationDoesNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PublishingPaused",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TokenDoesNotExist",
+      "type": "error"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"ActionNotAllowed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"AlreadyEnabled\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"AlreadyInitialized\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ArrayMismatch\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CannotInitImplementation\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CertificateModuleIsNotProvided\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CollectExpired\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CollectModuleIsNotProvided\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CollectNotAllowed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CourseIsAlreayRatedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CourseIsNotCollectedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CourseIsNotCompletedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"EmergencyAdminCanOnlyPauseFurther\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ExecutorInvalid\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InitParamsInvalid\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Initialized\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidOwner\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidParameter\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidParams\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidPointedPub\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"LessonIsAlreadyCompletedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MintLimitExceeded\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ModuleDataMismatch\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NonERC721ReceiverImplementer\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotActionModule\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotAllowed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotGovernance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotGovernanceOrEmergencyAdmin\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotHub\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotOwnerOrApproved\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotProfileOwner\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotRegistered\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotWhitelisted\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Paused\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ProtocolFeeIsNotCorrect\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PublicationDoesNotExist\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PublishingPaused\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TokenDoesNotExist\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/constants/Errors.sol\":\"Errors\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/libraries/constants/Errors.sol\":{\"keccak256\":\"0xab6ad80603172659406d0c638d5cdca8654345e1d8614a8b60233283fafdc10c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0b1645f287af422cca919c884678efa2493f1561c99232f3afcb8761d5c9ec57\",\"dweb:/ipfs/QmRC18phwvNTsCnGwPFm3iy4GmBNntu8WytFzghK28LApZ\"]}},\"version\":1}",
+  "bytecode": "0x6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea264697066735822122025ad9b20d9bc51ffdb10e7a40a14094bd4a2b641d50ec08d3a17ce3454d0eace64736f6c63430008140033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040525f80fdfea264697066735822122025ad9b20d9bc51ffdb10e7a40a14094bd4a2b641d50ec08d3a17ce3454d0eace64736f6c63430008140033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "63:1349:44:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "63:1349:44:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nlibrary Errors {\r\n    error CannotInitImplementation();\r\n    error Initialized();\r\n    error InvalidOwner();\r\n    error NotOwnerOrApproved();\r\n    error NotHub();\r\n    error TokenDoesNotExist();\r\n    error NotGovernance();\r\n    error NotGovernanceOrEmergencyAdmin();\r\n    error EmergencyAdminCanOnlyPauseFurther();\r\n    error NotProfileOwner();\r\n    error CourseIsAlreayRatedByProfile();\r\n    error LessonIsAlreadyCompletedByProfile();\r\n    error PublicationDoesNotExist();\r\n    error ArrayMismatch();\r\n    error NotWhitelisted();\r\n    error NotRegistered();\r\n    error InvalidParameter();\r\n    error ExecutorInvalid();\r\n    error InvalidPointedPub();\r\n    error NonERC721ReceiverImplementer();\r\n    error AlreadyEnabled();\r\n    error CourseIsNotCollectedByProfile();\r\n\r\n    // Module Errors\r\n    error InitParamsInvalid();\r\n    error ActionNotAllowed();\r\n    error ModuleDataMismatch();\r\n    error InvalidParams();\r\n    error MintLimitExceeded();\r\n    error CollectExpired();\r\n    error NotActionModule();\r\n    error CollectNotAllowed();\r\n    error AlreadyInitialized();\r\n    error CertificateModuleIsNotProvided();\r\n    error CollectModuleIsNotProvided();\r\n    error ProtocolFeeIsNotCorrect();\r\n    error CourseIsNotCompletedByProfile();\r\n\r\n\r\n    // MultiState Errors\r\n    error Paused();\r\n    error PublishingPaused();\r\n    error NotAllowed();\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\libraries\\constants\\Errors.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/constants/Errors.sol",
+    "exportedSymbols": {
+      "Errors": [
+        9002
+      ]
+    },
+    "id": 9003,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8925,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:44"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Errors",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 9002,
+        "linearizedBaseContracts": [
+          9002
+        ],
+        "name": "Errors",
+        "nameLocation": "71:6:44",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "errorSelector": "971d0414",
+            "id": 8927,
+            "name": "CannotInitImplementation",
+            "nameLocation": "91:24:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8926,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "115:2:44"
+            },
+            "src": "85:33:44"
+          },
+          {
+            "errorSelector": "5daa87a0",
+            "id": 8929,
+            "name": "Initialized",
+            "nameLocation": "130:11:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "141:2:44"
+            },
+            "src": "124:20:44"
+          },
+          {
+            "errorSelector": "49e27cff",
+            "id": 8931,
+            "name": "InvalidOwner",
+            "nameLocation": "156:12:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8930,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "168:2:44"
+            },
+            "src": "150:21:44"
+          },
+          {
+            "errorSelector": "db1453ce",
+            "id": 8933,
+            "name": "NotOwnerOrApproved",
+            "nameLocation": "183:18:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8932,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:2:44"
+            },
+            "src": "177:27:44"
+          },
+          {
+            "errorSelector": "9de97418",
+            "id": 8935,
+            "name": "NotHub",
+            "nameLocation": "216:6:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8934,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "222:2:44"
+            },
+            "src": "210:15:44"
+          },
+          {
+            "errorSelector": "ceea21b6",
+            "id": 8937,
+            "name": "TokenDoesNotExist",
+            "nameLocation": "237:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8936,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:2:44"
+            },
+            "src": "231:26:44"
+          },
+          {
+            "errorSelector": "b56f932c",
+            "id": 8939,
+            "name": "NotGovernance",
+            "nameLocation": "269:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8938,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "282:2:44"
+            },
+            "src": "263:22:44"
+          },
+          {
+            "errorSelector": "a020ab32",
+            "id": 8941,
+            "name": "NotGovernanceOrEmergencyAdmin",
+            "nameLocation": "297:29:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8940,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "326:2:44"
+            },
+            "src": "291:38:44"
+          },
+          {
+            "errorSelector": "7f573ff2",
+            "id": 8943,
+            "name": "EmergencyAdminCanOnlyPauseFurther",
+            "nameLocation": "341:33:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8942,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:2:44"
+            },
+            "src": "335:42:44"
+          },
+          {
+            "errorSelector": "f194fae5",
+            "id": 8945,
+            "name": "NotProfileOwner",
+            "nameLocation": "389:15:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8944,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "404:2:44"
+            },
+            "src": "383:24:44"
+          },
+          {
+            "errorSelector": "e8289ef6",
+            "id": 8947,
+            "name": "CourseIsAlreayRatedByProfile",
+            "nameLocation": "419:28:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8946,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "447:2:44"
+            },
+            "src": "413:37:44"
+          },
+          {
+            "errorSelector": "d1441006",
+            "id": 8949,
+            "name": "LessonIsAlreadyCompletedByProfile",
+            "nameLocation": "462:33:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8948,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "495:2:44"
+            },
+            "src": "456:42:44"
+          },
+          {
+            "errorSelector": "a43d2a71",
+            "id": 8951,
+            "name": "PublicationDoesNotExist",
+            "nameLocation": "510:23:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8950,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "533:2:44"
+            },
+            "src": "504:32:44"
+          },
+          {
+            "errorSelector": "b7c1140d",
+            "id": 8953,
+            "name": "ArrayMismatch",
+            "nameLocation": "548:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8952,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "561:2:44"
+            },
+            "src": "542:22:44"
+          },
+          {
+            "errorSelector": "584a7938",
+            "id": 8955,
+            "name": "NotWhitelisted",
+            "nameLocation": "576:14:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "590:2:44"
+            },
+            "src": "570:23:44"
+          },
+          {
+            "errorSelector": "aba47339",
+            "id": 8957,
+            "name": "NotRegistered",
+            "nameLocation": "605:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8956,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "618:2:44"
+            },
+            "src": "599:22:44"
+          },
+          {
+            "errorSelector": "613970e0",
+            "id": 8959,
+            "name": "InvalidParameter",
+            "nameLocation": "633:16:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8958,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "649:2:44"
+            },
+            "src": "627:25:44"
+          },
+          {
+            "errorSelector": "68a6f9a4",
+            "id": 8961,
+            "name": "ExecutorInvalid",
+            "nameLocation": "664:15:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8960,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "679:2:44"
+            },
+            "src": "658:24:44"
+          },
+          {
+            "errorSelector": "fc30e3cb",
+            "id": 8963,
+            "name": "InvalidPointedPub",
+            "nameLocation": "694:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8962,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "711:2:44"
+            },
+            "src": "688:26:44"
+          },
+          {
+            "errorSelector": "85d5821e",
+            "id": 8965,
+            "name": "NonERC721ReceiverImplementer",
+            "nameLocation": "726:28:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8964,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "754:2:44"
+            },
+            "src": "720:37:44"
+          },
+          {
+            "errorSelector": "f2a5f75a",
+            "id": 8967,
+            "name": "AlreadyEnabled",
+            "nameLocation": "769:14:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8966,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "783:2:44"
+            },
+            "src": "763:23:44"
+          },
+          {
+            "errorSelector": "b030d83e",
+            "id": 8969,
+            "name": "CourseIsNotCollectedByProfile",
+            "nameLocation": "798:29:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8968,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "827:2:44"
+            },
+            "src": "792:38:44"
+          },
+          {
+            "errorSelector": "48be0eb3",
+            "id": 8971,
+            "name": "InitParamsInvalid",
+            "nameLocation": "866:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8970,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "883:2:44"
+            },
+            "src": "860:26:44"
+          },
+          {
+            "errorSelector": "829e3733",
+            "id": 8973,
+            "name": "ActionNotAllowed",
+            "nameLocation": "898:16:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8972,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "914:2:44"
+            },
+            "src": "892:25:44"
+          },
+          {
+            "errorSelector": "46308bd5",
+            "id": 8975,
+            "name": "ModuleDataMismatch",
+            "nameLocation": "929:18:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8974,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "947:2:44"
+            },
+            "src": "923:27:44"
+          },
+          {
+            "errorSelector": "a86b6512",
+            "id": 8977,
+            "name": "InvalidParams",
+            "nameLocation": "962:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8976,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "975:2:44"
+            },
+            "src": "956:22:44"
+          },
+          {
+            "errorSelector": "b643bfa6",
+            "id": 8979,
+            "name": "MintLimitExceeded",
+            "nameLocation": "990:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8978,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1007:2:44"
+            },
+            "src": "984:26:44"
+          },
+          {
+            "errorSelector": "99ae0720",
+            "id": 8981,
+            "name": "CollectExpired",
+            "nameLocation": "1022:14:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8980,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1036:2:44"
+            },
+            "src": "1016:23:44"
+          },
+          {
+            "errorSelector": "bf15b844",
+            "id": 8983,
+            "name": "NotActionModule",
+            "nameLocation": "1051:15:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8982,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1066:2:44"
+            },
+            "src": "1045:24:44"
+          },
+          {
+            "errorSelector": "ad4cf0a3",
+            "id": 8985,
+            "name": "CollectNotAllowed",
+            "nameLocation": "1081:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8984,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1098:2:44"
+            },
+            "src": "1075:26:44"
+          },
+          {
+            "errorSelector": "0dc149f0",
+            "id": 8987,
+            "name": "AlreadyInitialized",
+            "nameLocation": "1113:18:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8986,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1131:2:44"
+            },
+            "src": "1107:27:44"
+          },
+          {
+            "errorSelector": "55d083d5",
+            "id": 8989,
+            "name": "CertificateModuleIsNotProvided",
+            "nameLocation": "1146:30:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8988,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1176:2:44"
+            },
+            "src": "1140:39:44"
+          },
+          {
+            "errorSelector": "60f5fb34",
+            "id": 8991,
+            "name": "CollectModuleIsNotProvided",
+            "nameLocation": "1191:26:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8990,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1217:2:44"
+            },
+            "src": "1185:35:44"
+          },
+          {
+            "errorSelector": "b7e09e9a",
+            "id": 8993,
+            "name": "ProtocolFeeIsNotCorrect",
+            "nameLocation": "1232:23:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8992,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1255:2:44"
+            },
+            "src": "1226:32:44"
+          },
+          {
+            "errorSelector": "7d2c7eb6",
+            "id": 8995,
+            "name": "CourseIsNotCompletedByProfile",
+            "nameLocation": "1270:29:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8994,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1299:2:44"
+            },
+            "src": "1264:38:44"
+          },
+          {
+            "errorSelector": "9e87fac8",
+            "id": 8997,
+            "name": "Paused",
+            "nameLocation": "1344:6:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8996,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1350:2:44"
+            },
+            "src": "1338:15:44"
+          },
+          {
+            "errorSelector": "79c951d8",
+            "id": 8999,
+            "name": "PublishingPaused",
+            "nameLocation": "1365:16:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8998,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1381:2:44"
+            },
+            "src": "1359:25:44"
+          },
+          {
+            "errorSelector": "3d693ada",
+            "id": 9001,
+            "name": "NotAllowed",
+            "nameLocation": "1396:10:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 9000,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1406:2:44"
+            },
+            "src": "1390:19:44"
+          }
+        ],
+        "scope": 9003,
+        "src": "63:1349:44",
+        "usedErrors": [
+          8927,
+          8929,
+          8931,
+          8933,
+          8935,
+          8937,
+          8939,
+          8941,
+          8943,
+          8945,
+          8947,
+          8949,
+          8951,
+          8953,
+          8955,
+          8957,
+          8959,
+          8961,
+          8963,
+          8965,
+          8967,
+          8969,
+          8971,
+          8973,
+          8975,
+          8977,
+          8979,
+          8981,
+          8983,
+          8985,
+          8987,
+          8989,
+          8991,
+          8993,
+          8995,
+          8997,
+          8999,
+          9001
+        ],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1377:44"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/libraries/constants/Errors.sol",
+    "exportedSymbols": {
+      "Errors": [
+        9002
+      ]
+    },
+    "id": 9003,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8925,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:44"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Errors",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 9002,
+        "linearizedBaseContracts": [
+          9002
+        ],
+        "name": "Errors",
+        "nameLocation": "71:6:44",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "errorSelector": "971d0414",
+            "id": 8927,
+            "name": "CannotInitImplementation",
+            "nameLocation": "91:24:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8926,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "115:2:44"
+            },
+            "src": "85:33:44"
+          },
+          {
+            "errorSelector": "5daa87a0",
+            "id": 8929,
+            "name": "Initialized",
+            "nameLocation": "130:11:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "141:2:44"
+            },
+            "src": "124:20:44"
+          },
+          {
+            "errorSelector": "49e27cff",
+            "id": 8931,
+            "name": "InvalidOwner",
+            "nameLocation": "156:12:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8930,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "168:2:44"
+            },
+            "src": "150:21:44"
+          },
+          {
+            "errorSelector": "db1453ce",
+            "id": 8933,
+            "name": "NotOwnerOrApproved",
+            "nameLocation": "183:18:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8932,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:2:44"
+            },
+            "src": "177:27:44"
+          },
+          {
+            "errorSelector": "9de97418",
+            "id": 8935,
+            "name": "NotHub",
+            "nameLocation": "216:6:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8934,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "222:2:44"
+            },
+            "src": "210:15:44"
+          },
+          {
+            "errorSelector": "ceea21b6",
+            "id": 8937,
+            "name": "TokenDoesNotExist",
+            "nameLocation": "237:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8936,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:2:44"
+            },
+            "src": "231:26:44"
+          },
+          {
+            "errorSelector": "b56f932c",
+            "id": 8939,
+            "name": "NotGovernance",
+            "nameLocation": "269:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8938,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "282:2:44"
+            },
+            "src": "263:22:44"
+          },
+          {
+            "errorSelector": "a020ab32",
+            "id": 8941,
+            "name": "NotGovernanceOrEmergencyAdmin",
+            "nameLocation": "297:29:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8940,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "326:2:44"
+            },
+            "src": "291:38:44"
+          },
+          {
+            "errorSelector": "7f573ff2",
+            "id": 8943,
+            "name": "EmergencyAdminCanOnlyPauseFurther",
+            "nameLocation": "341:33:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8942,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:2:44"
+            },
+            "src": "335:42:44"
+          },
+          {
+            "errorSelector": "f194fae5",
+            "id": 8945,
+            "name": "NotProfileOwner",
+            "nameLocation": "389:15:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8944,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "404:2:44"
+            },
+            "src": "383:24:44"
+          },
+          {
+            "errorSelector": "e8289ef6",
+            "id": 8947,
+            "name": "CourseIsAlreayRatedByProfile",
+            "nameLocation": "419:28:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8946,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "447:2:44"
+            },
+            "src": "413:37:44"
+          },
+          {
+            "errorSelector": "d1441006",
+            "id": 8949,
+            "name": "LessonIsAlreadyCompletedByProfile",
+            "nameLocation": "462:33:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8948,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "495:2:44"
+            },
+            "src": "456:42:44"
+          },
+          {
+            "errorSelector": "a43d2a71",
+            "id": 8951,
+            "name": "PublicationDoesNotExist",
+            "nameLocation": "510:23:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8950,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "533:2:44"
+            },
+            "src": "504:32:44"
+          },
+          {
+            "errorSelector": "b7c1140d",
+            "id": 8953,
+            "name": "ArrayMismatch",
+            "nameLocation": "548:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8952,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "561:2:44"
+            },
+            "src": "542:22:44"
+          },
+          {
+            "errorSelector": "584a7938",
+            "id": 8955,
+            "name": "NotWhitelisted",
+            "nameLocation": "576:14:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "590:2:44"
+            },
+            "src": "570:23:44"
+          },
+          {
+            "errorSelector": "aba47339",
+            "id": 8957,
+            "name": "NotRegistered",
+            "nameLocation": "605:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8956,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "618:2:44"
+            },
+            "src": "599:22:44"
+          },
+          {
+            "errorSelector": "613970e0",
+            "id": 8959,
+            "name": "InvalidParameter",
+            "nameLocation": "633:16:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8958,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "649:2:44"
+            },
+            "src": "627:25:44"
+          },
+          {
+            "errorSelector": "68a6f9a4",
+            "id": 8961,
+            "name": "ExecutorInvalid",
+            "nameLocation": "664:15:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8960,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "679:2:44"
+            },
+            "src": "658:24:44"
+          },
+          {
+            "errorSelector": "fc30e3cb",
+            "id": 8963,
+            "name": "InvalidPointedPub",
+            "nameLocation": "694:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8962,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "711:2:44"
+            },
+            "src": "688:26:44"
+          },
+          {
+            "errorSelector": "85d5821e",
+            "id": 8965,
+            "name": "NonERC721ReceiverImplementer",
+            "nameLocation": "726:28:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8964,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "754:2:44"
+            },
+            "src": "720:37:44"
+          },
+          {
+            "errorSelector": "f2a5f75a",
+            "id": 8967,
+            "name": "AlreadyEnabled",
+            "nameLocation": "769:14:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8966,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "783:2:44"
+            },
+            "src": "763:23:44"
+          },
+          {
+            "errorSelector": "b030d83e",
+            "id": 8969,
+            "name": "CourseIsNotCollectedByProfile",
+            "nameLocation": "798:29:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8968,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "827:2:44"
+            },
+            "src": "792:38:44"
+          },
+          {
+            "errorSelector": "48be0eb3",
+            "id": 8971,
+            "name": "InitParamsInvalid",
+            "nameLocation": "866:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8970,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "883:2:44"
+            },
+            "src": "860:26:44"
+          },
+          {
+            "errorSelector": "829e3733",
+            "id": 8973,
+            "name": "ActionNotAllowed",
+            "nameLocation": "898:16:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8972,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "914:2:44"
+            },
+            "src": "892:25:44"
+          },
+          {
+            "errorSelector": "46308bd5",
+            "id": 8975,
+            "name": "ModuleDataMismatch",
+            "nameLocation": "929:18:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8974,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "947:2:44"
+            },
+            "src": "923:27:44"
+          },
+          {
+            "errorSelector": "a86b6512",
+            "id": 8977,
+            "name": "InvalidParams",
+            "nameLocation": "962:13:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8976,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "975:2:44"
+            },
+            "src": "956:22:44"
+          },
+          {
+            "errorSelector": "b643bfa6",
+            "id": 8979,
+            "name": "MintLimitExceeded",
+            "nameLocation": "990:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8978,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1007:2:44"
+            },
+            "src": "984:26:44"
+          },
+          {
+            "errorSelector": "99ae0720",
+            "id": 8981,
+            "name": "CollectExpired",
+            "nameLocation": "1022:14:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8980,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1036:2:44"
+            },
+            "src": "1016:23:44"
+          },
+          {
+            "errorSelector": "bf15b844",
+            "id": 8983,
+            "name": "NotActionModule",
+            "nameLocation": "1051:15:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8982,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1066:2:44"
+            },
+            "src": "1045:24:44"
+          },
+          {
+            "errorSelector": "ad4cf0a3",
+            "id": 8985,
+            "name": "CollectNotAllowed",
+            "nameLocation": "1081:17:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8984,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1098:2:44"
+            },
+            "src": "1075:26:44"
+          },
+          {
+            "errorSelector": "0dc149f0",
+            "id": 8987,
+            "name": "AlreadyInitialized",
+            "nameLocation": "1113:18:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8986,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1131:2:44"
+            },
+            "src": "1107:27:44"
+          },
+          {
+            "errorSelector": "55d083d5",
+            "id": 8989,
+            "name": "CertificateModuleIsNotProvided",
+            "nameLocation": "1146:30:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8988,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1176:2:44"
+            },
+            "src": "1140:39:44"
+          },
+          {
+            "errorSelector": "60f5fb34",
+            "id": 8991,
+            "name": "CollectModuleIsNotProvided",
+            "nameLocation": "1191:26:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8990,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1217:2:44"
+            },
+            "src": "1185:35:44"
+          },
+          {
+            "errorSelector": "b7e09e9a",
+            "id": 8993,
+            "name": "ProtocolFeeIsNotCorrect",
+            "nameLocation": "1232:23:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8992,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1255:2:44"
+            },
+            "src": "1226:32:44"
+          },
+          {
+            "errorSelector": "7d2c7eb6",
+            "id": 8995,
+            "name": "CourseIsNotCompletedByProfile",
+            "nameLocation": "1270:29:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8994,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1299:2:44"
+            },
+            "src": "1264:38:44"
+          },
+          {
+            "errorSelector": "9e87fac8",
+            "id": 8997,
+            "name": "Paused",
+            "nameLocation": "1344:6:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8996,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1350:2:44"
+            },
+            "src": "1338:15:44"
+          },
+          {
+            "errorSelector": "79c951d8",
+            "id": 8999,
+            "name": "PublishingPaused",
+            "nameLocation": "1365:16:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 8998,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1381:2:44"
+            },
+            "src": "1359:25:44"
+          },
+          {
+            "errorSelector": "3d693ada",
+            "id": 9001,
+            "name": "NotAllowed",
+            "nameLocation": "1396:10:44",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 9000,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1406:2:44"
+            },
+            "src": "1390:19:44"
+          }
+        ],
+        "scope": 9003,
+        "src": "63:1349:44",
+        "usedErrors": [
+          8927,
+          8929,
+          8931,
+          8933,
+          8935,
+          8937,
+          8939,
+          8941,
+          8943,
+          8945,
+          8947,
+          8949,
+          8951,
+          8953,
+          8955,
+          8957,
+          8959,
+          8961,
+          8963,
+          8965,
+          8967,
+          8969,
+          8971,
+          8973,
+          8975,
+          8977,
+          8979,
+          8981,
+          8983,
+          8985,
+          8987,
+          8989,
+          8991,
+          8993,
+          8995,
+          8997,
+          8999,
+          9001
+        ],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1377:44"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.520Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

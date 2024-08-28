@@ -1,0 +1,772 @@
+{
+  "contractName": "HubRestricted",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "HUB",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"HUB\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{},\"title\":\"HubRestricted\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"This abstract contract adds a public `HUB` immutable field, as well as an `onlyHub` modifier, to inherit from contracts that have functions restricted to be only called by the Edux hub.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/base/HubRestricted.sol\":\"HubRestricted\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/base/HubRestricted.sol\":{\"keccak256\":\"0x6e9d85fa5920a03872ca359f3747ca85a1f6cb28681a03fa939df4f086854de2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://43957add179a566f93a1a57eacaa772aee5dd8d88c52b329b442807bb5a997c5\",\"dweb:/ipfs/QmVdHHxvaiDj124jtASuai1iPSqJDJCD3pVq1YDQWETue5\"]},\"project:/contracts/libraries/constants/Errors.sol\":{\"keccak256\":\"0xab6ad80603172659406d0c638d5cdca8654345e1d8614a8b60233283fafdc10c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0b1645f287af422cca919c884678efa2493f1561c99232f3afcb8761d5c9ec57\",\"dweb:/ipfs/QmRC18phwvNTsCnGwPFm3iy4GmBNntu8WytFzghK28LApZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.15;\r\n\r\nimport {Errors} from '../libraries/constants/Errors.sol';\r\n\r\n/**\r\n * @title HubRestricted\r\n * @author Edux Protocol\r\n *\r\n * @notice This abstract contract adds a public `HUB` immutable field, as well as an `onlyHub` modifier,\r\n * to inherit from contracts that have functions restricted to be only called by the Edux hub.\r\n */\r\nabstract contract HubRestricted {\r\n    address public immutable HUB;\r\n\r\n    modifier onlyHub() {\r\n        if (msg.sender != HUB) {\r\n            revert Errors.NotHub();\r\n        }\r\n        _;\r\n    }\r\n\r\n    constructor(address hub) {\r\n        HUB = hub;\r\n    }\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\base\\HubRestricted.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/base/HubRestricted.sol",
+    "exportedSymbols": {
+      "Errors": [
+        9002
+      ],
+      "HubRestricted": [
+        6077
+      ]
+    },
+    "id": 6078,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6046,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:25"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Errors.sol",
+        "file": "../libraries/constants/Errors.sol",
+        "id": 6048,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6078,
+        "sourceUnit": 9003,
+        "src": "63:57:25",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6047,
+              "name": "Errors",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9002,
+              "src": "71:6:25",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "HubRestricted",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6049,
+          "nodeType": "StructuredDocumentation",
+          "src": "124:265:25",
+          "text": " @title HubRestricted\n @author Edux Protocol\n @notice This abstract contract adds a public `HUB` immutable field, as well as an `onlyHub` modifier,\n to inherit from contracts that have functions restricted to be only called by the Edux hub."
+        },
+        "fullyImplemented": true,
+        "id": 6077,
+        "linearizedBaseContracts": [
+          6077
+        ],
+        "name": "HubRestricted",
+        "nameLocation": "409:13:25",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "a4c52b86",
+            "id": 6051,
+            "mutability": "immutable",
+            "name": "HUB",
+            "nameLocation": "455:3:25",
+            "nodeType": "VariableDeclaration",
+            "scope": 6077,
+            "src": "430:28:25",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6050,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "430:7:25",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6065,
+              "nodeType": "Block",
+              "src": "486:102:25",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 6056,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 6053,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967281,
+                        "src": "501:3:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 6054,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "505:6:25",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "501:10:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "id": 6055,
+                      "name": "HUB",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6051,
+                      "src": "515:3:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "501:17:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6063,
+                  "nodeType": "IfStatement",
+                  "src": "497:72:25",
+                  "trueBody": {
+                    "id": 6062,
+                    "nodeType": "Block",
+                    "src": "520:49:25",
+                    "statements": [
+                      {
+                        "errorCall": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "id": 6057,
+                              "name": "Errors",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 9002,
+                              "src": "542:6:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_Errors_$9002_$",
+                                "typeString": "type(library Errors)"
+                              }
+                            },
+                            "id": 6059,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "549:6:25",
+                            "memberName": "NotHub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 8935,
+                            "src": "542:13:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 6060,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "542:15:25",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 6061,
+                        "nodeType": "RevertStatement",
+                        "src": "535:22:25"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": 6064,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "579:1:25"
+                }
+              ]
+            },
+            "id": 6066,
+            "name": "onlyHub",
+            "nameLocation": "476:7:25",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 6052,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "483:2:25"
+            },
+            "src": "467:121:25",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6075,
+              "nodeType": "Block",
+              "src": "621:28:25",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6073,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 6071,
+                      "name": "HUB",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6051,
+                      "src": "632:3:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 6072,
+                      "name": "hub",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6068,
+                      "src": "638:3:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "632:9:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6074,
+                  "nodeType": "ExpressionStatement",
+                  "src": "632:9:25"
+                }
+              ]
+            },
+            "id": 6076,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6069,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6068,
+                  "mutability": "mutable",
+                  "name": "hub",
+                  "nameLocation": "616:3:25",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6076,
+                  "src": "608:11:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6067,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:13:25"
+            },
+            "returnParameters": {
+              "id": 6070,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "621:0:25"
+            },
+            "scope": 6077,
+            "src": "596:53:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6078,
+        "src": "391:261:25",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:617:25"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/base/HubRestricted.sol",
+    "exportedSymbols": {
+      "Errors": [
+        9002
+      ],
+      "HubRestricted": [
+        6077
+      ]
+    },
+    "id": 6078,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6046,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:25"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Errors.sol",
+        "file": "../libraries/constants/Errors.sol",
+        "id": 6048,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6078,
+        "sourceUnit": 9003,
+        "src": "63:57:25",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6047,
+              "name": "Errors",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9002,
+              "src": "71:6:25",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "HubRestricted",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6049,
+          "nodeType": "StructuredDocumentation",
+          "src": "124:265:25",
+          "text": " @title HubRestricted\n @author Edux Protocol\n @notice This abstract contract adds a public `HUB` immutable field, as well as an `onlyHub` modifier,\n to inherit from contracts that have functions restricted to be only called by the Edux hub."
+        },
+        "fullyImplemented": true,
+        "id": 6077,
+        "linearizedBaseContracts": [
+          6077
+        ],
+        "name": "HubRestricted",
+        "nameLocation": "409:13:25",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "a4c52b86",
+            "id": 6051,
+            "mutability": "immutable",
+            "name": "HUB",
+            "nameLocation": "455:3:25",
+            "nodeType": "VariableDeclaration",
+            "scope": 6077,
+            "src": "430:28:25",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6050,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "430:7:25",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6065,
+              "nodeType": "Block",
+              "src": "486:102:25",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 6056,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 6053,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967281,
+                        "src": "501:3:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 6054,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "505:6:25",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "501:10:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "id": 6055,
+                      "name": "HUB",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6051,
+                      "src": "515:3:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "501:17:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6063,
+                  "nodeType": "IfStatement",
+                  "src": "497:72:25",
+                  "trueBody": {
+                    "id": 6062,
+                    "nodeType": "Block",
+                    "src": "520:49:25",
+                    "statements": [
+                      {
+                        "errorCall": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "id": 6057,
+                              "name": "Errors",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 9002,
+                              "src": "542:6:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_Errors_$9002_$",
+                                "typeString": "type(library Errors)"
+                              }
+                            },
+                            "id": 6059,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "549:6:25",
+                            "memberName": "NotHub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 8935,
+                            "src": "542:13:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 6060,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "542:15:25",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 6061,
+                        "nodeType": "RevertStatement",
+                        "src": "535:22:25"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": 6064,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "579:1:25"
+                }
+              ]
+            },
+            "id": 6066,
+            "name": "onlyHub",
+            "nameLocation": "476:7:25",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 6052,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "483:2:25"
+            },
+            "src": "467:121:25",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6075,
+              "nodeType": "Block",
+              "src": "621:28:25",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6073,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 6071,
+                      "name": "HUB",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6051,
+                      "src": "632:3:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 6072,
+                      "name": "hub",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6068,
+                      "src": "638:3:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "632:9:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6074,
+                  "nodeType": "ExpressionStatement",
+                  "src": "632:9:25"
+                }
+              ]
+            },
+            "id": 6076,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6069,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6068,
+                  "mutability": "mutable",
+                  "name": "hub",
+                  "nameLocation": "616:3:25",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6076,
+                  "src": "608:11:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6067,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:13:25"
+            },
+            "returnParameters": {
+              "id": 6070,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "621:0:25"
+            },
+            "scope": 6077,
+            "src": "596:53:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6078,
+        "src": "391:261:25",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:617:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.370Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {},
+    "title": "HubRestricted",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "This abstract contract adds a public `HUB` immutable field, as well as an `onlyHub` modifier, to inherit from contracts that have functions restricted to be only called by the Edux hub.",
+    "version": 1
+  }
+}

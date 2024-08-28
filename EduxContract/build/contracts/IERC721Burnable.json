@@ -1,0 +1,285 @@
+{
+  "contractName": "IERC721Burnable",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"custom:permission\":\"Owner of the NFT.\",\"params\":{\"tokenId\":\"The token ID of the token to burn.\"}}},\"title\":\"IERC721Burnable\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"burn(uint256)\":{\"notice\":\"Burns an NFT, removing it from circulation and essentially destroying it.\"}},\"notice\":\"Extension of ERC-721 including a function that allows the token to be burned.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IERC721Burnable.sol\":\"IERC721Burnable\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC721Burnable.sol\":{\"keccak256\":\"0xd1c1897f0183863b979df72d3fd6b418eb2fec65472483c768ab38ff1df92d35\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f97d8857eb3bc6e40a3e304f6d90e55ca9d5672cc34bd3a2f44bc294e1486eb\",\"dweb:/ipfs/QmbB5cUEjRo3MUFXPYAmtcXEefEKfXDTKAJtwr5EJuACfR\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\n/**\r\n * @title IERC721Burnable\r\n * @author Edux Protocol\r\n *\r\n * @notice Extension of ERC-721 including a function that allows the token to be burned.\r\n */\r\ninterface IERC721Burnable {\r\n    /**\r\n     * @notice Burns an NFT, removing it from circulation and essentially destroying it.\r\n     * @custom:permission Owner of the NFT.\r\n     *\r\n     * @param tokenId The token ID of the token to burn.\r\n     */\r\n    function burn(uint256 tokenId) external;\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IERC721Burnable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IERC721Burnable.sol",
+    "exportedSymbols": {
+      "IERC721Burnable": [
+        6087
+      ]
+    },
+    "id": 6088,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6079,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:26"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC721Burnable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6080,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:155:26",
+          "text": " @title IERC721Burnable\n @author Edux Protocol\n @notice Extension of ERC-721 including a function that allows the token to be burned."
+        },
+        "fullyImplemented": false,
+        "id": 6087,
+        "linearizedBaseContracts": [
+          6087
+        ],
+        "name": "IERC721Burnable",
+        "nameLocation": "230:15:26",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6081,
+              "nodeType": "StructuredDocumentation",
+              "src": "253:213:26",
+              "text": " @notice Burns an NFT, removing it from circulation and essentially destroying it.\n @custom:permission Owner of the NFT.\n @param tokenId The token ID of the token to burn."
+            },
+            "functionSelector": "42966c68",
+            "id": 6086,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "481:4:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6084,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6083,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "494:7:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6086,
+                  "src": "486:15:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6082,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:17:26"
+            },
+            "returnParameters": {
+              "id": 6085,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "511:0:26"
+            },
+            "scope": 6087,
+            "src": "472:40:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6088,
+        "src": "220:295:26",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:480:26"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IERC721Burnable.sol",
+    "exportedSymbols": {
+      "IERC721Burnable": [
+        6087
+      ]
+    },
+    "id": 6088,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6079,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:26"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC721Burnable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6080,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:155:26",
+          "text": " @title IERC721Burnable\n @author Edux Protocol\n @notice Extension of ERC-721 including a function that allows the token to be burned."
+        },
+        "fullyImplemented": false,
+        "id": 6087,
+        "linearizedBaseContracts": [
+          6087
+        ],
+        "name": "IERC721Burnable",
+        "nameLocation": "230:15:26",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6081,
+              "nodeType": "StructuredDocumentation",
+              "src": "253:213:26",
+              "text": " @notice Burns an NFT, removing it from circulation and essentially destroying it.\n @custom:permission Owner of the NFT.\n @param tokenId The token ID of the token to burn."
+            },
+            "functionSelector": "42966c68",
+            "id": 6086,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "481:4:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6084,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6083,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "494:7:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6086,
+                  "src": "486:15:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6082,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:17:26"
+            },
+            "returnParameters": {
+              "id": 6085,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "511:0:26"
+            },
+            "scope": 6087,
+            "src": "472:40:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6088,
+        "src": "220:295:26",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:480:26"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.372Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {
+      "burn(uint256)": {
+        "custom:permission": "Owner of the NFT.",
+        "params": {
+          "tokenId": "The token ID of the token to burn."
+        }
+      }
+    },
+    "title": "IERC721Burnable",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "burn(uint256)": {
+        "notice": "Burns an NFT, removing it from circulation and essentially destroying it."
+      }
+    },
+    "notice": "Extension of ERC-721 including a function that allows the token to be burned.",
+    "version": 1
+  }
+}

@@ -1,0 +1,2871 @@
+{
+  "contractName": "IEduxGovernable",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "setGovernance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newEmergencyAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "setEmergencyAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum Types.ProtocolState",
+          "name": "newState",
+          "type": "uint8"
+        }
+      ],
+      "name": "setState",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "profileCreator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "whitelist",
+          "type": "bool"
+        }
+      ],
+      "name": "whitelistProfileCreator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "profileTokenURIContract",
+          "type": "address"
+        }
+      ],
+      "name": "setProfileTokenURIContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newTreasury",
+          "type": "address"
+        }
+      ],
+      "name": "setTreasury",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "newTreasuryFee",
+          "type": "uint16"
+        }
+      ],
+      "name": "setTreasuryFeeBPS",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newTreasuryFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "currency",
+          "type": "address"
+        }
+      ],
+      "name": "setTreasuryFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getGovernance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasury",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasuryFeeBPS",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "currency",
+          "type": "address"
+        }
+      ],
+      "name": "getTreasuryFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasuryData",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getState",
+      "outputs": [
+        {
+          "internalType": "enum Types.ProtocolState",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "profileCreator",
+          "type": "address"
+        }
+      ],
+      "name": "isProfileCreatorWhitelisted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getProfileTokenURIContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getGovernance\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getProfileTokenURIContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getState\",\"outputs\":[{\"internalType\":\"enum Types.ProtocolState\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTreasury\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTreasuryData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"currency\",\"type\":\"address\"}],\"name\":\"getTreasuryFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTreasuryFeeBPS\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"profileCreator\",\"type\":\"address\"}],\"name\":\"isProfileCreatorWhitelisted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newEmergencyAdmin\",\"type\":\"address\"}],\"name\":\"setEmergencyAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newGovernance\",\"type\":\"address\"}],\"name\":\"setGovernance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"profileTokenURIContract\",\"type\":\"address\"}],\"name\":\"setProfileTokenURIContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Types.ProtocolState\",\"name\":\"newState\",\"type\":\"uint8\"}],\"name\":\"setState\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newTreasury\",\"type\":\"address\"}],\"name\":\"setTreasury\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newTreasuryFee\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"currency\",\"type\":\"address\"}],\"name\":\"setTreasuryFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"newTreasuryFee\",\"type\":\"uint16\"}],\"name\":\"setTreasuryFeeBPS\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"profileCreator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"whitelist\",\"type\":\"bool\"}],\"name\":\"whitelistProfileCreator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{\"getGovernance()\":{\"returns\":{\"_0\":\"address The address of the currently configured governance.\"}},\"getProfileTokenURIContract()\":{\"returns\":{\"_0\":\"address The profile token URI contract.\"}},\"getState()\":{\"custom:permissions\":\"Anyone.\",\"returns\":{\"_0\":\"Types.ProtocolState The state currently set in the protocol.\"}},\"getTreasury()\":{\"returns\":{\"_0\":\"address The treasury address.\"}},\"getTreasuryData()\":{\"returns\":{\"_0\":\"tuple First, the treasury address, second, the treasury fee.\"}},\"getTreasuryFee(address)\":{\"params\":{\"currency\":\"the address of the currency.\"},\"returns\":{\"_0\":\"uint16 The treasury fee.*\"}},\"getTreasuryFeeBPS()\":{\"returns\":{\"_0\":\"uint16 The treasury fee.*\"}},\"isProfileCreatorWhitelisted(address)\":{\"params\":{\"profileCreator\":\"The address of the profile creator to check.\"},\"returns\":{\"_0\":\"bool True if the profile creator is whitelisted, false otherwise.\"}},\"setEmergencyAdmin(address)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"newEmergencyAdmin\":\"The new emergency admin address to set.\"}},\"setGovernance(address)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"newGovernance\":\"The new governance address to set.\"}},\"setProfileTokenURIContract(address)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"profileTokenURIContract\":\"The profile token URI contract to set.\"}},\"setState(uint8)\":{\"custom:permissions\":\"Governance or Emergency Admin. Emergency Admin can only restrict more.\",\"params\":{\"newState\":\"The state to set. It can be one of the following:  - Unpaused: The protocol is fully operational.  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.  - Paused: The protocol is paused for all operations.\"}},\"setTreasury(address)\":{\"custom:permissions\":\"Governance\",\"params\":{\"newTreasury\":\"The new treasury address to set.\"}},\"setTreasuryFee(uint256,address)\":{\"custom:permissions\":\"Governance\",\"params\":{\"currency\":\"The currency for the fee to set\",\"newTreasuryFee\":\"The new treasury fee to set.\"}},\"setTreasuryFeeBPS(uint16)\":{\"custom:permissions\":\"Governance\",\"params\":{\"newTreasuryFee\":\"The new treasury fee to set.\"}},\"whitelistProfileCreator(address,bool)\":{\"custom:permissions\":\"Governance.\",\"params\":{\"profileCreator\":\"The profile creator address to add or remove from the whitelist.\",\"whitelist\":\"Whether or not the profile creator should be whitelisted.\"}}},\"title\":\"IEduxGovernable\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getGovernance()\":{\"notice\":\"Returns the currently configured governance address.\"},\"getProfileTokenURIContract()\":{\"notice\":\"Gets the profile token URI contract.\"},\"getState()\":{\"notice\":\"Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an unpaused state.\"},\"getTreasury()\":{\"notice\":\"Returns the treasury address.\"},\"getTreasuryData()\":{\"notice\":\"Returns the treasury address and treasury fee in a single call.\"},\"getTreasuryFee(address)\":{\"notice\":\"Returns the treasury fee.\"},\"getTreasuryFeeBPS()\":{\"notice\":\"Returns the treasury fee.\"},\"isProfileCreatorWhitelisted(address)\":{\"notice\":\"Returns whether or not a profile creator is whitelisted.\"},\"setEmergencyAdmin(address)\":{\"notice\":\"Sets the emergency admin, which is a permissioned role able to set the protocol state.\"},\"setGovernance(address)\":{\"notice\":\"Sets the privileged governance role.\"},\"setProfileTokenURIContract(address)\":{\"notice\":\"Sets the profile token URI contract.\"},\"setState(uint8)\":{\"notice\":\"Sets the protocol state to either a global pause, a publishing pause or an unpaused state.\"},\"setTreasury(address)\":{\"notice\":\"Sets the treasury address.\"},\"setTreasuryFee(uint256,address)\":{\"notice\":\"Sets the treasury fee.\"},\"setTreasuryFeeBPS(uint16)\":{\"notice\":\"Sets the treasury fee BPS.\"},\"whitelistProfileCreator(address,bool)\":{\"notice\":\"Adds or removes a profile creator from the whitelist.\"}},\"notice\":\"This is the interface for the Edux Protocol main governance functions.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IEduxGovernable.sol\":\"IEduxGovernable\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IEduxGovernable.sol\":{\"keccak256\":\"0x031fff189b69fdb25fd8f87ecd72009589681def4dbe5725bf8f4ff7182970cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ea198bc4c3dacd5a024e6c72269f80cf3059ab4565faac1940ae2f705c9d8bb\",\"dweb:/ipfs/QmVxLgPyg3wbssJ8kqA9vRBxaudxdm4SvC8UtDeYQTd2A2\"]},\"project:/contracts/libraries/constants/Types.sol\":{\"keccak256\":\"0x30fab63816f02dde57845d72241843eb6936f4fb968a84e1087cba37352f0270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c09adaebf74fd2c4d14591ec3baeef610edc70e0e8e73e5ae1058df1fddc846\",\"dweb:/ipfs/QmaZiF5nx1Ycq2vga3RkNxsujyQPyYBTwr5VkrwEfmHAQf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nimport {Types} from '../libraries/constants/Types.sol';\r\n\r\n/**\r\n * @title IEduxGovernable\r\n * @author Edux Protocol\r\n *\r\n * @notice This is the interface for the Edux Protocol main governance functions.\r\n */\r\ninterface IEduxGovernable {\r\n    /**\r\n     * @notice Sets the privileged governance role.\r\n     * @custom:permissions Governance.\r\n     *\r\n     * @param newGovernance The new governance address to set.\r\n     */\r\n    function setGovernance(address newGovernance) external;\r\n\r\n    /**\r\n     * @notice Sets the emergency admin, which is a permissioned role able to set the protocol state.\r\n     * @custom:permissions Governance.\r\n     *\r\n     * @param newEmergencyAdmin The new emergency admin address to set.\r\n     */\r\n    function setEmergencyAdmin(address newEmergencyAdmin) external;\r\n\r\n    /**\r\n     * @notice Sets the protocol state to either a global pause, a publishing pause or an unpaused state.\r\n     * @custom:permissions Governance or Emergency Admin. Emergency Admin can only restrict more.\r\n     *\r\n     * @param newState The state to set. It can be one of the following:\r\n     *  - Unpaused: The protocol is fully operational.\r\n     *  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.\r\n     *  - Paused: The protocol is paused for all operations.\r\n     */\r\n    function setState(Types.ProtocolState newState) external;\r\n\r\n    /**\r\n     * @notice Adds or removes a profile creator from the whitelist.\r\n     * @custom:permissions Governance.\r\n     *\r\n     * @param profileCreator The profile creator address to add or remove from the whitelist.\r\n     * @param whitelist Whether or not the profile creator should be whitelisted.\r\n     */\r\n    function whitelistProfileCreator(address profileCreator, bool whitelist) external;\r\n\r\n    /**\r\n     * @notice Sets the profile token URI contract.\r\n     * @custom:permissions Governance.\r\n     *\r\n     * @param profileTokenURIContract The profile token URI contract to set.\r\n     */\r\n    function setProfileTokenURIContract(address profileTokenURIContract) external;\r\n\r\n    /**\r\n     * @notice Sets the treasury address.\r\n     * @custom:permissions Governance\r\n     *\r\n     * @param newTreasury The new treasury address to set.\r\n     */\r\n    function setTreasury(address newTreasury) external;\r\n\r\n    /**\r\n     * @notice Sets the treasury fee BPS.\r\n     * @custom:permissions Governance\r\n     *\r\n     * @param newTreasuryFee The new treasury fee to set.\r\n     */\r\n    function setTreasuryFeeBPS(uint16 newTreasuryFee) external;\r\n\r\n        /**\r\n     * @notice Sets the treasury fee.\r\n     * @custom:permissions Governance\r\n     *\r\n     * @param newTreasuryFee The new treasury fee to set.\r\n     *\r\n     * @param currency The currency for the fee to set\r\n     */\r\n    function setTreasuryFee(uint256 newTreasuryFee, address currency) external;\r\n\r\n    /**\r\n     * @notice Returns the currently configured governance address.\r\n     *\r\n     * @return address The address of the currently configured governance.\r\n     */\r\n    function getGovernance() external view returns (address);\r\n\r\n        /**\r\n     * @notice Returns the treasury address.\r\n     *\r\n     * @return address The treasury address.\r\n     */\r\n    function getTreasury() external view returns (address);\r\n\r\n    /**\r\n     * @notice Returns the treasury fee.\r\n     *\r\n     * @return uint16 The treasury fee.\r\n     **/\r\n    function getTreasuryFeeBPS() external view returns (uint16);\r\n\r\n    /**\r\n     * @notice Returns the treasury fee.\r\n     *\r\n     * @param currency the address of the currency.\r\n     *\r\n     * @return uint16 The treasury fee.\r\n     **/\r\n    function getTreasuryFee(address currency) external view returns (uint256);\r\n\r\n    /**\r\n     * @notice Returns the treasury address and treasury fee in a single call.\r\n     *\r\n     * @return tuple First, the treasury address, second, the treasury fee.\r\n     */\r\n    function getTreasuryData() external view returns (address, uint16);\r\n\r\n    /**\r\n     * @notice Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an\r\n     * unpaused state.\r\n     * @custom:permissions Anyone.\r\n     *\r\n     * @return Types.ProtocolState The state currently set in the protocol.\r\n     */\r\n    function getState() external view returns (Types.ProtocolState);\r\n\r\n    /**\r\n     * @notice Returns whether or not a profile creator is whitelisted.\r\n     *\r\n     * @param profileCreator The address of the profile creator to check.\r\n     *\r\n     * @return bool True if the profile creator is whitelisted, false otherwise.\r\n     */\r\n    function isProfileCreatorWhitelisted(address profileCreator) external view returns (bool);\r\n\r\n    /**\r\n     * @notice Gets the profile token URI contract.\r\n     *\r\n     * @return address The profile token URI contract.\r\n     */\r\n    function getProfileTokenURIContract() external view returns (address);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IEduxGovernable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IEduxGovernable.sol",
+    "exportedSymbols": {
+      "IEduxGovernable": [
+        6257
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6258,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6145,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:29"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6147,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6258,
+        "sourceUnit": 9442,
+        "src": "63:55:29",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6146,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:29",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEduxGovernable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6148,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:148:29",
+          "text": " @title IEduxGovernable\n @author Edux Protocol\n @notice This is the interface for the Edux Protocol main governance functions."
+        },
+        "fullyImplemented": false,
+        "id": 6257,
+        "linearizedBaseContracts": [
+          6257
+        ],
+        "name": "IEduxGovernable",
+        "nameLocation": "282:15:29",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6149,
+              "nodeType": "StructuredDocumentation",
+              "src": "305:177:29",
+              "text": " @notice Sets the privileged governance role.\n @custom:permissions Governance.\n @param newGovernance The new governance address to set."
+            },
+            "functionSelector": "ab033ea9",
+            "id": 6154,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setGovernance",
+            "nameLocation": "497:13:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6152,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6151,
+                  "mutability": "mutable",
+                  "name": "newGovernance",
+                  "nameLocation": "519:13:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6154,
+                  "src": "511:21:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6150,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "510:23:29"
+            },
+            "returnParameters": {
+              "id": 6153,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "542:0:29"
+            },
+            "scope": 6257,
+            "src": "488:55:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6155,
+              "nodeType": "StructuredDocumentation",
+              "src": "551:236:29",
+              "text": " @notice Sets the emergency admin, which is a permissioned role able to set the protocol state.\n @custom:permissions Governance.\n @param newEmergencyAdmin The new emergency admin address to set."
+            },
+            "functionSelector": "35da3394",
+            "id": 6160,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEmergencyAdmin",
+            "nameLocation": "802:17:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6157,
+                  "mutability": "mutable",
+                  "name": "newEmergencyAdmin",
+                  "nameLocation": "828:17:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6160,
+                  "src": "820:25:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6156,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "820:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "819:27:29"
+            },
+            "returnParameters": {
+              "id": 6159,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "855:0:29"
+            },
+            "scope": 6257,
+            "src": "793:63:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6161,
+              "nodeType": "StructuredDocumentation",
+              "src": "864:537:29",
+              "text": " @notice Sets the protocol state to either a global pause, a publishing pause or an unpaused state.\n @custom:permissions Governance or Emergency Admin. Emergency Admin can only restrict more.\n @param newState The state to set. It can be one of the following:\n  - Unpaused: The protocol is fully operational.\n  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.\n  - Paused: The protocol is paused for all operations."
+            },
+            "functionSelector": "56de96db",
+            "id": 6167,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setState",
+            "nameLocation": "1416:8:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6165,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6164,
+                  "mutability": "mutable",
+                  "name": "newState",
+                  "nameLocation": "1445:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6167,
+                  "src": "1425:28:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                    "typeString": "enum Types.ProtocolState"
+                  },
+                  "typeName": {
+                    "id": 6163,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6162,
+                      "name": "Types.ProtocolState",
+                      "nameLocations": [
+                        "1425:5:29",
+                        "1431:13:29"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9216,
+                      "src": "1425:19:29"
+                    },
+                    "referencedDeclaration": 9216,
+                    "src": "1425:19:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                      "typeString": "enum Types.ProtocolState"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1424:30:29"
+            },
+            "returnParameters": {
+              "id": 6166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1463:0:29"
+            },
+            "scope": 6257,
+            "src": "1407:57:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6168,
+              "nodeType": "StructuredDocumentation",
+              "src": "1472:308:29",
+              "text": " @notice Adds or removes a profile creator from the whitelist.\n @custom:permissions Governance.\n @param profileCreator The profile creator address to add or remove from the whitelist.\n @param whitelist Whether or not the profile creator should be whitelisted."
+            },
+            "functionSelector": "20905506",
+            "id": 6175,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "whitelistProfileCreator",
+            "nameLocation": "1795:23:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6173,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6170,
+                  "mutability": "mutable",
+                  "name": "profileCreator",
+                  "nameLocation": "1827:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6175,
+                  "src": "1819:22:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6169,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1819:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6172,
+                  "mutability": "mutable",
+                  "name": "whitelist",
+                  "nameLocation": "1848:9:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6175,
+                  "src": "1843:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6171,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1843:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1818:40:29"
+            },
+            "returnParameters": {
+              "id": 6174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1867:0:29"
+            },
+            "scope": 6257,
+            "src": "1786:82:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6176,
+              "nodeType": "StructuredDocumentation",
+              "src": "1876:191:29",
+              "text": " @notice Sets the profile token URI contract.\n @custom:permissions Governance.\n @param profileTokenURIContract The profile token URI contract to set."
+            },
+            "functionSelector": "97f48f13",
+            "id": 6181,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setProfileTokenURIContract",
+            "nameLocation": "2082:26:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6179,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6178,
+                  "mutability": "mutable",
+                  "name": "profileTokenURIContract",
+                  "nameLocation": "2117:23:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6181,
+                  "src": "2109:31:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6177,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2109:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2108:33:29"
+            },
+            "returnParameters": {
+              "id": 6180,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2150:0:29"
+            },
+            "scope": 6257,
+            "src": "2073:78:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6182,
+              "nodeType": "StructuredDocumentation",
+              "src": "2159:162:29",
+              "text": " @notice Sets the treasury address.\n @custom:permissions Governance\n @param newTreasury The new treasury address to set."
+            },
+            "functionSelector": "f0f44260",
+            "id": 6187,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasury",
+            "nameLocation": "2336:11:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6184,
+                  "mutability": "mutable",
+                  "name": "newTreasury",
+                  "nameLocation": "2356:11:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6187,
+                  "src": "2348:19:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6183,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2348:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2347:21:29"
+            },
+            "returnParameters": {
+              "id": 6186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2377:0:29"
+            },
+            "scope": 6257,
+            "src": "2327:51:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6188,
+              "nodeType": "StructuredDocumentation",
+              "src": "2386:161:29",
+              "text": " @notice Sets the treasury fee BPS.\n @custom:permissions Governance\n @param newTreasuryFee The new treasury fee to set."
+            },
+            "functionSelector": "d8da5689",
+            "id": 6193,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasuryFeeBPS",
+            "nameLocation": "2562:17:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6191,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6190,
+                  "mutability": "mutable",
+                  "name": "newTreasuryFee",
+                  "nameLocation": "2587:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6193,
+                  "src": "2580:21:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 6189,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2580:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2579:23:29"
+            },
+            "returnParameters": {
+              "id": 6192,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2611:0:29"
+            },
+            "scope": 6257,
+            "src": "2553:59:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6194,
+              "nodeType": "StructuredDocumentation",
+              "src": "2624:221:29",
+              "text": " @notice Sets the treasury fee.\n @custom:permissions Governance\n @param newTreasuryFee The new treasury fee to set.\n @param currency The currency for the fee to set"
+            },
+            "functionSelector": "abb9683c",
+            "id": 6201,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasuryFee",
+            "nameLocation": "2860:14:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6196,
+                  "mutability": "mutable",
+                  "name": "newTreasuryFee",
+                  "nameLocation": "2883:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6201,
+                  "src": "2875:22:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6195,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2875:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6198,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "2907:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6201,
+                  "src": "2899:16:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6197,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2899:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2874:42:29"
+            },
+            "returnParameters": {
+              "id": 6200,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2925:0:29"
+            },
+            "scope": 6257,
+            "src": "2851:75:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6202,
+              "nodeType": "StructuredDocumentation",
+              "src": "2934:165:29",
+              "text": " @notice Returns the currently configured governance address.\n @return address The address of the currently configured governance."
+            },
+            "functionSelector": "289b3c0d",
+            "id": 6207,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGovernance",
+            "nameLocation": "3114:13:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6203,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3127:2:29"
+            },
+            "returnParameters": {
+              "id": 6206,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6205,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6207,
+                  "src": "3153:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6204,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3153:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3152:9:29"
+            },
+            "scope": 6257,
+            "src": "3105:57:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6208,
+              "nodeType": "StructuredDocumentation",
+              "src": "3174:112:29",
+              "text": " @notice Returns the treasury address.\n @return address The treasury address."
+            },
+            "functionSelector": "3b19e84a",
+            "id": 6213,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasury",
+            "nameLocation": "3301:11:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6209,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3312:2:29"
+            },
+            "returnParameters": {
+              "id": 6212,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6211,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6213,
+                  "src": "3338:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6210,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3338:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3337:9:29"
+            },
+            "scope": 6257,
+            "src": "3292:55:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6214,
+              "nodeType": "StructuredDocumentation",
+              "src": "3355:104:29",
+              "text": " @notice Returns the treasury fee.\n @return uint16 The treasury fee.*"
+            },
+            "functionSelector": "dc276968",
+            "id": 6219,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryFeeBPS",
+            "nameLocation": "3474:17:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6215,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3491:2:29"
+            },
+            "returnParameters": {
+              "id": 6218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6217,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6219,
+                  "src": "3517:6:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 6216,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3517:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3516:8:29"
+            },
+            "scope": 6257,
+            "src": "3465:60:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6220,
+              "nodeType": "StructuredDocumentation",
+              "src": "3533:165:29",
+              "text": " @notice Returns the treasury fee.\n @param currency the address of the currency.\n @return uint16 The treasury fee.*"
+            },
+            "functionSelector": "4943b8a1",
+            "id": 6227,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryFee",
+            "nameLocation": "3713:14:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6223,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6222,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "3736:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6227,
+                  "src": "3728:16:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6221,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3728:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3727:18:29"
+            },
+            "returnParameters": {
+              "id": 6226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6225,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6227,
+                  "src": "3769:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6224,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3769:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3768:9:29"
+            },
+            "scope": 6257,
+            "src": "3704:74:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6228,
+              "nodeType": "StructuredDocumentation",
+              "src": "3786:177:29",
+              "text": " @notice Returns the treasury address and treasury fee in a single call.\n @return tuple First, the treasury address, second, the treasury fee."
+            },
+            "functionSelector": "98f965d1",
+            "id": 6235,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryData",
+            "nameLocation": "3978:15:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6229,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3993:2:29"
+            },
+            "returnParameters": {
+              "id": 6234,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6231,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6235,
+                  "src": "4019:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6230,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4019:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6233,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6235,
+                  "src": "4028:6:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 6232,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4028:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4018:17:29"
+            },
+            "scope": 6257,
+            "src": "3969:67:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6236,
+              "nodeType": "StructuredDocumentation",
+              "src": "4044:272:29",
+              "text": " @notice Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an\n unpaused state.\n @custom:permissions Anyone.\n @return Types.ProtocolState The state currently set in the protocol."
+            },
+            "functionSelector": "1865c57d",
+            "id": 6242,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getState",
+            "nameLocation": "4331:8:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6237,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4339:2:29"
+            },
+            "returnParameters": {
+              "id": 6241,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6240,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6242,
+                  "src": "4365:19:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                    "typeString": "enum Types.ProtocolState"
+                  },
+                  "typeName": {
+                    "id": 6239,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6238,
+                      "name": "Types.ProtocolState",
+                      "nameLocations": [
+                        "4365:5:29",
+                        "4371:13:29"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9216,
+                      "src": "4365:19:29"
+                    },
+                    "referencedDeclaration": 9216,
+                    "src": "4365:19:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                      "typeString": "enum Types.ProtocolState"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4364:21:29"
+            },
+            "scope": 6257,
+            "src": "4322:64:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6243,
+              "nodeType": "StructuredDocumentation",
+              "src": "4394:258:29",
+              "text": " @notice Returns whether or not a profile creator is whitelisted.\n @param profileCreator The address of the profile creator to check.\n @return bool True if the profile creator is whitelisted, false otherwise."
+            },
+            "functionSelector": "af05dd22",
+            "id": 6250,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isProfileCreatorWhitelisted",
+            "nameLocation": "4667:27:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6246,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6245,
+                  "mutability": "mutable",
+                  "name": "profileCreator",
+                  "nameLocation": "4703:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6250,
+                  "src": "4695:22:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6244,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4695:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4694:24:29"
+            },
+            "returnParameters": {
+              "id": 6249,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6248,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6250,
+                  "src": "4742:4:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6247,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4742:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4741:6:29"
+            },
+            "scope": 6257,
+            "src": "4658:90:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6251,
+              "nodeType": "StructuredDocumentation",
+              "src": "4756:129:29",
+              "text": " @notice Gets the profile token URI contract.\n @return address The profile token URI contract."
+            },
+            "functionSelector": "0092890e",
+            "id": 6256,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProfileTokenURIContract",
+            "nameLocation": "4900:26:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6252,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4926:2:29"
+            },
+            "returnParameters": {
+              "id": 6255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6254,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6256,
+                  "src": "4952:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6253,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4952:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4951:9:29"
+            },
+            "scope": 6257,
+            "src": "4891:70:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6258,
+        "src": "272:4692:29",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:4929:29"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IEduxGovernable.sol",
+    "exportedSymbols": {
+      "IEduxGovernable": [
+        6257
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6258,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6145,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:29"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6147,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6258,
+        "sourceUnit": 9442,
+        "src": "63:55:29",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6146,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:29",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEduxGovernable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6148,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:148:29",
+          "text": " @title IEduxGovernable\n @author Edux Protocol\n @notice This is the interface for the Edux Protocol main governance functions."
+        },
+        "fullyImplemented": false,
+        "id": 6257,
+        "linearizedBaseContracts": [
+          6257
+        ],
+        "name": "IEduxGovernable",
+        "nameLocation": "282:15:29",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6149,
+              "nodeType": "StructuredDocumentation",
+              "src": "305:177:29",
+              "text": " @notice Sets the privileged governance role.\n @custom:permissions Governance.\n @param newGovernance The new governance address to set."
+            },
+            "functionSelector": "ab033ea9",
+            "id": 6154,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setGovernance",
+            "nameLocation": "497:13:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6152,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6151,
+                  "mutability": "mutable",
+                  "name": "newGovernance",
+                  "nameLocation": "519:13:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6154,
+                  "src": "511:21:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6150,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "510:23:29"
+            },
+            "returnParameters": {
+              "id": 6153,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "542:0:29"
+            },
+            "scope": 6257,
+            "src": "488:55:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6155,
+              "nodeType": "StructuredDocumentation",
+              "src": "551:236:29",
+              "text": " @notice Sets the emergency admin, which is a permissioned role able to set the protocol state.\n @custom:permissions Governance.\n @param newEmergencyAdmin The new emergency admin address to set."
+            },
+            "functionSelector": "35da3394",
+            "id": 6160,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEmergencyAdmin",
+            "nameLocation": "802:17:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6157,
+                  "mutability": "mutable",
+                  "name": "newEmergencyAdmin",
+                  "nameLocation": "828:17:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6160,
+                  "src": "820:25:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6156,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "820:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "819:27:29"
+            },
+            "returnParameters": {
+              "id": 6159,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "855:0:29"
+            },
+            "scope": 6257,
+            "src": "793:63:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6161,
+              "nodeType": "StructuredDocumentation",
+              "src": "864:537:29",
+              "text": " @notice Sets the protocol state to either a global pause, a publishing pause or an unpaused state.\n @custom:permissions Governance or Emergency Admin. Emergency Admin can only restrict more.\n @param newState The state to set. It can be one of the following:\n  - Unpaused: The protocol is fully operational.\n  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.\n  - Paused: The protocol is paused for all operations."
+            },
+            "functionSelector": "56de96db",
+            "id": 6167,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setState",
+            "nameLocation": "1416:8:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6165,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6164,
+                  "mutability": "mutable",
+                  "name": "newState",
+                  "nameLocation": "1445:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6167,
+                  "src": "1425:28:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                    "typeString": "enum Types.ProtocolState"
+                  },
+                  "typeName": {
+                    "id": 6163,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6162,
+                      "name": "Types.ProtocolState",
+                      "nameLocations": [
+                        "1425:5:29",
+                        "1431:13:29"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9216,
+                      "src": "1425:19:29"
+                    },
+                    "referencedDeclaration": 9216,
+                    "src": "1425:19:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                      "typeString": "enum Types.ProtocolState"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1424:30:29"
+            },
+            "returnParameters": {
+              "id": 6166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1463:0:29"
+            },
+            "scope": 6257,
+            "src": "1407:57:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6168,
+              "nodeType": "StructuredDocumentation",
+              "src": "1472:308:29",
+              "text": " @notice Adds or removes a profile creator from the whitelist.\n @custom:permissions Governance.\n @param profileCreator The profile creator address to add or remove from the whitelist.\n @param whitelist Whether or not the profile creator should be whitelisted."
+            },
+            "functionSelector": "20905506",
+            "id": 6175,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "whitelistProfileCreator",
+            "nameLocation": "1795:23:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6173,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6170,
+                  "mutability": "mutable",
+                  "name": "profileCreator",
+                  "nameLocation": "1827:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6175,
+                  "src": "1819:22:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6169,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1819:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6172,
+                  "mutability": "mutable",
+                  "name": "whitelist",
+                  "nameLocation": "1848:9:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6175,
+                  "src": "1843:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6171,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1843:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1818:40:29"
+            },
+            "returnParameters": {
+              "id": 6174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1867:0:29"
+            },
+            "scope": 6257,
+            "src": "1786:82:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6176,
+              "nodeType": "StructuredDocumentation",
+              "src": "1876:191:29",
+              "text": " @notice Sets the profile token URI contract.\n @custom:permissions Governance.\n @param profileTokenURIContract The profile token URI contract to set."
+            },
+            "functionSelector": "97f48f13",
+            "id": 6181,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setProfileTokenURIContract",
+            "nameLocation": "2082:26:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6179,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6178,
+                  "mutability": "mutable",
+                  "name": "profileTokenURIContract",
+                  "nameLocation": "2117:23:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6181,
+                  "src": "2109:31:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6177,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2109:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2108:33:29"
+            },
+            "returnParameters": {
+              "id": 6180,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2150:0:29"
+            },
+            "scope": 6257,
+            "src": "2073:78:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6182,
+              "nodeType": "StructuredDocumentation",
+              "src": "2159:162:29",
+              "text": " @notice Sets the treasury address.\n @custom:permissions Governance\n @param newTreasury The new treasury address to set."
+            },
+            "functionSelector": "f0f44260",
+            "id": 6187,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasury",
+            "nameLocation": "2336:11:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6184,
+                  "mutability": "mutable",
+                  "name": "newTreasury",
+                  "nameLocation": "2356:11:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6187,
+                  "src": "2348:19:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6183,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2348:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2347:21:29"
+            },
+            "returnParameters": {
+              "id": 6186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2377:0:29"
+            },
+            "scope": 6257,
+            "src": "2327:51:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6188,
+              "nodeType": "StructuredDocumentation",
+              "src": "2386:161:29",
+              "text": " @notice Sets the treasury fee BPS.\n @custom:permissions Governance\n @param newTreasuryFee The new treasury fee to set."
+            },
+            "functionSelector": "d8da5689",
+            "id": 6193,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasuryFeeBPS",
+            "nameLocation": "2562:17:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6191,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6190,
+                  "mutability": "mutable",
+                  "name": "newTreasuryFee",
+                  "nameLocation": "2587:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6193,
+                  "src": "2580:21:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 6189,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2580:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2579:23:29"
+            },
+            "returnParameters": {
+              "id": 6192,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2611:0:29"
+            },
+            "scope": 6257,
+            "src": "2553:59:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6194,
+              "nodeType": "StructuredDocumentation",
+              "src": "2624:221:29",
+              "text": " @notice Sets the treasury fee.\n @custom:permissions Governance\n @param newTreasuryFee The new treasury fee to set.\n @param currency The currency for the fee to set"
+            },
+            "functionSelector": "abb9683c",
+            "id": 6201,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasuryFee",
+            "nameLocation": "2860:14:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6196,
+                  "mutability": "mutable",
+                  "name": "newTreasuryFee",
+                  "nameLocation": "2883:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6201,
+                  "src": "2875:22:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6195,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2875:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6198,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "2907:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6201,
+                  "src": "2899:16:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6197,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2899:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2874:42:29"
+            },
+            "returnParameters": {
+              "id": 6200,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2925:0:29"
+            },
+            "scope": 6257,
+            "src": "2851:75:29",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6202,
+              "nodeType": "StructuredDocumentation",
+              "src": "2934:165:29",
+              "text": " @notice Returns the currently configured governance address.\n @return address The address of the currently configured governance."
+            },
+            "functionSelector": "289b3c0d",
+            "id": 6207,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGovernance",
+            "nameLocation": "3114:13:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6203,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3127:2:29"
+            },
+            "returnParameters": {
+              "id": 6206,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6205,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6207,
+                  "src": "3153:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6204,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3153:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3152:9:29"
+            },
+            "scope": 6257,
+            "src": "3105:57:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6208,
+              "nodeType": "StructuredDocumentation",
+              "src": "3174:112:29",
+              "text": " @notice Returns the treasury address.\n @return address The treasury address."
+            },
+            "functionSelector": "3b19e84a",
+            "id": 6213,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasury",
+            "nameLocation": "3301:11:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6209,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3312:2:29"
+            },
+            "returnParameters": {
+              "id": 6212,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6211,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6213,
+                  "src": "3338:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6210,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3338:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3337:9:29"
+            },
+            "scope": 6257,
+            "src": "3292:55:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6214,
+              "nodeType": "StructuredDocumentation",
+              "src": "3355:104:29",
+              "text": " @notice Returns the treasury fee.\n @return uint16 The treasury fee.*"
+            },
+            "functionSelector": "dc276968",
+            "id": 6219,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryFeeBPS",
+            "nameLocation": "3474:17:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6215,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3491:2:29"
+            },
+            "returnParameters": {
+              "id": 6218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6217,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6219,
+                  "src": "3517:6:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 6216,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3517:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3516:8:29"
+            },
+            "scope": 6257,
+            "src": "3465:60:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6220,
+              "nodeType": "StructuredDocumentation",
+              "src": "3533:165:29",
+              "text": " @notice Returns the treasury fee.\n @param currency the address of the currency.\n @return uint16 The treasury fee.*"
+            },
+            "functionSelector": "4943b8a1",
+            "id": 6227,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryFee",
+            "nameLocation": "3713:14:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6223,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6222,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "3736:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6227,
+                  "src": "3728:16:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6221,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3728:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3727:18:29"
+            },
+            "returnParameters": {
+              "id": 6226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6225,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6227,
+                  "src": "3769:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6224,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3769:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3768:9:29"
+            },
+            "scope": 6257,
+            "src": "3704:74:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6228,
+              "nodeType": "StructuredDocumentation",
+              "src": "3786:177:29",
+              "text": " @notice Returns the treasury address and treasury fee in a single call.\n @return tuple First, the treasury address, second, the treasury fee."
+            },
+            "functionSelector": "98f965d1",
+            "id": 6235,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryData",
+            "nameLocation": "3978:15:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6229,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3993:2:29"
+            },
+            "returnParameters": {
+              "id": 6234,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6231,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6235,
+                  "src": "4019:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6230,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4019:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6233,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6235,
+                  "src": "4028:6:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 6232,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4028:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4018:17:29"
+            },
+            "scope": 6257,
+            "src": "3969:67:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6236,
+              "nodeType": "StructuredDocumentation",
+              "src": "4044:272:29",
+              "text": " @notice Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an\n unpaused state.\n @custom:permissions Anyone.\n @return Types.ProtocolState The state currently set in the protocol."
+            },
+            "functionSelector": "1865c57d",
+            "id": 6242,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getState",
+            "nameLocation": "4331:8:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6237,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4339:2:29"
+            },
+            "returnParameters": {
+              "id": 6241,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6240,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6242,
+                  "src": "4365:19:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                    "typeString": "enum Types.ProtocolState"
+                  },
+                  "typeName": {
+                    "id": 6239,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6238,
+                      "name": "Types.ProtocolState",
+                      "nameLocations": [
+                        "4365:5:29",
+                        "4371:13:29"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9216,
+                      "src": "4365:19:29"
+                    },
+                    "referencedDeclaration": 9216,
+                    "src": "4365:19:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                      "typeString": "enum Types.ProtocolState"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4364:21:29"
+            },
+            "scope": 6257,
+            "src": "4322:64:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6243,
+              "nodeType": "StructuredDocumentation",
+              "src": "4394:258:29",
+              "text": " @notice Returns whether or not a profile creator is whitelisted.\n @param profileCreator The address of the profile creator to check.\n @return bool True if the profile creator is whitelisted, false otherwise."
+            },
+            "functionSelector": "af05dd22",
+            "id": 6250,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isProfileCreatorWhitelisted",
+            "nameLocation": "4667:27:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6246,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6245,
+                  "mutability": "mutable",
+                  "name": "profileCreator",
+                  "nameLocation": "4703:14:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6250,
+                  "src": "4695:22:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6244,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4695:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4694:24:29"
+            },
+            "returnParameters": {
+              "id": 6249,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6248,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6250,
+                  "src": "4742:4:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6247,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4742:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4741:6:29"
+            },
+            "scope": 6257,
+            "src": "4658:90:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6251,
+              "nodeType": "StructuredDocumentation",
+              "src": "4756:129:29",
+              "text": " @notice Gets the profile token URI contract.\n @return address The profile token URI contract."
+            },
+            "functionSelector": "0092890e",
+            "id": 6256,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProfileTokenURIContract",
+            "nameLocation": "4900:26:29",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6252,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4926:2:29"
+            },
+            "returnParameters": {
+              "id": 6255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6254,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6256,
+                  "src": "4952:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6253,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4952:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4951:9:29"
+            },
+            "scope": 6257,
+            "src": "4891:70:29",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6258,
+        "src": "272:4692:29",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:4929:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.381Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {
+      "getGovernance()": {
+        "returns": {
+          "_0": "address The address of the currently configured governance."
+        }
+      },
+      "getProfileTokenURIContract()": {
+        "returns": {
+          "_0": "address The profile token URI contract."
+        }
+      },
+      "getState()": {
+        "custom:permissions": "Anyone.",
+        "returns": {
+          "_0": "Types.ProtocolState The state currently set in the protocol."
+        }
+      },
+      "getTreasury()": {
+        "returns": {
+          "_0": "address The treasury address."
+        }
+      },
+      "getTreasuryData()": {
+        "returns": {
+          "_0": "tuple First, the treasury address, second, the treasury fee."
+        }
+      },
+      "getTreasuryFee(address)": {
+        "params": {
+          "currency": "the address of the currency."
+        },
+        "returns": {
+          "_0": "uint16 The treasury fee.*"
+        }
+      },
+      "getTreasuryFeeBPS()": {
+        "returns": {
+          "_0": "uint16 The treasury fee.*"
+        }
+      },
+      "isProfileCreatorWhitelisted(address)": {
+        "params": {
+          "profileCreator": "The address of the profile creator to check."
+        },
+        "returns": {
+          "_0": "bool True if the profile creator is whitelisted, false otherwise."
+        }
+      },
+      "setEmergencyAdmin(address)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "newEmergencyAdmin": "The new emergency admin address to set."
+        }
+      },
+      "setGovernance(address)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "newGovernance": "The new governance address to set."
+        }
+      },
+      "setProfileTokenURIContract(address)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "profileTokenURIContract": "The profile token URI contract to set."
+        }
+      },
+      "setState(uint8)": {
+        "custom:permissions": "Governance or Emergency Admin. Emergency Admin can only restrict more.",
+        "params": {
+          "newState": "The state to set. It can be one of the following:  - Unpaused: The protocol is fully operational.  - PublishingPaused: The protocol is paused for publishing, but it is still operational for others operations.  - Paused: The protocol is paused for all operations."
+        }
+      },
+      "setTreasury(address)": {
+        "custom:permissions": "Governance",
+        "params": {
+          "newTreasury": "The new treasury address to set."
+        }
+      },
+      "setTreasuryFee(uint256,address)": {
+        "custom:permissions": "Governance",
+        "params": {
+          "currency": "The currency for the fee to set",
+          "newTreasuryFee": "The new treasury fee to set."
+        }
+      },
+      "setTreasuryFeeBPS(uint16)": {
+        "custom:permissions": "Governance",
+        "params": {
+          "newTreasuryFee": "The new treasury fee to set."
+        }
+      },
+      "whitelistProfileCreator(address,bool)": {
+        "custom:permissions": "Governance.",
+        "params": {
+          "profileCreator": "The profile creator address to add or remove from the whitelist.",
+          "whitelist": "Whether or not the profile creator should be whitelisted."
+        }
+      }
+    },
+    "title": "IEduxGovernable",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getGovernance()": {
+        "notice": "Returns the currently configured governance address."
+      },
+      "getProfileTokenURIContract()": {
+        "notice": "Gets the profile token URI contract."
+      },
+      "getState()": {
+        "notice": "Gets the state currently set in the protocol. It could be a global pause, a publishing pause or an unpaused state."
+      },
+      "getTreasury()": {
+        "notice": "Returns the treasury address."
+      },
+      "getTreasuryData()": {
+        "notice": "Returns the treasury address and treasury fee in a single call."
+      },
+      "getTreasuryFee(address)": {
+        "notice": "Returns the treasury fee."
+      },
+      "getTreasuryFeeBPS()": {
+        "notice": "Returns the treasury fee."
+      },
+      "isProfileCreatorWhitelisted(address)": {
+        "notice": "Returns whether or not a profile creator is whitelisted."
+      },
+      "setEmergencyAdmin(address)": {
+        "notice": "Sets the emergency admin, which is a permissioned role able to set the protocol state."
+      },
+      "setGovernance(address)": {
+        "notice": "Sets the privileged governance role."
+      },
+      "setProfileTokenURIContract(address)": {
+        "notice": "Sets the profile token URI contract."
+      },
+      "setState(uint8)": {
+        "notice": "Sets the protocol state to either a global pause, a publishing pause or an unpaused state."
+      },
+      "setTreasury(address)": {
+        "notice": "Sets the treasury address."
+      },
+      "setTreasuryFee(uint256,address)": {
+        "notice": "Sets the treasury fee."
+      },
+      "setTreasuryFeeBPS(uint16)": {
+        "notice": "Sets the treasury fee BPS."
+      },
+      "whitelistProfileCreator(address,bool)": {
+        "notice": "Adds or removes a profile creator from the whitelist."
+      }
+    },
+    "notice": "This is the interface for the Edux Protocol main governance functions.",
+    "version": 1
+  }
+}

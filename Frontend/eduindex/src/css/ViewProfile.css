@@ -1,0 +1,8 @@
+.ViewProfileContainer {
+    width: 60%;
+}
+.profile-image {
+    width: 250px !important;
+    height: 230px !important;
+    border-radius: 50%;
+}

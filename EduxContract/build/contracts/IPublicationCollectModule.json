@@ -1,0 +1,851 @@
+{
+  "contractName": "IPublicationCollectModule",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "transactionExecutor",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initializePublicationCollect",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "publicationCollectedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "publicationCollectedId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "collectorProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "collectorProfileOwner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "transactionExecutor",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "collectModuleData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Types.ProcessCollectParams",
+          "name": "processCollectParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "processPublicationCollect",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pubId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"transactionExecutor\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"initializePublicationCollect\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"publicationCollectedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"publicationCollectedId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"collectorProfileId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"collectorProfileOwner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"transactionExecutor\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"collectModuleData\",\"type\":\"bytes\"}],\"internalType\":\"struct Types.ProcessCollectParams\",\"name\":\"processCollectParams\",\"type\":\"tuple\"}],\"name\":\"processPublicationCollect\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{\"initializePublicationCollect(uint256,uint256,address,bytes)\":{\"custom:permissions\":\"EduxHub.\",\"params\":{\"data\":\"Arbitrary data passed from the user to be decoded by the Collect Module during initialization.\",\"profileId\":\"The profile ID of the author publishing the content with this Publication Collect.\",\"pubId\":\"The publication ID being published.\",\"transactionExecutor\":\"The address of the transaction executor (e.g. for any funds to transferFrom).\"},\"returns\":{\"_0\":\"bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs.\"}},\"processPublicationCollect((uint256,uint256,uint256,address,address,bytes))\":{\"custom:permissions\":\"EduxHub.\",\"params\":{\"processCollectParams\":\"The parameters needed to execute the publication collect.\"},\"returns\":{\"_0\":\"bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs.\"}}},\"title\":\"IPublicationCollect\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"initializePublicationCollect(uint256,uint256,address,bytes)\":{\"notice\":\"Initializes the collect module for the given publication being published with this Collect module.\"},\"processPublicationCollect((uint256,uint256,uint256,address,address,bytes))\":{\"notice\":\"Processes the collect for a given publication. This includes the collect's logic and any monetary/token operations.\"}},\"notice\":\"This is the standard interface for all Edux-compatible Course Publication Collects. Publication collect modules allow users to execute course collection directly from a publication, like:  - Course Collection.  - Collecting Course Based on some rules.  - Etc..\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IPublicationCollectModule.sol\":\"IPublicationCollectModule\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IPublicationCollectModule.sol\":{\"keccak256\":\"0xf7ea3ecd7c8ba9345c41b23cb763d13ee491f7f93bccebaa7f9f7856048e7550\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9e05307cf359b448d92b3ad987af4d2b53c8d38ff8c31ba1e42dacb882097ee\",\"dweb:/ipfs/QmTjDkFZsCzrSDs2yvRiifjPAhdzPk651dC6noALYyGeMP\"]},\"project:/contracts/libraries/constants/Types.sol\":{\"keccak256\":\"0x30fab63816f02dde57845d72241843eb6936f4fb968a84e1087cba37352f0270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c09adaebf74fd2c4d14591ec3baeef610edc70e0e8e73e5ae1058df1fddc846\",\"dweb:/ipfs/QmaZiF5nx1Ycq2vga3RkNxsujyQPyYBTwr5VkrwEfmHAQf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nimport {Types} from '../libraries/constants/Types.sol';\r\n\r\n/**\r\n * @title IPublicationCollect\r\n * @author Edux Protocol\r\n *\r\n * @notice This is the standard interface for all Edux-compatible Course Publication Collects.\r\n * Publication collect modules allow users to execute course collection directly from a publication, like:\r\n *  - Course Collection.\r\n *  - Collecting Course Based on some rules.\r\n *  - Etc..\r\n */\r\ninterface IPublicationCollectModule {\r\n    /**\r\n     * @notice Initializes the collect module for the given publication being published with this Collect module.\r\n     * @custom:permissions EduxHub.\r\n     *\r\n     * @param profileId The profile ID of the author publishing the content with this Publication Collect.\r\n     * @param pubId The publication ID being published.\r\n     * @param transactionExecutor The address of the transaction executor (e.g. for any funds to transferFrom).\r\n     * @param data Arbitrary data passed from the user to be decoded by the Collect Module during initialization.\r\n     *\r\n     * @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\r\n     * indexers or UIs.\r\n     */\r\n    function initializePublicationCollect(\r\n        uint256 profileId,\r\n        uint256 pubId,\r\n        address transactionExecutor,\r\n        bytes calldata data\r\n    ) external returns (bytes memory);\r\n\r\n    /**\r\n     * @notice Processes the collect for a given publication. This includes the collect's logic and any monetary/token\r\n     * operations.\r\n     * @custom:permissions EduxHub.\r\n     *\r\n     * @param processCollectParams The parameters needed to execute the publication collect.\r\n     *\r\n     * @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\r\n     * indexers or UIs.\r\n     */\r\n    function processPublicationCollect(Types.ProcessCollectParams calldata processCollectParams)\r\n        external\r\n        returns (bytes memory);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IPublicationCollectModule.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IPublicationCollectModule.sol",
+    "exportedSymbols": {
+      "IPublicationCollectModule": [
+        6601
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6602,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6574,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:36"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6576,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6602,
+        "sourceUnit": 9442,
+        "src": "63:55:36",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6575,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:36",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPublicationCollectModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6577,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:358:36",
+          "text": " @title IPublicationCollect\n @author Edux Protocol\n @notice This is the standard interface for all Edux-compatible Course Publication Collects.\n Publication collect modules allow users to execute course collection directly from a publication, like:\n  - Course Collection.\n  - Collecting Course Based on some rules.\n  - Etc.."
+        },
+        "fullyImplemented": false,
+        "id": 6601,
+        "linearizedBaseContracts": [
+          6601
+        ],
+        "name": "IPublicationCollectModule",
+        "nameLocation": "492:25:36",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6578,
+              "nodeType": "StructuredDocumentation",
+              "src": "525:705:36",
+              "text": " @notice Initializes the collect module for the given publication being published with this Collect module.\n @custom:permissions EduxHub.\n @param profileId The profile ID of the author publishing the content with this Publication Collect.\n @param pubId The publication ID being published.\n @param transactionExecutor The address of the transaction executor (e.g. for any funds to transferFrom).\n @param data Arbitrary data passed from the user to be decoded by the Collect Module during initialization.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "e08cf4e5",
+            "id": 6591,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initializePublicationCollect",
+            "nameLocation": "1245:28:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6587,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6580,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "1292:9:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1284:17:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6579,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1284:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6582,
+                  "mutability": "mutable",
+                  "name": "pubId",
+                  "nameLocation": "1320:5:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1312:13:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6581,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1312:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6584,
+                  "mutability": "mutable",
+                  "name": "transactionExecutor",
+                  "nameLocation": "1344:19:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1336:27:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6583,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1336:7:36",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6586,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1389:4:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1374:19:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6585,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1374:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1273:127:36"
+            },
+            "returnParameters": {
+              "id": 6590,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6589,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1419:12:36",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6588,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1419:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1418:14:36"
+            },
+            "scope": 6601,
+            "src": "1236:197:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6592,
+              "nodeType": "StructuredDocumentation",
+              "src": "1441:431:36",
+              "text": " @notice Processes the collect for a given publication. This includes the collect's logic and any monetary/token\n operations.\n @custom:permissions EduxHub.\n @param processCollectParams The parameters needed to execute the publication collect.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "ddb6b03a",
+            "id": 6600,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "processPublicationCollect",
+            "nameLocation": "1887:25:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6596,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6595,
+                  "mutability": "mutable",
+                  "name": "processCollectParams",
+                  "nameLocation": "1949:20:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6600,
+                  "src": "1913:56:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ProcessCollectParams_$9440_calldata_ptr",
+                    "typeString": "struct Types.ProcessCollectParams"
+                  },
+                  "typeName": {
+                    "id": 6594,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6593,
+                      "name": "Types.ProcessCollectParams",
+                      "nameLocations": [
+                        "1913:5:36",
+                        "1919:20:36"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9440,
+                      "src": "1913:26:36"
+                    },
+                    "referencedDeclaration": 9440,
+                    "src": "1913:26:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProcessCollectParams_$9440_storage_ptr",
+                      "typeString": "struct Types.ProcessCollectParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1912:58:36"
+            },
+            "returnParameters": {
+              "id": 6599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6598,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6600,
+                  "src": "2007:12:36",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6597,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2007:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2006:14:36"
+            },
+            "scope": 6601,
+            "src": "1878:143:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6602,
+        "src": "482:1542:36",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1989:36"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IPublicationCollectModule.sol",
+    "exportedSymbols": {
+      "IPublicationCollectModule": [
+        6601
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6602,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6574,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:36"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6576,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6602,
+        "sourceUnit": 9442,
+        "src": "63:55:36",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6575,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:36",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPublicationCollectModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6577,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:358:36",
+          "text": " @title IPublicationCollect\n @author Edux Protocol\n @notice This is the standard interface for all Edux-compatible Course Publication Collects.\n Publication collect modules allow users to execute course collection directly from a publication, like:\n  - Course Collection.\n  - Collecting Course Based on some rules.\n  - Etc.."
+        },
+        "fullyImplemented": false,
+        "id": 6601,
+        "linearizedBaseContracts": [
+          6601
+        ],
+        "name": "IPublicationCollectModule",
+        "nameLocation": "492:25:36",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6578,
+              "nodeType": "StructuredDocumentation",
+              "src": "525:705:36",
+              "text": " @notice Initializes the collect module for the given publication being published with this Collect module.\n @custom:permissions EduxHub.\n @param profileId The profile ID of the author publishing the content with this Publication Collect.\n @param pubId The publication ID being published.\n @param transactionExecutor The address of the transaction executor (e.g. for any funds to transferFrom).\n @param data Arbitrary data passed from the user to be decoded by the Collect Module during initialization.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "e08cf4e5",
+            "id": 6591,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initializePublicationCollect",
+            "nameLocation": "1245:28:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6587,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6580,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "1292:9:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1284:17:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6579,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1284:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6582,
+                  "mutability": "mutable",
+                  "name": "pubId",
+                  "nameLocation": "1320:5:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1312:13:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6581,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1312:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6584,
+                  "mutability": "mutable",
+                  "name": "transactionExecutor",
+                  "nameLocation": "1344:19:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1336:27:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6583,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1336:7:36",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6586,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1389:4:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1374:19:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6585,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1374:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1273:127:36"
+            },
+            "returnParameters": {
+              "id": 6590,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6589,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6591,
+                  "src": "1419:12:36",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6588,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1419:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1418:14:36"
+            },
+            "scope": 6601,
+            "src": "1236:197:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6592,
+              "nodeType": "StructuredDocumentation",
+              "src": "1441:431:36",
+              "text": " @notice Processes the collect for a given publication. This includes the collect's logic and any monetary/token\n operations.\n @custom:permissions EduxHub.\n @param processCollectParams The parameters needed to execute the publication collect.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "ddb6b03a",
+            "id": 6600,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "processPublicationCollect",
+            "nameLocation": "1887:25:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6596,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6595,
+                  "mutability": "mutable",
+                  "name": "processCollectParams",
+                  "nameLocation": "1949:20:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6600,
+                  "src": "1913:56:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ProcessCollectParams_$9440_calldata_ptr",
+                    "typeString": "struct Types.ProcessCollectParams"
+                  },
+                  "typeName": {
+                    "id": 6594,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6593,
+                      "name": "Types.ProcessCollectParams",
+                      "nameLocations": [
+                        "1913:5:36",
+                        "1919:20:36"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9440,
+                      "src": "1913:26:36"
+                    },
+                    "referencedDeclaration": 9440,
+                    "src": "1913:26:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProcessCollectParams_$9440_storage_ptr",
+                      "typeString": "struct Types.ProcessCollectParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1912:58:36"
+            },
+            "returnParameters": {
+              "id": 6599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6598,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6600,
+                  "src": "2007:12:36",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6597,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2007:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2006:14:36"
+            },
+            "scope": 6601,
+            "src": "1878:143:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6602,
+        "src": "482:1542:36",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1989:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.404Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {
+      "initializePublicationCollect(uint256,uint256,address,bytes)": {
+        "custom:permissions": "EduxHub.",
+        "params": {
+          "data": "Arbitrary data passed from the user to be decoded by the Collect Module during initialization.",
+          "profileId": "The profile ID of the author publishing the content with this Publication Collect.",
+          "pubId": "The publication ID being published.",
+          "transactionExecutor": "The address of the transaction executor (e.g. for any funds to transferFrom)."
+        },
+        "returns": {
+          "_0": "bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs."
+        }
+      },
+      "processPublicationCollect((uint256,uint256,uint256,address,address,bytes))": {
+        "custom:permissions": "EduxHub.",
+        "params": {
+          "processCollectParams": "The parameters needed to execute the publication collect."
+        },
+        "returns": {
+          "_0": "bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs."
+        }
+      }
+    },
+    "title": "IPublicationCollect",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "initializePublicationCollect(uint256,uint256,address,bytes)": {
+        "notice": "Initializes the collect module for the given publication being published with this Collect module."
+      },
+      "processPublicationCollect((uint256,uint256,uint256,address,address,bytes))": {
+        "notice": "Processes the collect for a given publication. This includes the collect's logic and any monetary/token operations."
+      }
+    },
+    "notice": "This is the standard interface for all Edux-compatible Course Publication Collects. Publication collect modules allow users to execute course collection directly from a publication, like:  - Course Collection.  - Collecting Course Based on some rules.  - Etc..",
+    "version": 1
+  }
+}

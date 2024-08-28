@@ -1,0 +1,516 @@
+{
+  "contractName": "INFTCertificate",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedProfileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointedPublication",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "transactionExecutor",
+          "type": "address"
+        }
+      ],
+      "name": "claimCertificate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pointedPublication\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"transactionExecutor\",\"type\":\"address\"}],\"name\":\"claimCertificate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"claimCertificate(uint256,uint256,uint256,address)\":{\"params\":{\"pointedProfileId\":\"The token ID of the publication's profile.\",\"pointedPublication\":\"The course publication id.\",\"profileId\":\"The token ID of the profile.\",\"transactionExecutor\":\"The owner of the profile.\"},\"returns\":{\"_0\":\"uint256 TokenId for received NFT certificate\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"claimCertificate(uint256,uint256,uint256,address)\":{\"notice\":\"claimCertificate for completed course with the specified parameters. You can claim Certificate for completed course publication.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/INFTCertificate.sol\":\"INFTCertificate\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/INFTCertificate.sol\":{\"keccak256\":\"0xcaf82cefa2cfb2a34818501dfb34b1da4d00c728e79f9d6a6f400785fb75146b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://030fb44829cec942b41cc951187aa5252ca6c760218673a2ca402de5c54e7a22\",\"dweb:/ipfs/QmSKsJhhW28z9jUn21iK5prxkjouXH7ghGLpr4K8mzmMoK\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.15;\r\n\r\ninterface INFTCertificate {\r\n    /**\r\n     * @notice claimCertificate for completed course with the specified parameters.\r\n     * You can claim Certificate for completed course publication.\r\n     *\r\n     * @param profileId The token ID of the profile.\r\n     *\r\n     * @param pointedProfileId The token ID of the publication's profile.\r\n     *\r\n     * @param pointedPublication The course publication id.\r\n     *\r\n     * @param transactionExecutor The owner of the profile.\r\n     *\r\n     * @return uint256 TokenId for received NFT certificate\r\n     */\r\n    function claimCertificate(uint256 profileId, uint256 pointedProfileId, uint256 pointedPublication, address transactionExecutor) external returns (uint256);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\INFTCertificate.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/INFTCertificate.sol",
+    "exportedSymbols": {
+      "INFTCertificate": [
+        6531
+      ]
+    },
+    "id": 6532,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6516,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:33"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "INFTCertificate",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6531,
+        "linearizedBaseContracts": [
+          6531
+        ],
+        "name": "INFTCertificate",
+        "nameLocation": "73:15:33",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6517,
+              "nodeType": "StructuredDocumentation",
+              "src": "96:517:33",
+              "text": " @notice claimCertificate for completed course with the specified parameters.\n You can claim Certificate for completed course publication.\n @param profileId The token ID of the profile.\n @param pointedProfileId The token ID of the publication's profile.\n @param pointedPublication The course publication id.\n @param transactionExecutor The owner of the profile.\n @return uint256 TokenId for received NFT certificate"
+            },
+            "functionSelector": "70dc48fa",
+            "id": 6530,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimCertificate",
+            "nameLocation": "628:16:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6526,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6519,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "653:9:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "645:17:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6518,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6521,
+                  "mutability": "mutable",
+                  "name": "pointedProfileId",
+                  "nameLocation": "672:16:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "664:24:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6520,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6523,
+                  "mutability": "mutable",
+                  "name": "pointedPublication",
+                  "nameLocation": "698:18:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "690:26:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "690:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6525,
+                  "mutability": "mutable",
+                  "name": "transactionExecutor",
+                  "nameLocation": "726:19:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "718:27:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "718:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:102:33"
+            },
+            "returnParameters": {
+              "id": 6529,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6528,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "765:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6527,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "765:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "764:9:33"
+            },
+            "scope": 6531,
+            "src": "619:155:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6532,
+        "src": "63:714:33",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:742:33"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/INFTCertificate.sol",
+    "exportedSymbols": {
+      "INFTCertificate": [
+        6531
+      ]
+    },
+    "id": 6532,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6516,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:33"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "INFTCertificate",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6531,
+        "linearizedBaseContracts": [
+          6531
+        ],
+        "name": "INFTCertificate",
+        "nameLocation": "73:15:33",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6517,
+              "nodeType": "StructuredDocumentation",
+              "src": "96:517:33",
+              "text": " @notice claimCertificate for completed course with the specified parameters.\n You can claim Certificate for completed course publication.\n @param profileId The token ID of the profile.\n @param pointedProfileId The token ID of the publication's profile.\n @param pointedPublication The course publication id.\n @param transactionExecutor The owner of the profile.\n @return uint256 TokenId for received NFT certificate"
+            },
+            "functionSelector": "70dc48fa",
+            "id": 6530,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimCertificate",
+            "nameLocation": "628:16:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6526,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6519,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "653:9:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "645:17:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6518,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6521,
+                  "mutability": "mutable",
+                  "name": "pointedProfileId",
+                  "nameLocation": "672:16:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "664:24:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6520,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6523,
+                  "mutability": "mutable",
+                  "name": "pointedPublication",
+                  "nameLocation": "698:18:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "690:26:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "690:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6525,
+                  "mutability": "mutable",
+                  "name": "transactionExecutor",
+                  "nameLocation": "726:19:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "718:27:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "718:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:102:33"
+            },
+            "returnParameters": {
+              "id": 6529,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6528,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6530,
+                  "src": "765:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6527,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "765:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "764:9:33"
+            },
+            "scope": 6531,
+            "src": "619:155:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6532,
+        "src": "63:714:33",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:742:33"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.397Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "claimCertificate(uint256,uint256,uint256,address)": {
+        "params": {
+          "pointedProfileId": "The token ID of the publication's profile.",
+          "pointedPublication": "The course publication id.",
+          "profileId": "The token ID of the profile.",
+          "transactionExecutor": "The owner of the profile."
+        },
+        "returns": {
+          "_0": "uint256 TokenId for received NFT certificate"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "claimCertificate(uint256,uint256,uint256,address)": {
+        "notice": "claimCertificate for completed course with the specified parameters. You can claim Certificate for completed course publication."
+      }
+    },
+    "version": 1
+  }
+}

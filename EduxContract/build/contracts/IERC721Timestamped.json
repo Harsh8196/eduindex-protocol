@@ -1,0 +1,998 @@
+{
+  "contractName": "IERC721Timestamped",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "mintTimestampOf",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenDataOf",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint96",
+              "name": "mintTimestamp",
+              "type": "uint96"
+            }
+          ],
+          "internalType": "struct Types.TokenData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"mintTimestampOf\",\"outputs\":[{\"internalType\":\"uint96\",\"name\":\"\",\"type\":\"uint96\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenDataOf\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint96\",\"name\":\"mintTimestamp\",\"type\":\"uint96\"}],\"internalType\":\"struct Types.TokenData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{\"exists(uint256)\":{\"params\":{\"tokenId\":\"The token ID of the NFT to check existence for.\"},\"returns\":{\"_0\":\"bool True if the token exists.\"}},\"mintTimestampOf(uint256)\":{\"params\":{\"tokenId\":\"The token ID of the NFT to query the mint timestamp for.\"},\"returns\":{\"_0\":\"uint256 Mint timestamp, this is stored as a uint96 but returned as a uint256 to reduce unnecessary padding.\"}},\"tokenDataOf(uint256)\":{\"params\":{\"tokenId\":\"The token ID of the NFT to query the token data for.\"},\"returns\":{\"_0\":\"TokenData A struct containing both the owner address and the mint timestamp.\"}},\"totalSupply()\":{\"returns\":{\"_0\":\"uint256 The current total supply of tokens.\"}}},\"title\":\"IERC721Timestamped\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"exists(uint256)\":{\"notice\":\"Returns whether a token with the given token ID exists.\"},\"mintTimestampOf(uint256)\":{\"notice\":\"Returns the mint timestamp associated with a given NFT.\"},\"tokenDataOf(uint256)\":{\"notice\":\"Returns the token data associated with a given NFT. This allows fetching the token owner and mint timestamp in a single call.\"},\"totalSupply()\":{\"notice\":\"Returns the amount of tokens in circulation.\"}},\"notice\":\"Extension of ERC-721 including a struct for token data, which contains the owner and the mint timestamp, as well as their associated getters.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IERC721Timestamped.sol\":\"IERC721Timestamped\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC721Timestamped.sol\":{\"keccak256\":\"0x19508b977a1aa42dd5600ca3ca8cc369aa806d498e96c4798f574951b5b273cc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://294af672e90c5b58bd0305bd6bcd93c68a4ff88b4f0535c0af6af489a829e1ae\",\"dweb:/ipfs/QmUcdeN27XyLWLcFREiP6aZm8UbgDhG4bVb4fnvW5gWmKA\"]},\"project:/contracts/libraries/constants/Types.sol\":{\"keccak256\":\"0x30fab63816f02dde57845d72241843eb6936f4fb968a84e1087cba37352f0270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c09adaebf74fd2c4d14591ec3baeef610edc70e0e8e73e5ae1058df1fddc846\",\"dweb:/ipfs/QmaZiF5nx1Ycq2vga3RkNxsujyQPyYBTwr5VkrwEfmHAQf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nimport {Types} from '../libraries/constants/Types.sol';\r\n\r\n/**\r\n * @title IERC721Timestamped\r\n * @author Edux Protocol\r\n *\r\n * @notice Extension of ERC-721 including a struct for token data, which contains the owner and the mint timestamp, as\r\n * well as their associated getters.\r\n */\r\ninterface IERC721Timestamped {\r\n    /**\r\n     * @notice Returns the mint timestamp associated with a given NFT.\r\n     *\r\n     * @param tokenId The token ID of the NFT to query the mint timestamp for.\r\n     *\r\n     * @return uint256 Mint timestamp, this is stored as a uint96 but returned as a uint256 to reduce unnecessary\r\n     * padding.\r\n     */\r\n    function mintTimestampOf(uint256 tokenId) external view returns (uint96);\r\n\r\n    /**\r\n     * @notice Returns the token data associated with a given NFT. This allows fetching the token owner and\r\n     * mint timestamp in a single call.\r\n     *\r\n     * @param tokenId The token ID of the NFT to query the token data for.\r\n     *\r\n     * @return TokenData A struct containing both the owner address and the mint timestamp.\r\n     */\r\n    function tokenDataOf(uint256 tokenId) external view returns (Types.TokenData memory);\r\n\r\n    /**\r\n     * @notice Returns whether a token with the given token ID exists.\r\n     *\r\n     * @param tokenId The token ID of the NFT to check existence for.\r\n     *\r\n     * @return bool True if the token exists.\r\n     */\r\n    function exists(uint256 tokenId) external view returns (bool);\r\n\r\n    /**\r\n     * @notice Returns the amount of tokens in circulation.\r\n     *\r\n     * @return uint256 The current total supply of tokens.\r\n     */\r\n    function totalSupply() external view returns (uint256);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IERC721Timestamped.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IERC721Timestamped.sol",
+    "exportedSymbols": {
+      "IERC721Timestamped": [
+        6124
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6125,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6089,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:27"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6091,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6125,
+        "sourceUnit": 9442,
+        "src": "63:55:27",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6090,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:27",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC721Timestamped",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6092,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:226:27",
+          "text": " @title IERC721Timestamped\n @author Edux Protocol\n @notice Extension of ERC-721 including a struct for token data, which contains the owner and the mint timestamp, as\n well as their associated getters."
+        },
+        "fullyImplemented": false,
+        "id": 6124,
+        "linearizedBaseContracts": [
+          6124
+        ],
+        "name": "IERC721Timestamped",
+        "nameLocation": "360:18:27",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6093,
+              "nodeType": "StructuredDocumentation",
+              "src": "386:312:27",
+              "text": " @notice Returns the mint timestamp associated with a given NFT.\n @param tokenId The token ID of the NFT to query the mint timestamp for.\n @return uint256 Mint timestamp, this is stored as a uint96 but returned as a uint256 to reduce unnecessary\n padding."
+            },
+            "functionSelector": "50ddf35c",
+            "id": 6100,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintTimestampOf",
+            "nameLocation": "713:15:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6096,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6095,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "737:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6100,
+                  "src": "729:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6094,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:17:27"
+            },
+            "returnParameters": {
+              "id": 6099,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6098,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6100,
+                  "src": "769:6:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 6097,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "769:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:8:27"
+            },
+            "scope": 6124,
+            "src": "704:73:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6101,
+              "nodeType": "StructuredDocumentation",
+              "src": "785:347:27",
+              "text": " @notice Returns the token data associated with a given NFT. This allows fetching the token owner and\n mint timestamp in a single call.\n @param tokenId The token ID of the NFT to query the token data for.\n @return TokenData A struct containing both the owner address and the mint timestamp."
+            },
+            "functionSelector": "c0da9bcd",
+            "id": 6109,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenDataOf",
+            "nameLocation": "1147:11:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6104,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6103,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1167:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6109,
+                  "src": "1159:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6102,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1159:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1158:17:27"
+            },
+            "returnParameters": {
+              "id": 6108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6107,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6109,
+                  "src": "1199:22:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenData_$9203_memory_ptr",
+                    "typeString": "struct Types.TokenData"
+                  },
+                  "typeName": {
+                    "id": 6106,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6105,
+                      "name": "Types.TokenData",
+                      "nameLocations": [
+                        "1199:5:27",
+                        "1205:9:27"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9203,
+                      "src": "1199:15:27"
+                    },
+                    "referencedDeclaration": 9203,
+                    "src": "1199:15:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenData_$9203_storage_ptr",
+                      "typeString": "struct Types.TokenData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1198:24:27"
+            },
+            "scope": 6124,
+            "src": "1138:85:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6110,
+              "nodeType": "StructuredDocumentation",
+              "src": "1231:218:27",
+              "text": " @notice Returns whether a token with the given token ID exists.\n @param tokenId The token ID of the NFT to check existence for.\n @return bool True if the token exists."
+            },
+            "functionSelector": "4f558e79",
+            "id": 6117,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nameLocation": "1464:6:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6112,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1479:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6117,
+                  "src": "1471:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6111,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1471:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1470:17:27"
+            },
+            "returnParameters": {
+              "id": 6116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6115,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6117,
+                  "src": "1511:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6114,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1511:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1510:6:27"
+            },
+            "scope": 6124,
+            "src": "1455:62:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6118,
+              "nodeType": "StructuredDocumentation",
+              "src": "1525:141:27",
+              "text": " @notice Returns the amount of tokens in circulation.\n @return uint256 The current total supply of tokens."
+            },
+            "functionSelector": "18160ddd",
+            "id": 6123,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupply",
+            "nameLocation": "1681:11:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1692:2:27"
+            },
+            "returnParameters": {
+              "id": 6122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6121,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6123,
+                  "src": "1718:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6120,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1718:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1717:9:27"
+            },
+            "scope": 6124,
+            "src": "1672:55:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6125,
+        "src": "350:1380:27",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1695:27"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IERC721Timestamped.sol",
+    "exportedSymbols": {
+      "IERC721Timestamped": [
+        6124
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6125,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6089,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:27"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6091,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6125,
+        "sourceUnit": 9442,
+        "src": "63:55:27",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6090,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:27",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC721Timestamped",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6092,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:226:27",
+          "text": " @title IERC721Timestamped\n @author Edux Protocol\n @notice Extension of ERC-721 including a struct for token data, which contains the owner and the mint timestamp, as\n well as their associated getters."
+        },
+        "fullyImplemented": false,
+        "id": 6124,
+        "linearizedBaseContracts": [
+          6124
+        ],
+        "name": "IERC721Timestamped",
+        "nameLocation": "360:18:27",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6093,
+              "nodeType": "StructuredDocumentation",
+              "src": "386:312:27",
+              "text": " @notice Returns the mint timestamp associated with a given NFT.\n @param tokenId The token ID of the NFT to query the mint timestamp for.\n @return uint256 Mint timestamp, this is stored as a uint96 but returned as a uint256 to reduce unnecessary\n padding."
+            },
+            "functionSelector": "50ddf35c",
+            "id": 6100,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintTimestampOf",
+            "nameLocation": "713:15:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6096,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6095,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "737:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6100,
+                  "src": "729:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6094,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:17:27"
+            },
+            "returnParameters": {
+              "id": 6099,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6098,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6100,
+                  "src": "769:6:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 6097,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "769:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:8:27"
+            },
+            "scope": 6124,
+            "src": "704:73:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6101,
+              "nodeType": "StructuredDocumentation",
+              "src": "785:347:27",
+              "text": " @notice Returns the token data associated with a given NFT. This allows fetching the token owner and\n mint timestamp in a single call.\n @param tokenId The token ID of the NFT to query the token data for.\n @return TokenData A struct containing both the owner address and the mint timestamp."
+            },
+            "functionSelector": "c0da9bcd",
+            "id": 6109,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenDataOf",
+            "nameLocation": "1147:11:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6104,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6103,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1167:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6109,
+                  "src": "1159:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6102,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1159:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1158:17:27"
+            },
+            "returnParameters": {
+              "id": 6108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6107,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6109,
+                  "src": "1199:22:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenData_$9203_memory_ptr",
+                    "typeString": "struct Types.TokenData"
+                  },
+                  "typeName": {
+                    "id": 6106,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6105,
+                      "name": "Types.TokenData",
+                      "nameLocations": [
+                        "1199:5:27",
+                        "1205:9:27"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9203,
+                      "src": "1199:15:27"
+                    },
+                    "referencedDeclaration": 9203,
+                    "src": "1199:15:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenData_$9203_storage_ptr",
+                      "typeString": "struct Types.TokenData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1198:24:27"
+            },
+            "scope": 6124,
+            "src": "1138:85:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6110,
+              "nodeType": "StructuredDocumentation",
+              "src": "1231:218:27",
+              "text": " @notice Returns whether a token with the given token ID exists.\n @param tokenId The token ID of the NFT to check existence for.\n @return bool True if the token exists."
+            },
+            "functionSelector": "4f558e79",
+            "id": 6117,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nameLocation": "1464:6:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6112,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1479:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6117,
+                  "src": "1471:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6111,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1471:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1470:17:27"
+            },
+            "returnParameters": {
+              "id": 6116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6115,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6117,
+                  "src": "1511:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6114,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1511:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1510:6:27"
+            },
+            "scope": 6124,
+            "src": "1455:62:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6118,
+              "nodeType": "StructuredDocumentation",
+              "src": "1525:141:27",
+              "text": " @notice Returns the amount of tokens in circulation.\n @return uint256 The current total supply of tokens."
+            },
+            "functionSelector": "18160ddd",
+            "id": 6123,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupply",
+            "nameLocation": "1681:11:27",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1692:2:27"
+            },
+            "returnParameters": {
+              "id": 6122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6121,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6123,
+                  "src": "1718:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6120,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1718:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1717:9:27"
+            },
+            "scope": 6124,
+            "src": "1672:55:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6125,
+        "src": "350:1380:27",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1695:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.374Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {
+      "exists(uint256)": {
+        "params": {
+          "tokenId": "The token ID of the NFT to check existence for."
+        },
+        "returns": {
+          "_0": "bool True if the token exists."
+        }
+      },
+      "mintTimestampOf(uint256)": {
+        "params": {
+          "tokenId": "The token ID of the NFT to query the mint timestamp for."
+        },
+        "returns": {
+          "_0": "uint256 Mint timestamp, this is stored as a uint96 but returned as a uint256 to reduce unnecessary padding."
+        }
+      },
+      "tokenDataOf(uint256)": {
+        "params": {
+          "tokenId": "The token ID of the NFT to query the token data for."
+        },
+        "returns": {
+          "_0": "TokenData A struct containing both the owner address and the mint timestamp."
+        }
+      },
+      "totalSupply()": {
+        "returns": {
+          "_0": "uint256 The current total supply of tokens."
+        }
+      }
+    },
+    "title": "IERC721Timestamped",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "exists(uint256)": {
+        "notice": "Returns whether a token with the given token ID exists."
+      },
+      "mintTimestampOf(uint256)": {
+        "notice": "Returns the mint timestamp associated with a given NFT."
+      },
+      "tokenDataOf(uint256)": {
+        "notice": "Returns the token data associated with a given NFT. This allows fetching the token owner and mint timestamp in a single call."
+      },
+      "totalSupply()": {
+        "notice": "Returns the amount of tokens in circulation."
+      }
+    },
+    "notice": "Extension of ERC-721 including a struct for token data, which contains the owner and the mint timestamp, as well as their associated getters.",
+    "version": 1
+  }
+}

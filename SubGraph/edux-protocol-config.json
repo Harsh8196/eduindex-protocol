@@ -1,0 +1,44 @@
+{
+  "name": "edux-protocol/1.0.0",
+  "version": "1",
+  "abis": {
+    "edux-protocol": {
+      "path": "./abis/edux-protocol.json"
+    },
+    "simpleFeeCollectModule": {
+      "path": "./abis/simpleFeeCollectModule.json"
+    },
+    "rewardActionModule": {
+      "path": "./abis/rewardActionModule.json"
+    },
+    "moduleRegistry": {
+      "path": "./abis/moduleRegistry.json"
+    }
+  },
+  "instances": [
+    {
+      "abi": "edux-protocol",
+      "address": "0x51835f2c023E41F093d6D36fe74a159bfaf5f667",
+      "startBlock":43592,
+      "chain": "open-campus-codex"
+    },
+    {
+      "abi": "simpleFeeCollectModule",
+      "address": "0xb6FfaeFc397e9739385e464954434aD39f534332",
+      "startBlock": 43596,
+      "chain": "open-campus-codex"
+    },
+    {
+      "abi": "rewardActionModule",
+      "address": "0xbAFaC84cFdC477C55e2a134f1D7e7873c79394a7",
+      "startBlock": 43594,
+      "chain": "open-campus-codex"
+    },
+    {
+      "abi": "moduleRegistry",
+      "address": "0x9E7C0129e9C8C76270ba4C4fc39BcD3aC4Ccb301",
+      "startBlock": 43579,
+      "chain": "open-campus-codex"
+    }
+  ]
+}

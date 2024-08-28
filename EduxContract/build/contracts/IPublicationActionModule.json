@@ -1,0 +1,851 @@
+{
+  "contractName": "IPublicationActionModule",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "profileId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "transactionExecutor",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initializePublicationAction",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "publicationActedProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "publicationActedId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "actorProfileId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "actorProfileOwner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "transactionExecutor",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "actionModuleData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Types.ProcessActionParams",
+          "name": "processActionParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "processPublicationAction",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pubId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"transactionExecutor\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"initializePublicationAction\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"publicationActedProfileId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"publicationActedId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"actorProfileId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"actorProfileOwner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"transactionExecutor\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"actionModuleData\",\"type\":\"bytes\"}],\"internalType\":\"struct Types.ProcessActionParams\",\"name\":\"processActionParams\",\"type\":\"tuple\"}],\"name\":\"processPublicationAction\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{\"initializePublicationAction(uint256,uint256,address,bytes)\":{\"custom:permissions\":\"EduxHub.\",\"params\":{\"data\":\"Arbitrary data passed from the user to be decoded by the Action Module during initialization.\",\"profileId\":\"The profile ID of the author publishing the content with this Publication Action.\",\"pubId\":\"The publication ID being published.\",\"transactionExecutor\":\"The address of the transaction executor (e.g. for any funds to transferFrom).\"},\"returns\":{\"_0\":\"bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs.\"}},\"processPublicationAction((uint256,uint256,uint256,address,address,bytes))\":{\"custom:permissions\":\"EduxHub.\",\"params\":{\"processActionParams\":\"The parameters needed to execute the publication action.\"},\"returns\":{\"_0\":\"bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs.\"}}},\"title\":\"IPublicationAction\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"initializePublicationAction(uint256,uint256,address,bytes)\":{\"notice\":\"Initializes the action module for the given publication being published with this Action module.\"},\"processPublicationAction((uint256,uint256,uint256,address,address,bytes))\":{\"notice\":\"Processes the action for a given publication. This includes the action's logic and any monetary/token operations.\"}},\"notice\":\"This is the standard interface for all Edux-compatible Publication Actions. Publication action modules allow users to execute actions directly from a publication, like:  - Token Rewards for completing lesson.  - Milestone base rewards.  - Etc. Referrers are supported, so any publication or profile that references the publication can receive a share from the publication's action if the action module supports it.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IPublicationActionModule.sol\":\"IPublicationActionModule\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IPublicationActionModule.sol\":{\"keccak256\":\"0xb2d34c5ebe595dad8394e61d0d0df7dbe6a4e9472c227ea2d492b2eddff9ac15\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4413b25f7b249a9af9cfd88313f170a4b94de9aba978a596df1df42497673a64\",\"dweb:/ipfs/QmUorZtwtNB36VMfWsiWEBf9Zi21Wv4HJ5SnvMDKjEqzhg\"]},\"project:/contracts/libraries/constants/Types.sol\":{\"keccak256\":\"0x30fab63816f02dde57845d72241843eb6936f4fb968a84e1087cba37352f0270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c09adaebf74fd2c4d14591ec3baeef610edc70e0e8e73e5ae1058df1fddc846\",\"dweb:/ipfs/QmaZiF5nx1Ycq2vga3RkNxsujyQPyYBTwr5VkrwEfmHAQf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nimport {Types} from '../libraries/constants/Types.sol';\r\n\r\n/**\r\n * @title IPublicationAction\r\n * @author Edux Protocol\r\n *\r\n * @notice This is the standard interface for all Edux-compatible Publication Actions.\r\n * Publication action modules allow users to execute actions directly from a publication, like:\r\n *  - Token Rewards for completing lesson.\r\n *  - Milestone base rewards.\r\n *  - Etc.\r\n * Referrers are supported, so any publication or profile that references the publication can receive a share from the\r\n * publication's action if the action module supports it.\r\n */\r\ninterface IPublicationActionModule {\r\n    /**\r\n     * @notice Initializes the action module for the given publication being published with this Action module.\r\n     * @custom:permissions EduxHub.\r\n     *\r\n     * @param profileId The profile ID of the author publishing the content with this Publication Action.\r\n     * @param pubId The publication ID being published.\r\n     * @param transactionExecutor The address of the transaction executor (e.g. for any funds to transferFrom).\r\n     * @param data Arbitrary data passed from the user to be decoded by the Action Module during initialization.\r\n     *\r\n     * @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\r\n     * indexers or UIs.\r\n     */\r\n    function initializePublicationAction(\r\n        uint256 profileId,\r\n        uint256 pubId,\r\n        address transactionExecutor,\r\n        bytes calldata data\r\n    ) external returns (bytes memory);\r\n\r\n    /**\r\n     * @notice Processes the action for a given publication. This includes the action's logic and any monetary/token\r\n     * operations.\r\n     * @custom:permissions EduxHub.\r\n     *\r\n     * @param processActionParams The parameters needed to execute the publication action.\r\n     *\r\n     * @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\r\n     * indexers or UIs.\r\n     */\r\n    function processPublicationAction(Types.ProcessActionParams calldata processActionParams)\r\n        external\r\n        returns (bytes memory);\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\interfaces\\IPublicationActionModule.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IPublicationActionModule.sol",
+    "exportedSymbols": {
+      "IPublicationActionModule": [
+        6572
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6573,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6545,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:35"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6547,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6573,
+        "sourceUnit": 9442,
+        "src": "63:55:35",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6546,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:35",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPublicationActionModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6548,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:519:35",
+          "text": " @title IPublicationAction\n @author Edux Protocol\n @notice This is the standard interface for all Edux-compatible Publication Actions.\n Publication action modules allow users to execute actions directly from a publication, like:\n  - Token Rewards for completing lesson.\n  - Milestone base rewards.\n  - Etc.\n Referrers are supported, so any publication or profile that references the publication can receive a share from the\n publication's action if the action module supports it."
+        },
+        "fullyImplemented": false,
+        "id": 6572,
+        "linearizedBaseContracts": [
+          6572
+        ],
+        "name": "IPublicationActionModule",
+        "nameLocation": "653:24:35",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6549,
+              "nodeType": "StructuredDocumentation",
+              "src": "685:701:35",
+              "text": " @notice Initializes the action module for the given publication being published with this Action module.\n @custom:permissions EduxHub.\n @param profileId The profile ID of the author publishing the content with this Publication Action.\n @param pubId The publication ID being published.\n @param transactionExecutor The address of the transaction executor (e.g. for any funds to transferFrom).\n @param data Arbitrary data passed from the user to be decoded by the Action Module during initialization.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "0b960220",
+            "id": 6562,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initializePublicationAction",
+            "nameLocation": "1401:27:35",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6551,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "1447:9:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1439:17:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6550,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6553,
+                  "mutability": "mutable",
+                  "name": "pubId",
+                  "nameLocation": "1475:5:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1467:13:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6552,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1467:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6555,
+                  "mutability": "mutable",
+                  "name": "transactionExecutor",
+                  "nameLocation": "1499:19:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1491:27:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6554,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1491:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6557,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1544:4:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1529:19:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6556,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1529:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1428:127:35"
+            },
+            "returnParameters": {
+              "id": 6561,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6560,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1574:12:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6559,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1574:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1573:14:35"
+            },
+            "scope": 6572,
+            "src": "1392:196:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6563,
+              "nodeType": "StructuredDocumentation",
+              "src": "1596:427:35",
+              "text": " @notice Processes the action for a given publication. This includes the action's logic and any monetary/token\n operations.\n @custom:permissions EduxHub.\n @param processActionParams The parameters needed to execute the publication action.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "019f9d77",
+            "id": 6571,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "processPublicationAction",
+            "nameLocation": "2038:24:35",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6567,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6566,
+                  "mutability": "mutable",
+                  "name": "processActionParams",
+                  "nameLocation": "2098:19:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6571,
+                  "src": "2063:54:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ProcessActionParams_$9365_calldata_ptr",
+                    "typeString": "struct Types.ProcessActionParams"
+                  },
+                  "typeName": {
+                    "id": 6565,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6564,
+                      "name": "Types.ProcessActionParams",
+                      "nameLocations": [
+                        "2063:5:35",
+                        "2069:19:35"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9365,
+                      "src": "2063:25:35"
+                    },
+                    "referencedDeclaration": 9365,
+                    "src": "2063:25:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProcessActionParams_$9365_storage_ptr",
+                      "typeString": "struct Types.ProcessActionParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2062:56:35"
+            },
+            "returnParameters": {
+              "id": 6570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6569,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6571,
+                  "src": "2155:12:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6568,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2155:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2154:14:35"
+            },
+            "scope": 6572,
+            "src": "2029:140:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6573,
+        "src": "643:1529:35",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:2137:35"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IPublicationActionModule.sol",
+    "exportedSymbols": {
+      "IPublicationActionModule": [
+        6572
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 6573,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6545,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:35"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 6547,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6573,
+        "sourceUnit": 9442,
+        "src": "63:55:35",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6546,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:35",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPublicationActionModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 6548,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:519:35",
+          "text": " @title IPublicationAction\n @author Edux Protocol\n @notice This is the standard interface for all Edux-compatible Publication Actions.\n Publication action modules allow users to execute actions directly from a publication, like:\n  - Token Rewards for completing lesson.\n  - Milestone base rewards.\n  - Etc.\n Referrers are supported, so any publication or profile that references the publication can receive a share from the\n publication's action if the action module supports it."
+        },
+        "fullyImplemented": false,
+        "id": 6572,
+        "linearizedBaseContracts": [
+          6572
+        ],
+        "name": "IPublicationActionModule",
+        "nameLocation": "653:24:35",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 6549,
+              "nodeType": "StructuredDocumentation",
+              "src": "685:701:35",
+              "text": " @notice Initializes the action module for the given publication being published with this Action module.\n @custom:permissions EduxHub.\n @param profileId The profile ID of the author publishing the content with this Publication Action.\n @param pubId The publication ID being published.\n @param transactionExecutor The address of the transaction executor (e.g. for any funds to transferFrom).\n @param data Arbitrary data passed from the user to be decoded by the Action Module during initialization.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "0b960220",
+            "id": 6562,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initializePublicationAction",
+            "nameLocation": "1401:27:35",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6551,
+                  "mutability": "mutable",
+                  "name": "profileId",
+                  "nameLocation": "1447:9:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1439:17:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6550,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6553,
+                  "mutability": "mutable",
+                  "name": "pubId",
+                  "nameLocation": "1475:5:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1467:13:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6552,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1467:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6555,
+                  "mutability": "mutable",
+                  "name": "transactionExecutor",
+                  "nameLocation": "1499:19:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1491:27:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6554,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1491:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6557,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1544:4:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1529:19:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6556,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1529:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1428:127:35"
+            },
+            "returnParameters": {
+              "id": 6561,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6560,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6562,
+                  "src": "1574:12:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6559,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1574:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1573:14:35"
+            },
+            "scope": 6572,
+            "src": "1392:196:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 6563,
+              "nodeType": "StructuredDocumentation",
+              "src": "1596:427:35",
+              "text": " @notice Processes the action for a given publication. This includes the action's logic and any monetary/token\n operations.\n @custom:permissions EduxHub.\n @param processActionParams The parameters needed to execute the publication action.\n @return bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by\n indexers or UIs."
+            },
+            "functionSelector": "019f9d77",
+            "id": 6571,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "processPublicationAction",
+            "nameLocation": "2038:24:35",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6567,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6566,
+                  "mutability": "mutable",
+                  "name": "processActionParams",
+                  "nameLocation": "2098:19:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6571,
+                  "src": "2063:54:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ProcessActionParams_$9365_calldata_ptr",
+                    "typeString": "struct Types.ProcessActionParams"
+                  },
+                  "typeName": {
+                    "id": 6565,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6564,
+                      "name": "Types.ProcessActionParams",
+                      "nameLocations": [
+                        "2063:5:35",
+                        "2069:19:35"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9365,
+                      "src": "2063:25:35"
+                    },
+                    "referencedDeclaration": 9365,
+                    "src": "2063:25:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProcessActionParams_$9365_storage_ptr",
+                      "typeString": "struct Types.ProcessActionParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2062:56:35"
+            },
+            "returnParameters": {
+              "id": 6570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6569,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6571,
+                  "src": "2155:12:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6568,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2155:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2154:14:35"
+            },
+            "scope": 6572,
+            "src": "2029:140:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6573,
+        "src": "643:1529:35",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:2137:35"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.402Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {
+      "initializePublicationAction(uint256,uint256,address,bytes)": {
+        "custom:permissions": "EduxHub.",
+        "params": {
+          "data": "Arbitrary data passed from the user to be decoded by the Action Module during initialization.",
+          "profileId": "The profile ID of the author publishing the content with this Publication Action.",
+          "pubId": "The publication ID being published.",
+          "transactionExecutor": "The address of the transaction executor (e.g. for any funds to transferFrom)."
+        },
+        "returns": {
+          "_0": "bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs."
+        }
+      },
+      "processPublicationAction((uint256,uint256,uint256,address,address,bytes))": {
+        "custom:permissions": "EduxHub.",
+        "params": {
+          "processActionParams": "The parameters needed to execute the publication action."
+        },
+        "returns": {
+          "_0": "bytes Any custom ABI-encoded data. This will be a EduxHub event params that can be used by indexers or UIs."
+        }
+      }
+    },
+    "title": "IPublicationAction",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "initializePublicationAction(uint256,uint256,address,bytes)": {
+        "notice": "Initializes the action module for the given publication being published with this Action module."
+      },
+      "processPublicationAction((uint256,uint256,uint256,address,address,bytes))": {
+        "notice": "Processes the action for a given publication. This includes the action's logic and any monetary/token operations."
+      }
+    },
+    "notice": "This is the standard interface for all Edux-compatible Publication Actions. Publication action modules allow users to execute actions directly from a publication, like:  - Token Rewards for completing lesson.  - Milestone base rewards.  - Etc. Referrers are supported, so any publication or profile that references the publication can receive a share from the publication's action if the action module supports it.",
+    "version": 1
+  }
+}

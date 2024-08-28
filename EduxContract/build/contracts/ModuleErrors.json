@@ -1,0 +1,756 @@
+{
+  "contractName": "ModuleErrors",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AlreadyInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CertificateIsAlreadyClaimedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CollectExpired",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CollectNotAllowed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CourseIsNotCompletedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InitParamsInvalid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidParams",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "LessonIsNotCompletedByProfile",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MintLimitExceeded",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ModuleDataMismatch",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotActionModule",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotCollectModule",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotHub",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ProfileIsAlreadyRewarded",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PublicationIdNotProvided",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RewardAmountCannotBeZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TokenTransferIsBlock",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferNotAllowed",
+      "type": "error"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"AlreadyInitialized\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CertificateIsAlreadyClaimedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CollectExpired\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CollectNotAllowed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CourseIsNotCompletedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InitParamsInvalid\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidParams\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"LessonIsNotCompletedByProfile\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MintLimitExceeded\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ModuleDataMismatch\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotActionModule\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotCollectModule\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotHub\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ProfileIsAlreadyRewarded\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PublicationIdNotProvided\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"RewardAmountCannotBeZero\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TokenTransferIsBlock\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferNotAllowed\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/modules/libraries/constants/ModuleErrors.sol\":\"ModuleErrors\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/modules/libraries/constants/ModuleErrors.sol\":{\"keccak256\":\"0x04a158e0173d8aef5404da9304aaf07850008e7137ef37615c554536d599abb6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://41fb4e6ec1bc04b9a6c92cb15ce461bf8bc9069a41ee1e72fd2cf553370fec7a\",\"dweb:/ipfs/Qmc1y7d8JwGDHfXDuPLgaGAXe5G9T4yPN92XhrnwNg8Swa\"]}},\"version\":1}",
+  "bytecode": "0x6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea264697066735822122027c7153e2d7d071e5a1528356b679811a79ebb01d214eb81ea9aee493b13a46a64736f6c63430008140033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040525f80fdfea264697066735822122027c7153e2d7d071e5a1528356b679811a79ebb01d214eb81ea9aee493b13a46a64736f6c63430008140033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "63:775:95:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "63:775:95:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\nlibrary ModuleErrors {\r\n    // Reward Action Module\r\n    error PublicationIdNotProvided();\r\n    error RewardAmountCannotBeZero();\r\n    error ProfileIsAlreadyRewarded();\r\n    error LessonIsNotCompletedByProfile();\r\n    error TransferNotAllowed();\r\n\r\n    // CollectRestricted\r\n    error NotCollectModule();\r\n\r\n    //Base Fee Collect Module\r\n\r\n    error ModuleDataMismatch();\r\n    error NotHub();\r\n    error InitParamsInvalid();\r\n    error InvalidParams();\r\n    error MintLimitExceeded();\r\n    error CollectExpired();\r\n    error NotActionModule();\r\n    error CollectNotAllowed();\r\n    error AlreadyInitialized();\r\n\r\n    // Base NFT Certificate\r\n\r\n    error CourseIsNotCompletedByProfile();\r\n    error TokenTransferIsBlock();\r\n    error CertificateIsAlreadyClaimedByProfile();\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\modules\\libraries\\constants\\ModuleErrors.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/modules/libraries/constants/ModuleErrors.sol",
+    "exportedSymbols": {
+      "ModuleErrors": [
+        21178
+      ]
+    },
+    "id": 21179,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21141,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:95"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ModuleErrors",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 21178,
+        "linearizedBaseContracts": [
+          21178
+        ],
+        "name": "ModuleErrors",
+        "nameLocation": "71:12:95",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "errorSelector": "1faccdf7",
+            "id": 21143,
+            "name": "PublicationIdNotProvided",
+            "nameLocation": "126:24:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21142,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:2:95"
+            },
+            "src": "120:33:95"
+          },
+          {
+            "errorSelector": "2f007fe5",
+            "id": 21145,
+            "name": "RewardAmountCannotBeZero",
+            "nameLocation": "165:24:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:2:95"
+            },
+            "src": "159:33:95"
+          },
+          {
+            "errorSelector": "b8153611",
+            "id": 21147,
+            "name": "ProfileIsAlreadyRewarded",
+            "nameLocation": "204:24:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "228:2:95"
+            },
+            "src": "198:33:95"
+          },
+          {
+            "errorSelector": "d572d4f9",
+            "id": 21149,
+            "name": "LessonIsNotCompletedByProfile",
+            "nameLocation": "243:29:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:2:95"
+            },
+            "src": "237:38:95"
+          },
+          {
+            "errorSelector": "8cd22d19",
+            "id": 21151,
+            "name": "TransferNotAllowed",
+            "nameLocation": "287:18:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21150,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "305:2:95"
+            },
+            "src": "281:27:95"
+          },
+          {
+            "errorSelector": "ceeb1f8f",
+            "id": 21153,
+            "name": "NotCollectModule",
+            "nameLocation": "348:16:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21152,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:2:95"
+            },
+            "src": "342:25:95"
+          },
+          {
+            "errorSelector": "46308bd5",
+            "id": 21155,
+            "name": "ModuleDataMismatch",
+            "nameLocation": "414:18:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21154,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:2:95"
+            },
+            "src": "408:27:95"
+          },
+          {
+            "errorSelector": "9de97418",
+            "id": 21157,
+            "name": "NotHub",
+            "nameLocation": "447:6:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21156,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "453:2:95"
+            },
+            "src": "441:15:95"
+          },
+          {
+            "errorSelector": "48be0eb3",
+            "id": 21159,
+            "name": "InitParamsInvalid",
+            "nameLocation": "468:17:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21158,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "485:2:95"
+            },
+            "src": "462:26:95"
+          },
+          {
+            "errorSelector": "a86b6512",
+            "id": 21161,
+            "name": "InvalidParams",
+            "nameLocation": "500:13:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "513:2:95"
+            },
+            "src": "494:22:95"
+          },
+          {
+            "errorSelector": "b643bfa6",
+            "id": 21163,
+            "name": "MintLimitExceeded",
+            "nameLocation": "528:17:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21162,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "545:2:95"
+            },
+            "src": "522:26:95"
+          },
+          {
+            "errorSelector": "99ae0720",
+            "id": 21165,
+            "name": "CollectExpired",
+            "nameLocation": "560:14:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "574:2:95"
+            },
+            "src": "554:23:95"
+          },
+          {
+            "errorSelector": "bf15b844",
+            "id": 21167,
+            "name": "NotActionModule",
+            "nameLocation": "589:15:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "604:2:95"
+            },
+            "src": "583:24:95"
+          },
+          {
+            "errorSelector": "ad4cf0a3",
+            "id": 21169,
+            "name": "CollectNotAllowed",
+            "nameLocation": "619:17:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "636:2:95"
+            },
+            "src": "613:26:95"
+          },
+          {
+            "errorSelector": "0dc149f0",
+            "id": 21171,
+            "name": "AlreadyInitialized",
+            "nameLocation": "651:18:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21170,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "669:2:95"
+            },
+            "src": "645:27:95"
+          },
+          {
+            "errorSelector": "7d2c7eb6",
+            "id": 21173,
+            "name": "CourseIsNotCompletedByProfile",
+            "nameLocation": "717:29:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "746:2:95"
+            },
+            "src": "711:38:95"
+          },
+          {
+            "errorSelector": "a6e99f85",
+            "id": 21175,
+            "name": "TokenTransferIsBlock",
+            "nameLocation": "761:20:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "781:2:95"
+            },
+            "src": "755:29:95"
+          },
+          {
+            "errorSelector": "5b35b544",
+            "id": 21177,
+            "name": "CertificateIsAlreadyClaimedByProfile",
+            "nameLocation": "796:36:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21176,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "832:2:95"
+            },
+            "src": "790:45:95"
+          }
+        ],
+        "scope": 21179,
+        "src": "63:775:95",
+        "usedErrors": [
+          21143,
+          21145,
+          21147,
+          21149,
+          21151,
+          21153,
+          21155,
+          21157,
+          21159,
+          21161,
+          21163,
+          21165,
+          21167,
+          21169,
+          21171,
+          21173,
+          21175,
+          21177
+        ],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:803:95"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/modules/libraries/constants/ModuleErrors.sol",
+    "exportedSymbols": {
+      "ModuleErrors": [
+        21178
+      ]
+    },
+    "id": 21179,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21141,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:95"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ModuleErrors",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 21178,
+        "linearizedBaseContracts": [
+          21178
+        ],
+        "name": "ModuleErrors",
+        "nameLocation": "71:12:95",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "errorSelector": "1faccdf7",
+            "id": 21143,
+            "name": "PublicationIdNotProvided",
+            "nameLocation": "126:24:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21142,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:2:95"
+            },
+            "src": "120:33:95"
+          },
+          {
+            "errorSelector": "2f007fe5",
+            "id": 21145,
+            "name": "RewardAmountCannotBeZero",
+            "nameLocation": "165:24:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:2:95"
+            },
+            "src": "159:33:95"
+          },
+          {
+            "errorSelector": "b8153611",
+            "id": 21147,
+            "name": "ProfileIsAlreadyRewarded",
+            "nameLocation": "204:24:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "228:2:95"
+            },
+            "src": "198:33:95"
+          },
+          {
+            "errorSelector": "d572d4f9",
+            "id": 21149,
+            "name": "LessonIsNotCompletedByProfile",
+            "nameLocation": "243:29:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:2:95"
+            },
+            "src": "237:38:95"
+          },
+          {
+            "errorSelector": "8cd22d19",
+            "id": 21151,
+            "name": "TransferNotAllowed",
+            "nameLocation": "287:18:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21150,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "305:2:95"
+            },
+            "src": "281:27:95"
+          },
+          {
+            "errorSelector": "ceeb1f8f",
+            "id": 21153,
+            "name": "NotCollectModule",
+            "nameLocation": "348:16:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21152,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:2:95"
+            },
+            "src": "342:25:95"
+          },
+          {
+            "errorSelector": "46308bd5",
+            "id": 21155,
+            "name": "ModuleDataMismatch",
+            "nameLocation": "414:18:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21154,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:2:95"
+            },
+            "src": "408:27:95"
+          },
+          {
+            "errorSelector": "9de97418",
+            "id": 21157,
+            "name": "NotHub",
+            "nameLocation": "447:6:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21156,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "453:2:95"
+            },
+            "src": "441:15:95"
+          },
+          {
+            "errorSelector": "48be0eb3",
+            "id": 21159,
+            "name": "InitParamsInvalid",
+            "nameLocation": "468:17:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21158,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "485:2:95"
+            },
+            "src": "462:26:95"
+          },
+          {
+            "errorSelector": "a86b6512",
+            "id": 21161,
+            "name": "InvalidParams",
+            "nameLocation": "500:13:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "513:2:95"
+            },
+            "src": "494:22:95"
+          },
+          {
+            "errorSelector": "b643bfa6",
+            "id": 21163,
+            "name": "MintLimitExceeded",
+            "nameLocation": "528:17:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21162,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "545:2:95"
+            },
+            "src": "522:26:95"
+          },
+          {
+            "errorSelector": "99ae0720",
+            "id": 21165,
+            "name": "CollectExpired",
+            "nameLocation": "560:14:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "574:2:95"
+            },
+            "src": "554:23:95"
+          },
+          {
+            "errorSelector": "bf15b844",
+            "id": 21167,
+            "name": "NotActionModule",
+            "nameLocation": "589:15:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "604:2:95"
+            },
+            "src": "583:24:95"
+          },
+          {
+            "errorSelector": "ad4cf0a3",
+            "id": 21169,
+            "name": "CollectNotAllowed",
+            "nameLocation": "619:17:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "636:2:95"
+            },
+            "src": "613:26:95"
+          },
+          {
+            "errorSelector": "0dc149f0",
+            "id": 21171,
+            "name": "AlreadyInitialized",
+            "nameLocation": "651:18:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21170,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "669:2:95"
+            },
+            "src": "645:27:95"
+          },
+          {
+            "errorSelector": "7d2c7eb6",
+            "id": 21173,
+            "name": "CourseIsNotCompletedByProfile",
+            "nameLocation": "717:29:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "746:2:95"
+            },
+            "src": "711:38:95"
+          },
+          {
+            "errorSelector": "a6e99f85",
+            "id": 21175,
+            "name": "TokenTransferIsBlock",
+            "nameLocation": "761:20:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "781:2:95"
+            },
+            "src": "755:29:95"
+          },
+          {
+            "errorSelector": "5b35b544",
+            "id": 21177,
+            "name": "CertificateIsAlreadyClaimedByProfile",
+            "nameLocation": "796:36:95",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 21176,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "832:2:95"
+            },
+            "src": "790:45:95"
+          }
+        ],
+        "scope": 21179,
+        "src": "63:775:95",
+        "usedErrors": [
+          21143,
+          21145,
+          21147,
+          21149,
+          21151,
+          21153,
+          21155,
+          21157,
+          21159,
+          21161,
+          21163,
+          21165,
+          21167,
+          21169,
+          21171,
+          21173,
+          21175,
+          21177
+        ],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:803:95"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:22.303Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

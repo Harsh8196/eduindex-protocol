@@ -1,0 +1,882 @@
+{
+  "contractName": "EduxHubStorage",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Edux Protocol\",\"kind\":\"dev\",\"methods\":{},\"title\":\"EduxHubStorage\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"This is an abstract contract that ONLY contains storage for the EduxHub contract. This MUST be inherited last to preserve the EduxHub storage layout. Adding storage variables should be done ONLY at the bottom of this contract.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/base/EduxHubStorage.sol\":\"EduxHubStorage\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/base/EduxHubStorage.sol\":{\"keccak256\":\"0x7c89acc2ede9250d0361415e38177f3ec36bdd3645beff864182fecad1f40e95\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95a31afd9f8467269a316a946b0370ba49a73bde0783b45c0a93619d20339e4a\",\"dweb:/ipfs/Qme1n2wod7s8HiQKWeDq3riGmnJr7m6AHH9bEEy65YBYsp\"]},\"project:/contracts/libraries/constants/Types.sol\":{\"keccak256\":\"0x30fab63816f02dde57845d72241843eb6936f4fb968a84e1087cba37352f0270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c09adaebf74fd2c4d14591ec3baeef610edc70e0e8e73e5ae1058df1fddc846\",\"dweb:/ipfs/QmaZiF5nx1Ycq2vga3RkNxsujyQPyYBTwr5VkrwEfmHAQf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.18;\r\n\r\nimport {Types} from '../libraries/constants/Types.sol';\r\n\r\n/**\r\n * @title EduxHubStorage\r\n * @author Edux Protocol\r\n *\r\n * @notice This is an abstract contract that ONLY contains storage for the EduxHub contract. This MUST be inherited last\r\n * to preserve the EduxHub storage layout. Adding storage variables should be done ONLY at the bottom of this contract.\r\n */\r\nabstract contract EduxHubStorage {\r\n\r\n    Types.ProtocolState internal _state; // Slot 10\r\n\r\n    mapping(address profileCreator => bool isWhitelisted) internal _profileCreatorWhitelisted; // Slot 11\r\n\r\n    mapping(uint256 profileId => Types.ProfileMemory profile) internal _profiles; // Slot 12\r\n\r\n    mapping(uint256 profileId => mapping(uint256 pubId => Types.Publication publication)) internal _publications; // Slot 13\r\n\r\n\r\n    uint256 internal _profileCounter; // Slot 14 - different from totalSupply, as this is not decreased when burning profiles\r\n\r\n    address internal _governance; // Slot 15\r\n\r\n    address internal _emergencyAdmin; // Slot 16\r\n\r\n    address internal _profileTokenURIContract; // Slot 17\r\n\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\base\\EduxHubStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/base/EduxHubStorage.sol",
+    "exportedSymbols": {
+      "EduxHubStorage": [
+        5727
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 5728,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5696,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:23"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 5698,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 5728,
+        "sourceUnit": 9442,
+        "src": "63:55:23",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 5697,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:23",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "EduxHubStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 5699,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:307:23",
+          "text": " @title EduxHubStorage\n @author Edux Protocol\n @notice This is an abstract contract that ONLY contains storage for the EduxHub contract. This MUST be inherited last\n to preserve the EduxHub storage layout. Adding storage variables should be done ONLY at the bottom of this contract."
+        },
+        "fullyImplemented": true,
+        "id": 5727,
+        "linearizedBaseContracts": [
+          5727
+        ],
+        "name": "EduxHubStorage",
+        "nameLocation": "449:14:23",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5702,
+            "mutability": "mutable",
+            "name": "_state",
+            "nameLocation": "502:6:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "473:35:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_ProtocolState_$9216",
+              "typeString": "enum Types.ProtocolState"
+            },
+            "typeName": {
+              "id": 5701,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 5700,
+                "name": "Types.ProtocolState",
+                "nameLocations": [
+                  "473:5:23",
+                  "479:13:23"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 9216,
+                "src": "473:19:23"
+              },
+              "referencedDeclaration": 9216,
+              "src": "473:19:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                "typeString": "enum Types.ProtocolState"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5706,
+            "mutability": "mutable",
+            "name": "_profileCreatorWhitelisted",
+            "nameLocation": "591:26:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "528:89:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 5705,
+              "keyName": "profileCreator",
+              "keyNameLocation": "544:14:23",
+              "keyType": {
+                "id": 5703,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "536:7:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "528:53:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueName": "isWhitelisted",
+              "valueNameLocation": "567:13:23",
+              "valueType": {
+                "id": 5704,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "562:4:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5711,
+            "mutability": "mutable",
+            "name": "_profiles",
+            "nameLocation": "704:9:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "637:76:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProfileMemory_$9243_storage_$",
+              "typeString": "mapping(uint256 => struct Types.ProfileMemory)"
+            },
+            "typeName": {
+              "id": 5710,
+              "keyName": "profileId",
+              "keyNameLocation": "653:9:23",
+              "keyType": {
+                "id": 5707,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "645:7:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "637:57:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProfileMemory_$9243_storage_$",
+                "typeString": "mapping(uint256 => struct Types.ProfileMemory)"
+              },
+              "valueName": "profile",
+              "valueNameLocation": "686:7:23",
+              "valueType": {
+                "id": 5709,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 5708,
+                  "name": "Types.ProfileMemory",
+                  "nameLocations": [
+                    "666:5:23",
+                    "672:13:23"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 9243,
+                  "src": "666:19:23"
+                },
+                "referencedDeclaration": 9243,
+                "src": "666:19:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ProfileMemory_$9243_storage_ptr",
+                  "typeString": "struct Types.ProfileMemory"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5718,
+            "mutability": "mutable",
+            "name": "_publications",
+            "nameLocation": "828:13:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "733:108:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_uint256_$_t_struct$_Publication_$9268_storage_$_$",
+              "typeString": "mapping(uint256 => mapping(uint256 => struct Types.Publication))"
+            },
+            "typeName": {
+              "id": 5717,
+              "keyName": "profileId",
+              "keyNameLocation": "749:9:23",
+              "keyType": {
+                "id": 5712,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "741:7:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "733:85:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_uint256_$_t_struct$_Publication_$9268_storage_$_$",
+                "typeString": "mapping(uint256 => mapping(uint256 => struct Types.Publication))"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 5716,
+                "keyName": "pubId",
+                "keyNameLocation": "778:5:23",
+                "keyType": {
+                  "id": 5713,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "770:7:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "762:55:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Publication_$9268_storage_$",
+                  "typeString": "mapping(uint256 => struct Types.Publication)"
+                },
+                "valueName": "publication",
+                "valueNameLocation": "805:11:23",
+                "valueType": {
+                  "id": 5715,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 5714,
+                    "name": "Types.Publication",
+                    "nameLocations": [
+                      "787:5:23",
+                      "793:11:23"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 9268,
+                    "src": "787:17:23"
+                  },
+                  "referencedDeclaration": 9268,
+                  "src": "787:17:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Publication_$9268_storage_ptr",
+                    "typeString": "struct Types.Publication"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5720,
+            "mutability": "mutable",
+            "name": "_profileCounter",
+            "nameLocation": "880:15:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "863:32:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5719,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "863:7:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5722,
+            "mutability": "mutable",
+            "name": "_governance",
+            "nameLocation": "1009:11:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "992:28:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 5721,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "992:7:23",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5724,
+            "mutability": "mutable",
+            "name": "_emergencyAdmin",
+            "nameLocation": "1057:15:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "1040:32:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 5723,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1040:7:23",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5726,
+            "mutability": "mutable",
+            "name": "_profileTokenURIContract",
+            "nameLocation": "1109:24:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "1092:41:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 5725,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1092:7:23",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5728,
+        "src": "431:719:23",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1115:23"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/base/EduxHubStorage.sol",
+    "exportedSymbols": {
+      "EduxHubStorage": [
+        5727
+      ],
+      "Types": [
+        9441
+      ]
+    },
+    "id": 5728,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5696,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:23"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/constants/Types.sol",
+        "file": "../libraries/constants/Types.sol",
+        "id": 5698,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 5728,
+        "sourceUnit": 9442,
+        "src": "63:55:23",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 5697,
+              "name": "Types",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9441,
+              "src": "71:5:23",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "EduxHubStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 5699,
+          "nodeType": "StructuredDocumentation",
+          "src": "122:307:23",
+          "text": " @title EduxHubStorage\n @author Edux Protocol\n @notice This is an abstract contract that ONLY contains storage for the EduxHub contract. This MUST be inherited last\n to preserve the EduxHub storage layout. Adding storage variables should be done ONLY at the bottom of this contract."
+        },
+        "fullyImplemented": true,
+        "id": 5727,
+        "linearizedBaseContracts": [
+          5727
+        ],
+        "name": "EduxHubStorage",
+        "nameLocation": "449:14:23",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5702,
+            "mutability": "mutable",
+            "name": "_state",
+            "nameLocation": "502:6:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "473:35:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_ProtocolState_$9216",
+              "typeString": "enum Types.ProtocolState"
+            },
+            "typeName": {
+              "id": 5701,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 5700,
+                "name": "Types.ProtocolState",
+                "nameLocations": [
+                  "473:5:23",
+                  "479:13:23"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 9216,
+                "src": "473:19:23"
+              },
+              "referencedDeclaration": 9216,
+              "src": "473:19:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_ProtocolState_$9216",
+                "typeString": "enum Types.ProtocolState"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5706,
+            "mutability": "mutable",
+            "name": "_profileCreatorWhitelisted",
+            "nameLocation": "591:26:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "528:89:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 5705,
+              "keyName": "profileCreator",
+              "keyNameLocation": "544:14:23",
+              "keyType": {
+                "id": 5703,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "536:7:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "528:53:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueName": "isWhitelisted",
+              "valueNameLocation": "567:13:23",
+              "valueType": {
+                "id": 5704,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "562:4:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5711,
+            "mutability": "mutable",
+            "name": "_profiles",
+            "nameLocation": "704:9:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "637:76:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProfileMemory_$9243_storage_$",
+              "typeString": "mapping(uint256 => struct Types.ProfileMemory)"
+            },
+            "typeName": {
+              "id": 5710,
+              "keyName": "profileId",
+              "keyNameLocation": "653:9:23",
+              "keyType": {
+                "id": 5707,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "645:7:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "637:57:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProfileMemory_$9243_storage_$",
+                "typeString": "mapping(uint256 => struct Types.ProfileMemory)"
+              },
+              "valueName": "profile",
+              "valueNameLocation": "686:7:23",
+              "valueType": {
+                "id": 5709,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 5708,
+                  "name": "Types.ProfileMemory",
+                  "nameLocations": [
+                    "666:5:23",
+                    "672:13:23"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 9243,
+                  "src": "666:19:23"
+                },
+                "referencedDeclaration": 9243,
+                "src": "666:19:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ProfileMemory_$9243_storage_ptr",
+                  "typeString": "struct Types.ProfileMemory"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5718,
+            "mutability": "mutable",
+            "name": "_publications",
+            "nameLocation": "828:13:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "733:108:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_uint256_$_t_struct$_Publication_$9268_storage_$_$",
+              "typeString": "mapping(uint256 => mapping(uint256 => struct Types.Publication))"
+            },
+            "typeName": {
+              "id": 5717,
+              "keyName": "profileId",
+              "keyNameLocation": "749:9:23",
+              "keyType": {
+                "id": 5712,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "741:7:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "733:85:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_uint256_$_t_struct$_Publication_$9268_storage_$_$",
+                "typeString": "mapping(uint256 => mapping(uint256 => struct Types.Publication))"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 5716,
+                "keyName": "pubId",
+                "keyNameLocation": "778:5:23",
+                "keyType": {
+                  "id": 5713,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "770:7:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "762:55:23",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Publication_$9268_storage_$",
+                  "typeString": "mapping(uint256 => struct Types.Publication)"
+                },
+                "valueName": "publication",
+                "valueNameLocation": "805:11:23",
+                "valueType": {
+                  "id": 5715,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 5714,
+                    "name": "Types.Publication",
+                    "nameLocations": [
+                      "787:5:23",
+                      "793:11:23"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 9268,
+                    "src": "787:17:23"
+                  },
+                  "referencedDeclaration": 9268,
+                  "src": "787:17:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Publication_$9268_storage_ptr",
+                    "typeString": "struct Types.Publication"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5720,
+            "mutability": "mutable",
+            "name": "_profileCounter",
+            "nameLocation": "880:15:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "863:32:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5719,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "863:7:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5722,
+            "mutability": "mutable",
+            "name": "_governance",
+            "nameLocation": "1009:11:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "992:28:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 5721,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "992:7:23",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5724,
+            "mutability": "mutable",
+            "name": "_emergencyAdmin",
+            "nameLocation": "1057:15:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "1040:32:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 5723,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1040:7:23",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5726,
+            "mutability": "mutable",
+            "name": "_profileTokenURIContract",
+            "nameLocation": "1109:24:23",
+            "nodeType": "VariableDeclaration",
+            "scope": 5727,
+            "src": "1092:41:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 5725,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1092:7:23",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5728,
+        "src": "431:719:23",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "35:1115:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:21.358Z",
+  "devdoc": {
+    "author": "Edux Protocol",
+    "kind": "dev",
+    "methods": {},
+    "title": "EduxHubStorage",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "This is an abstract contract that ONLY contains storage for the EduxHub contract. This MUST be inherited last to preserve the EduxHub storage layout. Adding storage variables should be done ONLY at the bottom of this contract.",
+    "version": 1
+  }
+}

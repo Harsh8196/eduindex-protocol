@@ -1,0 +1,838 @@
+{
+  "contractName": "EduxModule",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getModuleMetadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getModuleMetadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"for now we check for keccak('EDUX_MODULE'); Override this and add the type(IModuleInterface).interfaceId for corresponding module type\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getModuleMetadataURI()\":{\"notice\":\"Human-readable description of the module\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/modules/EduxModule.sol\":\"EduxModule\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"project:/contracts/modules/EduxModule.sol\":{\"keccak256\":\"0xe3b44cd0bd40feef58cc1bb240ac779f67ed0b8ff97e78697c1f4ee924c8325b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7be4b7b6626decad86f85767a383c3ef18fbd5302ade3618f183773a3e6823e3\",\"dweb:/ipfs/QmXQjGj94Nyhj1NMqxmnp59NfEtAWHMMQimfSBgDJkKihE\"]},\"project:/contracts/modules/interfaces/IEduxModule.sol\":{\"keccak256\":\"0xf34f80448b3fd709dfa91bf87b8dfb0a052f1f6b4953dac1a4d20cf316c74266\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37f917bcb60496f2d1f81da9e85221d58a73af125049209ef0cf9409eb71e94d\",\"dweb:/ipfs/QmUGFJtHDJHN1A8LSeWJpL4RaG96NjLbAXkmhK9u8h9uEB\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.18;\r\n\r\nimport {IEduxModule} from './interfaces/IEduxModule.sol';\r\n\r\nabstract contract EduxModule is IEduxModule {\r\n    /// @inheritdoc IEduxModule\r\n    function supportsInterface(bytes4 interfaceID) public pure virtual override returns (bool) {\r\n        return interfaceID == bytes4(keccak256(abi.encodePacked('Edux_MODULE')));\r\n    }\r\n}",
+  "sourcePath": "E:\\Blockchain\\EDUIndex\\EduxContract\\contracts\\modules\\EduxModule.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/modules/EduxModule.sol",
+    "exportedSymbols": {
+      "EduxModule": [
+        19750
+      ],
+      "IEduxModule": [
+        21139
+      ]
+    },
+    "id": 19751,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 19723,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:87"
+      },
+      {
+        "absolutePath": "project:/contracts/modules/interfaces/IEduxModule.sol",
+        "file": "./interfaces/IEduxModule.sol",
+        "id": 19725,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 19751,
+        "sourceUnit": 21140,
+        "src": "61:57:87",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 19724,
+              "name": "IEduxModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 21139,
+              "src": "69:11:87",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 19726,
+              "name": "IEduxModule",
+              "nameLocations": [
+                "154:11:87"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 21139,
+              "src": "154:11:87"
+            },
+            "id": 19727,
+            "nodeType": "InheritanceSpecifier",
+            "src": "154:11:87"
+          }
+        ],
+        "canonicalName": "EduxModule",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 19750,
+        "linearizedBaseContracts": [
+          19750,
+          21139,
+          3034
+        ],
+        "name": "EduxModule",
+        "nameLocation": "140:10:87",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              21132
+            ],
+            "body": {
+              "id": 19748,
+              "nodeType": "Block",
+              "src": "297:91:87",
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    },
+                    "id": 19746,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 19736,
+                      "name": "interfaceID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19730,
+                      "src": "315:11:87",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "hexValue": "456475785f4d4f44554c45",
+                                  "id": 19742,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "364:13:87",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_90492328c40d101426d14947e9440489238e0c9c190bbb3ae6839f337fb6c3b4",
+                                    "typeString": "literal_string \"Edux_MODULE\""
+                                  },
+                                  "value": "Edux_MODULE"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_90492328c40d101426d14947e9440489238e0c9c190bbb3ae6839f337fb6c3b4",
+                                    "typeString": "literal_string \"Edux_MODULE\""
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 19740,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 4294967295,
+                                  "src": "347:3:87",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 19741,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberLocation": "351:12:87",
+                                "memberName": "encodePacked",
+                                "nodeType": "MemberAccess",
+                                "src": "347:16:87",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function () pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 19743,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "347:31:87",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 19739,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967288,
+                            "src": "337:9:87",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 19744,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "337:42:87",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 19738,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "330:6:87",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_bytes4_$",
+                          "typeString": "type(bytes4)"
+                        },
+                        "typeName": {
+                          "id": 19737,
+                          "name": "bytes4",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "330:6:87",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 19745,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "330:50:87",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "src": "315:65:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 19735,
+                  "id": 19747,
+                  "nodeType": "Return",
+                  "src": "308:72:87"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 19728,
+              "nodeType": "StructuredDocumentation",
+              "src": "173:27:87",
+              "text": "@inheritdoc IEduxModule"
+            },
+            "functionSelector": "01ffc9a7",
+            "id": 19749,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "215:17:87",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 19732,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "273:8:87"
+            },
+            "parameters": {
+              "id": 19731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19730,
+                  "mutability": "mutable",
+                  "name": "interfaceID",
+                  "nameLocation": "240:11:87",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19749,
+                  "src": "233:18:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 19729,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:6:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:20:87"
+            },
+            "returnParameters": {
+              "id": 19735,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19734,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19749,
+                  "src": "291:4:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 19733,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "291:4:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "290:6:87"
+            },
+            "scope": 19750,
+            "src": "206:182:87",
+            "stateMutability": "pure",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 19751,
+        "src": "122:269:87",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:358:87"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/modules/EduxModule.sol",
+    "exportedSymbols": {
+      "EduxModule": [
+        19750
+      ],
+      "IEduxModule": [
+        21139
+      ]
+    },
+    "id": 19751,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 19723,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:87"
+      },
+      {
+        "absolutePath": "project:/contracts/modules/interfaces/IEduxModule.sol",
+        "file": "./interfaces/IEduxModule.sol",
+        "id": 19725,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 19751,
+        "sourceUnit": 21140,
+        "src": "61:57:87",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 19724,
+              "name": "IEduxModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 21139,
+              "src": "69:11:87",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 19726,
+              "name": "IEduxModule",
+              "nameLocations": [
+                "154:11:87"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 21139,
+              "src": "154:11:87"
+            },
+            "id": 19727,
+            "nodeType": "InheritanceSpecifier",
+            "src": "154:11:87"
+          }
+        ],
+        "canonicalName": "EduxModule",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 19750,
+        "linearizedBaseContracts": [
+          19750,
+          21139,
+          3034
+        ],
+        "name": "EduxModule",
+        "nameLocation": "140:10:87",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              21132
+            ],
+            "body": {
+              "id": 19748,
+              "nodeType": "Block",
+              "src": "297:91:87",
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    },
+                    "id": 19746,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 19736,
+                      "name": "interfaceID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19730,
+                      "src": "315:11:87",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "hexValue": "456475785f4d4f44554c45",
+                                  "id": 19742,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "364:13:87",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_90492328c40d101426d14947e9440489238e0c9c190bbb3ae6839f337fb6c3b4",
+                                    "typeString": "literal_string \"Edux_MODULE\""
+                                  },
+                                  "value": "Edux_MODULE"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_90492328c40d101426d14947e9440489238e0c9c190bbb3ae6839f337fb6c3b4",
+                                    "typeString": "literal_string \"Edux_MODULE\""
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 19740,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 4294967295,
+                                  "src": "347:3:87",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 19741,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberLocation": "351:12:87",
+                                "memberName": "encodePacked",
+                                "nodeType": "MemberAccess",
+                                "src": "347:16:87",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function () pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 19743,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "347:31:87",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 19739,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967288,
+                            "src": "337:9:87",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 19744,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "337:42:87",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 19738,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "330:6:87",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_bytes4_$",
+                          "typeString": "type(bytes4)"
+                        },
+                        "typeName": {
+                          "id": 19737,
+                          "name": "bytes4",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "330:6:87",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 19745,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "330:50:87",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "src": "315:65:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 19735,
+                  "id": 19747,
+                  "nodeType": "Return",
+                  "src": "308:72:87"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 19728,
+              "nodeType": "StructuredDocumentation",
+              "src": "173:27:87",
+              "text": "@inheritdoc IEduxModule"
+            },
+            "functionSelector": "01ffc9a7",
+            "id": 19749,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "215:17:87",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 19732,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "273:8:87"
+            },
+            "parameters": {
+              "id": 19731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19730,
+                  "mutability": "mutable",
+                  "name": "interfaceID",
+                  "nameLocation": "240:11:87",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19749,
+                  "src": "233:18:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 19729,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:6:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:20:87"
+            },
+            "returnParameters": {
+              "id": 19735,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19734,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19749,
+                  "src": "291:4:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 19733,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "291:4:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "290:6:87"
+            },
+            "scope": 19750,
+            "src": "206:182:87",
+            "stateMutability": "pure",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 19751,
+        "src": "122:269:87",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:358:87"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2024-08-25T13:13:22.196Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "for now we check for keccak('EDUX_MODULE'); Override this and add the type(IModuleInterface).interfaceId for corresponding module type"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getModuleMetadataURI()": {
+        "notice": "Human-readable description of the module"
+      }
+    },
+    "version": 1
+  }
+}
