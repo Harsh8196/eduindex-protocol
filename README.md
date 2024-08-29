@@ -1,6 +1,7 @@
 # EduIndex Protocol
 
 The EduIndex Protocol is a decentralized, non-custodial educational social graph. EduIndex implements unique, on-chain interaction, that is similar to the web2 education platform, but significantly expanded with unique functionality that empowers communities to form and participants to own their own educational social graph.
+
 Developers can build on the network, leveraging its audience and infrastructure. Users can seamlessly switch between education platforms without losing their profiles, content, or certificates.
 Here are some components of the protocol,
 
